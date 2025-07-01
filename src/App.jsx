@@ -6,6 +6,9 @@ import Filterbar from './components/Features/Filterbar/Filterbar';
 import Notification from './components/Features/Notification/Notification';
 import Assurance from './components/Features/Assurance/Assurance';
 import Footer from './components/Features/Footer/Footer';
+import ProcessLayout from './components/Features/Process/ProcessLayout';
+import InformationPage from './components/Features/Information/InformationPage';
+import Types from './components/Features/ProductTypes/Types';
 function App() {
   return (
    <>
@@ -16,6 +19,9 @@ function App() {
    <Filterbar/>
    <CoverPage/>
    <Assurance/>
+   <ProcessLayout/>
+   <Types/>
+   <InformationPage/>
    <Footer/>
     
    </>

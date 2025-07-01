@@ -20,7 +20,7 @@ const Assurance = () => {
           details="Our secure payment system accepts the most common forms of payments making the checkout process quicker! The payments we accept are debit, all major credit cards, and cryptocurrency."
         />
       </Box>
-      <Box>
+      <Box sx={{mb:{xs:15}}}>
         <AssuranceLayout
         logo={images.Price}
           title="BestQ Quality & Pricing"

@@ -11,7 +11,7 @@ const CoverPage = () => {
         style={{
           width: "100%",
           height: "100%",
-          objectFit: "cover",
+          objectFit: "cover"
         }}
       />
       <Box sx={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
@@ -63,7 +63,7 @@ const CoverPage = () => {
         <Box
           sx={{
             pl: { xs: 3, sm: 8 },
-            mt: 4,
+            mt: {md:20,xs:13},
             display: "flex",
             alignItems: "center",
             gap: 2,
@@ -98,7 +98,7 @@ const CoverPage = () => {
           </Typography>
         </Box>
         <Box sx={{ pl: { xs: 3, sm: 8 }, mt: 5 }}>
-          <MyButton name="Shop All" />
+          <MyButton name="Shop All" size="18px" />
         </Box>
       </Box>
     </Box>
