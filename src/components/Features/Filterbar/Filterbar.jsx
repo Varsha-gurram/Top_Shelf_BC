@@ -8,7 +8,6 @@ const Filterbar = () => {
       sx={{
         display: { xs: "none", md: "flex" },
         gap: 3,
-        width: "100%",
         justifyContent: "center",
         alignItems: "center",
         height: "56px",

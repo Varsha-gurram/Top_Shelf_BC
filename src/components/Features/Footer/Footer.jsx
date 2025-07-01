@@ -10,7 +10,15 @@ const footerTextStyle = {
   lineHeight: "150%",
   color: "#9D9EA2",
 };
-
+export const BoxStyle={
+          background: "linear-gradient(to bottom,#01100B,#1A1E26)",
+          px: { xs: 2, md: 8 },
+          pb: { xs: 8, md: 12 }, 
+          pt: 40,
+          color: "white",
+          position: "relative",
+          zIndex: 1,
+        }
 const footerTitleStyle = {
   fontFamily: "Lexend, sans-serif",
   fontWeight: 700,
@@ -36,15 +44,7 @@ const Footer = () => {
   return (
     <Box sx={{ position: "relative" }}>
       <Box
-        sx={{
-          background: "linear-gradient(to bottom,#01100B,#1A1E26)",
-          px: { xs: 2, md: 8 },
-          pb: { xs: 8, md: 12 }, 
-          pt: 10,
-          color: "white",
-          position: "relative",
-          zIndex: 1,
-        }}
+        sx={BoxStyle}
       >
         <Stack
           direction={{ xs: "column", md: "row" }}
@@ -57,7 +57,7 @@ const Footer = () => {
               <img
                 src={images.BWLogo}
                 alt="Logo"
-                style={{ width: 120, height: "auto" }}
+                style={{ width: 200, height: "auto" }}
               />
             </Box>
             <Typography sx={footerTextStyle}>
@@ -68,7 +68,7 @@ const Footer = () => {
               service and care at the lowest prices you’ll ever find.
             </Typography>
           </Box>
-          <Box sx={{ flex: 2, minWidth: 200, px: { md: 20 } }}>
+          <Box sx={{ flex: 2, minWidth: 200, px: { md: 20 }, pt: { xs: 2, md: 2 } }}>
             <Typography sx={footerTitleStyle}>Quick Link</Typography>
             <Stack direction="row" spacing={6}>
               <Box sx={{ flex: 1 }}>
@@ -95,7 +95,7 @@ const Footer = () => {
             display: "flex",
             flexDirection: "column",
             flex: 1,
-            px: { md: 75 },
+            px: { md: 70 },
             mt: 4,
           }}
         >
@@ -104,7 +104,7 @@ const Footer = () => {
             info@topshelfbc.cc
           </Link>
         </Box>
-        <Box sx={{ flex: 2, minWidth: 200, pl: { md: 75 } }}>
+        <Box sx={{ flex: 2, minWidth: 200, pl: { md: 70 } }}>
           <Typography sx={footerTitleStyle}>MORE</Typography>
           <Stack direction="row" spacing={2}>
             <Box sx={{ flex: 1 }}>
@@ -134,7 +134,7 @@ const Footer = () => {
           sx={{
             position: "absolute",
             left: "50%",
-            top:"40px",
+            top:{md:"-150px",xs:"-100px"},
 
             transform: "translateX(-50%)",
             zIndex: 2,

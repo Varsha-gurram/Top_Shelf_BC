@@ -10,7 +10,6 @@ const Navbar = () => {
   return (
     <Box
       sx={{
-        width: "100%",
         minHeight: "76px",
         display: "flex",
         alignItems: "center",
@@ -36,7 +35,7 @@ const Navbar = () => {
         />
       </Box>
       <Box sx={{ flex: 1, mx: { xs: 1, md: 4 }, display: { xs: "none", sm: "block" } }}>
-        <Search />
+        <Search placeholder="Search here..." color="#f1f1f1" text="#000" border="none" width={{ xs: "70%", sm: "400px" }} />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: { xs: 1, md: 2 } }}>
         <Typography sx={{ fontSize: { xs: 14, md: 16 }, mr: 1, display: { xs: "none", sm: "block" } }}>
