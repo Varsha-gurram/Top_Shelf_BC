@@ -1,16 +1,23 @@
-import React from 'react'
+import React from "react";
 
 export const images = {
-    Logo1:require('./Logo1.png'),
-    Logo2:require('./Logo2.png'),
-    Logo3:require('./Logo3.png'),
-    Logo4:require('./Logo4.png'),
-    Logo:require('./Logo.png'),
-    BgImage:require('./Maskgroup.png'),
-    Shipping:require('./shipping.png'),
-    Safe:require('./safe.png'),
-    Price:require('./price.png'),
-    BWLogo:require('./bwlogo.jpg'),
-    Bg2:require('./bg2.png'),
-}
-
+  Logo1: require("./Logo1.png"),
+  Logo2: require("./Logo2.png"),
+  Logo3: require("./Logo3.png"),
+  Logo4: require("./Logo4.png"),
+  Logo: require("./Logo.png"),
+  BgImage: require("./Maskgroup.png"),
+  Shipping: require("./shipping.png"),
+  Safe: require("./safe.png"),
+  Price: require("./price.png"),
+  BWLogo: require("./bwlogo.jpg"),
+  Bg2: require("./bg2.png"),
+  Pay1: require("./pay1.png"),
+  Pay2: require("./pay2.png"),
+  Pay3: require("./pay3.png"),
+  Pay4: require("./pay4.png"),
+  Review1: require("./review1.png"),
+  Review2: require("./review2.png"),
+  Review3: require("./review3.png"),
+  Product1:require("./product1.png")
+};
