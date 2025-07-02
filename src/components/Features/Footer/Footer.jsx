@@ -1,4 +1,4 @@
-import { Box, Typography, Link, Stack } from "@mui/material";
+import { Box, Typography, Link, Stack, Divider } from "@mui/material";
 import React from "react";
 import { images } from "../../../Assets/images";
 import Coupons from "./Coupons";
@@ -10,15 +10,15 @@ const footerTextStyle = {
   lineHeight: "150%",
   color: "#9D9EA2",
 };
-export const BoxStyle={
-          background: "linear-gradient(to bottom,#01100B,#1A1E26)",
-          px: { xs: 2, md: 8 },
-          pb: { xs: 8, md: 12 }, 
-          pt: 40,
-          color: "white",
-          position: "relative",
-          zIndex: 1,
-        }
+export const BoxStyle = {
+  background: "linear-gradient(to bottom,#01100B,#1A1E26)",
+  px: { xs: 2, md: 8 },
+  pb: { xs: 8, md: 12 },
+  pt: 40,
+  color: "white",
+  position: "relative",
+  zIndex: 1,
+};
 const footerTitleStyle = {
   fontFamily: "Lexend, sans-serif",
   fontWeight: 700,
@@ -43,9 +43,7 @@ const footerLinkStyle = {
 const Footer = () => {
   return (
     <Box sx={{ position: "relative" }}>
-      <Box
-        sx={BoxStyle}
-      >
+      <Box sx={BoxStyle}>
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={{ xs: 4, md: 8 }}
@@ -68,7 +66,14 @@ const Footer = () => {
               service and care at the lowest prices you’ll ever find.
             </Typography>
           </Box>
-          <Box sx={{ flex: 2, minWidth: 200, px: { md: 20 }, pt: { xs: 2, md: 2 } }}>
+          <Box
+            sx={{
+              flex: 2,
+              minWidth: 200,
+              px: { md: 20 },
+              pt: { xs: 2, md: 2 },
+            }}
+          >
             <Typography sx={footerTitleStyle}>Quick Link</Typography>
             <Stack direction="row" spacing={6}>
               <Box sx={{ flex: 1 }}>
@@ -117,6 +122,20 @@ const Footer = () => {
                 Buy weed online Northwest Territories
               </Link>
               <Link sx={footerLinkStyle}>Buy weed online in Saskatchewan</Link>
+              <Box mb={2} sx={{ display: "flex", gap: 1 }}>
+                <Box>
+                  <img src={images.Pay1} alt="pay1" style={{}} />
+                </Box>
+                <Box>
+                  <img src={images.Pay2} alt="pay2" style={{}} />
+                </Box>
+                <Box>
+                  <img src={images.Pay3} alt="pay3" style={{}} />
+                </Box>
+                <Box>
+                  <img src={images.Pay4} alt="pay4" style={{}} />
+                </Box>
+              </Box>
             </Box>
             <Box sx={{ flex: 1 }}>
               <Link sx={footerLinkStyle}>Buy weed online in Manitoba</Link>
@@ -134,7 +153,7 @@ const Footer = () => {
           sx={{
             position: "absolute",
             left: "50%",
-            top:{md:"-150px",xs:"-100px"},
+            top: { md: "-150px", xs: "-100px" },
 
             transform: "translateX(-50%)",
             zIndex: 2,
@@ -145,6 +164,15 @@ const Footer = () => {
           }}
         >
           <Coupons />
+        </Box>
+        <Divider sx={{ borderColor: "#9D9EA2", width: "100%", mt: 4, mb: 1 }} />
+        <Box sx={{display:"flex",justifyContent:"space-between",gap:3,pt:2}}>
+          <Link sx={footerLinkStyle}>2022 Top Shelf BC. All Rights are reseved.</Link>
+          <Box sx={{display:"flex",gap:3}}>
+            <Link sx={footerLinkStyle}>Out of Stock</Link>
+            <Link sx={footerLinkStyle}>Privacy Policy</Link>
+            <Link sx={footerLinkStyle}>Terms and Conditions</Link>
+          </Box>
         </Box>
       </Box>
     </Box>

@@ -3,7 +3,7 @@ import React from 'react'
 export const textStyle={fontWeight:"400",fontSize:{md:"16px",xs:""},color:"#717378",mt:2,whiteSpace:"normal",flex:1}
 const AssuranceLayout = ({logo,title,details}) => {
   return (
-    <Box sx={{display:"flex",flexDirection:"row",fontFamily:"Lexend",LineHeight:"150%",gap:{md:"16px",xs:"10px",sm:"2px"},mb:{md:10},}}>
+    <Box sx={{display:"flex",flexDirection:"row",fontFamily:"Lexend",LineHeight:"150%",gap:{md:"16px",xs:"10px",sm:"2px"},}}>
         <Box
           component="img"
           src={logo}

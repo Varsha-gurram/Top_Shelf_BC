@@ -8,35 +8,34 @@ const Refer = () => (
     sx={{
       backgroundImage: `url(${images.Bg2})`,
       display: "flex",
-      flexDirection: { xs: "column", sm: "row" },
-      px: { xs: 5, sm: 10, md: 15 },
-      pb: { xs: 8, sm: 8, md: 8 },
-      pt: { xs: 5, sm: 6, md: 10 },
+      flexDirection: { xs: "column", sm: "column", md: "row" },
+      px: { xs: 2, sm: 1.5, md: 8 }, 
+      pb: { xs: 6, sm: 7, md: 8 },
+      pt: { xs: 4, sm: 5, md: 8 },
       backgroundRepeat: "no-repeat",
-      borderRadius: "50px",
+      borderRadius: "40px",
       backgroundSize: "cover",
       backgroundColor: "#01100B",
       color: "white",
       position: "relative",
       backgroundPosition: "center",
-      mx: { xs: 2, sm: 8, md: 20 },
-      mr: { xs: 2, sm: 8, md: 20 },
-      gap: { xs: 3, sm: 15, md: 25 },
+      mx: { xs: 6, sm: 22, md:2,lg:30 },
+      gap: { xs: 3, sm: 4, md: 12 }, 
       alignItems: { xs: "center", sm: "center", md: "flex-start" },
     }}
   >
-    <Box sx={{ ml: { xs: 0, sm: 0, md: -9 }, width: { xs: "100%", sm: "auto" } }}>
+    <Box sx={{ width: { xs: "100%", sm: "100%", md: "auto" } }}>
       <Typography
         sx={{
           fontFamily: "Lexend, sans-serif",
           fontWeight: 550,
-          fontSize: { xs: "32px", sm: "48px", md: "64px" },
+          fontSize: { xs: "32px", sm: "44px", md: "60px" },
           letterSpacing: "-1px",
           color: "#fff",
           lineHeight: "110%",
           textTransform: "uppercase",
-          textAlign: { xs: "center", sm: "left", md: "left" },
-          mt: 3,
+          textAlign: { xs: "center", sm: "center", md: "left" },
+          mt: 2,
         }}
       >
         REFER A FRIEND
@@ -45,18 +44,18 @@ const Refer = () => (
         sx={{
           display: "flex",
           flexDirection: "row",
-          my: { xs: 2, sm: 4, md: 5 },
-          gap: 3,
-          justifyContent: { xs: "center", sm: "flex-start", md: "flex-start" },
+          my: { xs: 2, sm: 3, md: 4 },
+          gap: 2,
+          justifyContent: { xs: "center", sm: "center", md: "flex-start" },
         }}
       >
-        <Typography sx={{ fontWeight: 400, fontSize: { xs: "28px", sm: "30px", md: "32px" } }}>
+        <Typography sx={{ fontWeight: 400, fontSize: { xs: "24px", sm: "28px", md: "32px" } }}>
           And Get
         </Typography>
         <Typography
           sx={{
             fontWeight: 600,
-            fontSize: { xs: "28px", sm: "30px", md: "32px" },
+            fontSize: { xs: "24px", sm: "28px", md: "32px" },
             color: "#F2BC1B",
             fontFamily: "Lexend",
           }}
@@ -65,7 +64,15 @@ const Refer = () => (
         </Typography>
       </Box>
     </Box>
-    <Box sx={{ mt: { xs: 1.5, sm: 0, md: 6 }, mb: { xs: 4, sm: 0, md: 0 } }}>
+    <Box
+      sx={{
+        mt: { xs: 1, sm: 1, md: 6 },
+        mb: { xs: 1, sm: -2, md: 0 },
+        display: "flex",
+        justifyContent: { xs: "center", sm: "center", md: "flex-start" },
+        width: { xs: "100%", sm: "100%", md: "auto" }
+      }}
+    >
       <MyButton name="Refer Here" />
     </Box>
   </Box>

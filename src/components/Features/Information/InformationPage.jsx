@@ -36,7 +36,7 @@ const steps = [
 
 const InformationPage = () => {
   return (
-    <Box sx={{ mb: 50 }}>
+    <Box sx={{pb:10 }}>
       <Typography
         sx={{
           fontFamily: "Lexend, sans-serif",

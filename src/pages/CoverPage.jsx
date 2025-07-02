@@ -4,7 +4,7 @@ import { images } from "../Assets/images";
 import MyButton from "../components/Common/Button";
 const CoverPage = () => {
   return (
-    <Box sx={{ position: "relative", width: "100%", height: "100vh", overflow: "hidden" }}>
+    <Box sx={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden" }}>
       <img
         src={images.BgImage}
         alt="Cover Background"
@@ -63,7 +63,7 @@ const CoverPage = () => {
         <Box
           sx={{
             pl: { xs: 3, sm: 8 },
-            mt: {md:20,xs:13},
+            mt: {md:12,xs:13},
             display: "flex",
             alignItems: "center",
             gap: 2,
