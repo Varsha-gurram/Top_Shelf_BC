@@ -19,5 +19,9 @@ export const images = {
   Review1: require("./review1.png"),
   Review2: require("./review2.png"),
   Review3: require("./review3.png"),
-  Product1:require("./product1.png")
+  Product1: require("./product1.png"),
+  Product2: require("./product2.png"),
+  Product3: require("./product3.png"),
+  Product4: require("./product4.png"),
+  Bsc:require("./bestsellers.png")
 };

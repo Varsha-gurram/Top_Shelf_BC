@@ -18,7 +18,7 @@ const ReviewCard = ({ profile, name, rating, comment, date }) => (
         boxShadow: 6,
       },
       gap: 2,
-      mb:20
+      //mb:20
     }}
   >
     <Box sx={{ display: "flex", alignItems: "center", gap: 2, width: "100%", mb: 1 }}>

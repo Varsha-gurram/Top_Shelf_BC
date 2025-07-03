@@ -140,6 +140,7 @@ const ProcessLayout = () => {
                   fontSize: 20,
                   mb: 2,
                   ml: { xs: 0, md: -30 },
+                  cursor:"pointer"
                 }}
               >
                 {step.number}
@@ -147,7 +148,7 @@ const ProcessLayout = () => {
               <img
                 src={step.logo}
                 alt={step.title}
-                style={{ width: 94, height: 94, marginBottom: 16 }}
+                style={{ width: 94, height: 94, marginBottom: 16,cursor:"pointer" }}
               />
               <Typography sx={{ fontWeight: "bold", fontSize: 20, mb: 1, mt: 1 }}>
                 {step.title}
@@ -160,7 +161,7 @@ const ProcessLayout = () => {
         </Grid>
 
         <Box sx={{ display: "flex", justifyContent: "center", mb: 20, mt: 10 }}>
-          <MyButton name="Choose Your Weed" />
+          <MyButton name="Choose Your Weed" height="64px" />
         </Box>
       </Box>
     </Box>

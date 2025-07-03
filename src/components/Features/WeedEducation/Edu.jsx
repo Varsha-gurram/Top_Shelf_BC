@@ -42,6 +42,11 @@ function Edu() {
               sx={{
                 display: "flex",
                 justifyContent: "center",
+                cursor: "pointer",
+      "&:hover": {
+        boxShadow: 6,
+        transform: "translateY(-6px) scale(1.03)",
+      },
               }}
             >
               <Box

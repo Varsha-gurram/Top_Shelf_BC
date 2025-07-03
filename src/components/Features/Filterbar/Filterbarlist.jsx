@@ -1,15 +1,13 @@
-import React from 'react'
-import Dropdown from '../../Common/Dropdown'
-import { Drop } from 'iconsax-react'
- export const Filterbarlist = {
-    ShopAll:"Shop All",
-    Flowerdropdown:<Dropdown label="Flower" options={["Indica", "Sativa", "Hybrid"]} />,
-    Edibles:"Edibles",
-    Concentrates:<Dropdown label="Concentrates" options={["Shatter", "Wax", "Live Resin"]} />,
-    Mushrooms:"Mushrooms",
-    Promotions:<Dropdown label="Promotions/Bundles" options={["Discounts", "Bundles", "Deals"]} />,
-    Support:<Dropdown label="Support" options={["FAQs", "Contact Us", "Live Chat"]} />,
-    Rewards:"Rewards",
-    Blog:"Blog"
-  
-}
+export const Filterbarlist = {
+  categories: [
+    { label: "Shop All", value: "all" },
+    { label: "Flower", value: "Flowers" },
+    { label: "Edibles", value: "Edibles" },
+    { label: "Concentrates", value: "Concentrates" },
+    { label: "Mushrooms", value: "Mushrooms" },
+    { label: "Promotions", value: "Bundles & Promotions" },
+    { label: "Support", value: "Support" },
+    { label: "Rewards", value: "Rewards" },
+    { label: "Blog", value: "Blog" }
+  ]
+};

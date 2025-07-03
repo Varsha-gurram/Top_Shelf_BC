@@ -122,7 +122,7 @@ const Footer = () => {
                 Buy weed online Northwest Territories
               </Link>
               <Link sx={footerLinkStyle}>Buy weed online in Saskatchewan</Link>
-              <Box mb={2} sx={{ display: "flex", gap: 1 }}>
+              <Box mb={2} sx={{ display: "flex", gap: 1,cursor:"pointer" }}>
                 <Box>
                   <img src={images.Pay1} alt="pay1" style={{}} />
                 </Box>
@@ -166,7 +166,7 @@ const Footer = () => {
           <Coupons />
         </Box>
         <Divider sx={{ borderColor: "#9D9EA2", width: "100%", mt: 4, mb: 1 }} />
-        <Box sx={{display:"flex",justifyContent:"space-between",gap:3,pt:2}}>
+        <Box sx={{display:"flex",justifyContent:"space-between",gap:3,pt:2,}}>
           <Link sx={footerLinkStyle}>2022 Top Shelf BC. All Rights are reseved.</Link>
           <Box sx={{display:"flex",gap:3}}>
             <Link sx={footerLinkStyle}>Out of Stock</Link>

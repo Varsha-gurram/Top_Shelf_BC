@@ -1,7 +1,153 @@
-import React from 'react'
+export const productList = [
+  {
+    id:1,
+    image: require('../../../Assets/product1.png'), 
+    title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    type: "Flowers",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Sativa 100%",
+    price: 80.00,
+    options: ["28gg", "1/2lb", "1/4lb"],
+    category: "Best Sellers", 
+    Rc:"Recently Added" 
+  },
+  {
+    id:2,
+    image: require('../../../Assets/product2.png'),
+    title: "2 Oz Deal Ahi Tuna + Master Tuna",
+    type: "Flowers",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Indica 70%",
+    price: 120,
+    options: ["28g", "1/2lb", "1/4lb"],
+    category: "Bundles & Promotions",
+    Rc:"Recently Added" 
+  },
+  {
+    id:3,
+    image: require('../../../Assets/product3.png'),
+    title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
+    type: "Concentrates",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Indica 70%",
+    price: 102,
+    options: ["28g", "1/2lb", "1/4lb"],
+    category: "On Sale",
+    Rc:"Recently Added" 
+  },
 
-const ProductList = {
-    
-}
+  {
+    id:4,
+    image: require('../../../Assets/product1.png'), 
+    title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    type: "Flowers",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Sativa 100%",
+    price: 80.00,
+    options: ["28gg", "1/2lb", "1/4lb"],
+    category: "Best Sellers",
+    Rc:"Recently Added" 
+  },
+  {
+    id:5,
+    image: require('../../../Assets/product3.png'),
+    title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
+    type: "Concentrates",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Indica 70%",
+    price: 102,
+    options: ["28g", "1/2lb", "1/4lb"],
+    category: "Best Sellers"
+  },
+  {
+    id:6,
+    image: require('../../../Assets/product1.png'), 
+    title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    type: "Flowers",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Sativa 100%",
+    price: 80.00,
+    options: ["28gg", "1/2lb", "1/4lb"],
+    category: "Bundles & Promotions",
+    Rc:"Recently Added" 
+  },
+  {
+    id:7,
+    image: require('../../../Assets/product1.png'), 
+    title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    type: "Flowers",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Sativa 100%",
+    price: 80.00,
+    options: ["28gg", "1/2lb", "1/4lb"],
+    category: "Bundles & Promotions"  
+  },
+  {
+    id:8,
+    image: require('../../../Assets/product2.png'),
+    title: "2 Oz Deal Ahi Tuna + Master Tuna",
+    type: "Flowers",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Indica 70%",
+    price: 120,
+    options: ["28g", "1/2lb", "1/4lb"],
+    category: "Bundles & Promotions", 
+  },
+  {
+    id:9,
+    image: require('../../../Assets/product3.png'),
+    title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
+    type: "Concentrates",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Indica 70%",
+    price: 102,
+    options: ["28g", "1/2lb", "1/4lb"],
+    category: "On Sale"
+  },
 
-export default ProductList
+  {
+    id:10,
+    image: require('../../../Assets/product1.png'), 
+    title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    type: "Flowers",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Sativa 100%",
+    price: 80.00,
+    options: ["28gg", "1/2lb", "1/4lb"],
+    category: "Best Sellers"
+  },
+  {
+    id:11,
+    image: require('../../../Assets/product3.png'),
+    title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
+    type: "Concentrates",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Indica 70%",
+    price: 102,
+    options: ["28g", "1/2lb", "1/4lb"],
+    category: "On Sale"
+  },
+  {
+    id:12,
+    image: require('../../../Assets/product1.png'), 
+    title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    type: "Flowers",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Sativa 100%",
+    price: 80.00,
+    options: ["28gg", "1/2lb", "1/4lb"],
+    category: "Best Sellers",
+  },
+];
