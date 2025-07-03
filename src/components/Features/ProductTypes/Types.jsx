@@ -25,7 +25,7 @@ const Types = () => {
   ];
 
   return (
-    <Box sx={{ px: { xs: 2, sm: 4, md: 17 }, py: 2, width: "auto" }}>
+    <Box sx={{ px: { xs: 2, sm: 4, md: 17 }, py: 2, width: "auto", }}>
       <Grid container spacing={2}>
         {types.map((type, idx) => (
           <Grid item xs={12} sm={12} md={4} key={idx}>
@@ -36,6 +36,11 @@ const Types = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                cursor: "pointer",
+      "&:hover": {
+        boxShadow: 6,
+        transform: "translateY(-6px) scale(1.03)",
+      },
               }}
             >
               <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>

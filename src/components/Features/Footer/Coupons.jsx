@@ -30,6 +30,11 @@ const Coupons = () => (
         py: { xs: 2, sm: 2, md: 2 },
         mt: { xs: "-60px", sm: "-70px", md: "-80px" },
         minWidth: { xs: "90%", sm: "80%", md: "60%" },
+        cursor: "pointer",
+      "&:hover": {
+        boxShadow: 6,
+        transform: "translateY(-6px) scale(1.03)",
+      },
       }}
     >
       <Typography sx={titleStyle}>
@@ -59,7 +64,7 @@ const Coupons = () => (
           />
         </Box>
         <Box sx={{ mt: { xs: 2, sm: 0, md: 0 }, width: { xs: "100%", sm: "auto", md: "auto" } }}>
-          <MyButton name="Reveal Coupon" />
+          <MyButton name="Reveal Coupon" height="64px" />
         </Box>
       </Box>
     </Box>

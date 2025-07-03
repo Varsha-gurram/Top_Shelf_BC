@@ -22,6 +22,11 @@ const Refer = () => (
       mx: { xs: 6, sm: 22, md:2,lg:30 },
       gap: { xs: 3, sm: 4, md: 12 }, 
       alignItems: { xs: "center", sm: "center", md: "flex-start" },
+      cursor: "pointer",
+      "&:hover": {
+        boxShadow: 6,
+        transform: "translateY(-6px) scale(1.03)",
+      },
     }}
   >
     <Box sx={{ width: { xs: "100%", sm: "100%", md: "auto" } }}>
@@ -73,7 +78,7 @@ const Refer = () => (
         width: { xs: "100%", sm: "100%", md: "auto" }
       }}
     >
-      <MyButton name="Refer Here" />
+      <MyButton name="Refer Here" height="64px" />
     </Box>
   </Box>
 );

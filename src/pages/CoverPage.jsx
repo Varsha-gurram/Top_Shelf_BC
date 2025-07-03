@@ -98,7 +98,7 @@ const CoverPage = () => {
           </Typography>
         </Box>
         <Box sx={{ pl: { xs: 3, sm: 8 }, mt: 5 }}>
-          <MyButton name="Shop All" size="18px" />
+          <MyButton name="Shop All" size="18px" height="64px" />
         </Box>
       </Box>
     </Box>

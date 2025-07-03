@@ -94,6 +94,11 @@ const InformationPage = () => {
                     border: "1px solid #E0E0E0",
                     borderRadius: "8px",
                     padding: 3,
+                    cursor: "pointer",
+      "&:hover": {
+        boxShadow: 6,
+        transform: "translateY(-6px) scale(1.03)",
+      },
                   }}
                 >
                   <img
