@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@mui/material';
 
-const MyButton = ({ name, size, height }) => {
+const MyButton = ({ name, size, height, onClick }) => {
   return (
     <Button
       sx={{
@@ -11,7 +11,6 @@ const MyButton = ({ name, size, height }) => {
         background: "#17AF26",
         color: "white",
         fontSize: size,
-        //fontFamily: "Lexend",
         padding: "8px",
         textTransform: "none",
         cursor: "pointer",
@@ -26,6 +25,7 @@ const MyButton = ({ name, size, height }) => {
           transform: "scale(0.97)",
         },
       }}
+      onClick={onClick} 
     >
       {name}
     </Button>

@@ -1,16 +1,36 @@
 import React from 'react'
-import { Box, Card, Typography, Chip} from '@mui/material'
+import { Box, Card, Typography, Chip } from '@mui/material'
 import StarIcon from '@mui/icons-material/Star';
-import MyButton from './Button';
+import MyButton from './Button'; // Your custom button!
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../Redux/filters/CartSlice'; // Make sure the path is correct
 
-const ProductCard = ({ id,image, title, type, rating, reviews, strain, price, options }) => {
+const ProductCard = ({
+  id,
+  image,
+  title,
+  type,
+  rating,
+  reviews,
+  strain,
+  price,
+  options
+}) => {
+  const dispatch = useDispatch();
+
+  // Handler for Add to Cart
+  const handleAddToCart = (e) => {
+    if (e) e.stopPropagation(); // Prevent navigation when clicking the button
+    dispatch(addToCart({
+      id, image, title, type, rating, reviews, strain, price, options
+    }));
+  };
+
   return (
     <Card
-    component={Link}
-    to={`/product/${id}`}
       sx={{
-         textDecoration:"none",
+        textDecoration: "none",
         borderRadius: 3,
         boxShadow: 2,
         p: 2,
@@ -28,7 +48,18 @@ const ProductCard = ({ id,image, title, type, rating, reviews, strain, price, op
         },
       }}
     >
-      <Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
+      {/* Only this area is a link */}
+      <Box
+        component={Link}
+        to={`/product/${id}`}
+        sx={{
+          flexGrow: 1,
+          display: "flex",
+          flexDirection: "column",
+          textDecoration: "none",
+          color: "inherit"
+        }}
+      >
         <Box
           sx={{
             bgcolor: "#fafbfc",
@@ -96,6 +127,7 @@ const ProductCard = ({ id,image, title, type, rating, reviews, strain, price, op
           ))}
         </Box>
       </Box>
+      {/* Button is outside the link */}
       <Box
         sx={{
           mt: "auto",
@@ -105,7 +137,7 @@ const ProductCard = ({ id,image, title, type, rating, reviews, strain, price, op
           }
         }}
       >
-        <MyButton name="Add to cart" />
+        <MyButton name="Add to cart" onClick={handleAddToCart} />
       </Box>
     </Card>
   );

@@ -1,55 +1,141 @@
-import { Box, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
+import { Box, Typography, Drawer, IconButton } from '@mui/material';
+import TuneIcon from '@mui/icons-material/Tune';
 import { useDispatch, useSelector } from 'react-redux';
 import { Filterbarlist } from './Filterbarlist';
-import { setCategory } from '../../../Redux/filters/filterSlice';
-import { useNavigate } from 'react-router-dom';
+import { setCategory, setStrain } from '../../../Redux/filters/filterSlice';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Dropdown from '../../Common/Dropdown';
+import { useTheme, useMediaQuery } from '@mui/material';
 
-const Filterbar = () => {
+const Filterbar = ({ showMobileIcon = false }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
   const selectedCategory = useSelector((state) => state.filters.category);
 
-  const handleCategoryClick = (category) => {
-    dispatch(setCategory(category));
-    navigate('/products'); // navigate after dispatching
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleCategoryClick = (item) => {
+    if (item.label === 'Home') {
+      dispatch(setCategory('all'));
+      navigate('/');
+    } else if (item.label === 'Shop All') {
+      dispatch(setCategory('all'));
+      navigate('/products');
+    } else {
+      dispatch(setCategory(item.value));
+      navigate('/products');
+    }
+    setDrawerOpen(false); // Close drawer if open
   };
 
-  return (
+  const handleSubCategorySelect = (subItem) => {
+    dispatch(setStrain(subItem));
+    navigate('/products');
+    setDrawerOpen(false); // Close drawer if open
+  };
+
+  const currentCategory =
+    location.pathname === '/' ? '/' : selectedCategory;
+
+  // The filter bar content (used in both drawer and desktop)
+  const filterBarContent = (
     <Box
       sx={{
-        display: { xs: 'none', md: 'flex' },
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
         gap: 3,
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '56px',
-        px: 8,
+        justifyContent: { xs: 'flex-start', md: 'center' },
+        alignItems: { xs: 'flex-start', md: 'center' },
+        height: { md: '56px' },
+        px: { xs: 2, md: 8 },
+        py: { xs: 2, md: 0 },
         bgcolor: '#fff',
-        borderBottom: '1px solid #F4F4F4',
+        borderBottom: { md: '1px solid #F4F4F4' },
+        minWidth: { xs: 220, md: 'auto' },
       }}
     >
       {Filterbarlist.categories.map((item) => (
         <Box
           key={item.value}
-          onClick={() => handleCategoryClick(item.value)}
           sx={{
             cursor: 'pointer',
-            borderBottom: selectedCategory === item.value ? '2px solid green' : 'none',
-            paddingBottom: '4px',
+            display: 'flex',
+            alignItems: 'center',
+            pb: 0.5,
+            borderBottom:
+              currentCategory === item.value && !isMobile
+                ? '2px solid green'
+                : 'none',
+            width: { xs: '100%', md: 'auto' },
           }}
         >
-          <Typography
-            sx={{
-              color: selectedCategory === item.value ? 'green' : 'black',
-              fontWeight: selectedCategory === item.value ? 'bold' : 'normal',
-            }}
-          >
-            {item.label}
-          </Typography>
+          {item.subItems ? (
+            <Dropdown
+              label={item.label}
+              options={item.subItems}
+              onChange={handleSubCategorySelect}
+              fullWidth={isMobile}
+            />
+          ) : (
+            <Typography
+              onClick={() => handleCategoryClick(item)}
+              sx={{
+                color:
+                  currentCategory === item.value ? 'green' : 'black',
+                fontWeight:
+                  currentCategory === item.value ? 'bold' : 'normal',
+                width: { xs: '100%', md: 'auto' },
+                py: { xs: 1, md: 0 },
+              }}
+            >
+              {item.label}
+            </Typography>
+          )}
         </Box>
       ))}
     </Box>
   );
+
+  // On mobile, show nothing unless showMobileIcon is true
+  if (isMobile && !showMobileIcon) return null;
+
+  // On mobile, show only the filter icon (trigger drawer)
+  if (isMobile && showMobileIcon) {
+    return (
+      <>
+        <IconButton
+          onClick={() => setDrawerOpen(true)}
+          color="inherit"
+          sx={{ ml: 1 }}
+          aria-label="open filter bar"
+        >
+          <TuneIcon />
+        </IconButton>
+        <Drawer
+          anchor="left"
+          open={drawerOpen}
+          onClose={() => setDrawerOpen(false)}
+          PaperProps={{
+            sx: {
+              borderTopLeftRadius: 12,
+              borderTopRightRadius: 12,
+              minHeight: 200,
+              bgcolor: '#fff',
+            },
+          }}
+        >
+          <Box sx={{ p: 2 }}>{filterBarContent}</Box>
+        </Drawer>
+      </>
+    );
+  }
+
+  // On desktop, show the filter bar as usual
+  return filterBarContent;
 };
 
 export default Filterbar;

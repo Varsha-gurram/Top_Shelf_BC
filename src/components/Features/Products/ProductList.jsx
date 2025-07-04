@@ -1,7 +1,7 @@
 export const productList = [
   {
-    id:1,
-    image: require('../../../Assets/product1.png'), 
+    id: 1,
+    image: require('../../../Assets/product1.png'),
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
     rating: 4.6,
@@ -9,11 +9,13 @@ export const productList = [
     strain: "Sativa 100%",
     price: 80.00,
     options: ["28gg", "1/2lb", "1/4lb"],
-    category: "Best Sellers", 
-    Rc:"Recently Added" 
+    category: "Best Sellers",
+    Rc: "Recently Added",
+    createdAt: "2024-06-01T12:00:00Z",
+    popularity: 90
   },
   {
-    id:2,
+    id: 2,
     image: require('../../../Assets/product2.png'),
     title: "2 Oz Deal Ahi Tuna + Master Tuna",
     type: "Flowers",
@@ -23,10 +25,12 @@ export const productList = [
     price: 120,
     options: ["28g", "1/2lb", "1/4lb"],
     category: "Bundles & Promotions",
-    Rc:"Recently Added" 
+    Rc: "Recently Added",
+    createdAt: "2024-06-03T12:00:00Z",
+    popularity: 80
   },
   {
-    id:3,
+    id: 3,
     image: require('../../../Assets/product3.png'),
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     type: "Concentrates",
@@ -36,12 +40,13 @@ export const productList = [
     price: 102,
     options: ["28g", "1/2lb", "1/4lb"],
     category: "On Sale",
-    Rc:"Recently Added" 
+    Rc: "Recently Added",
+    createdAt: "2024-06-04T12:00:00Z",
+    popularity: 70
   },
-
   {
-    id:4,
-    image: require('../../../Assets/product1.png'), 
+    id: 4,
+    image: require('../../../Assets/product1.png'),
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
     rating: 4.6,
@@ -50,10 +55,12 @@ export const productList = [
     price: 80.00,
     options: ["28gg", "1/2lb", "1/4lb"],
     category: "Best Sellers",
-    Rc:"Recently Added" 
+    Rc: "Recently Added",
+    createdAt: "2024-06-05T12:00:00Z",
+    popularity: 95
   },
   {
-    id:5,
+    id: 5,
     image: require('../../../Assets/product3.png'),
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     type: "Concentrates",
@@ -62,11 +69,14 @@ export const productList = [
     strain: "Indica 70%",
     price: 102,
     options: ["28g", "1/2lb", "1/4lb"],
-    category: "Best Sellers"
+    category: "Best Sellers",
+    Rc: "Recently Added",
+    createdAt: "2024-06-06T12:00:00Z",
+    popularity: 85
   },
   {
-    id:6,
-    image: require('../../../Assets/product1.png'), 
+    id: 6,
+    image: require('../../../Assets/product1.png'),
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
     rating: 4.6,
@@ -75,11 +85,13 @@ export const productList = [
     price: 80.00,
     options: ["28gg", "1/2lb", "1/4lb"],
     category: "Bundles & Promotions",
-    Rc:"Recently Added" 
+    Rc: "Recently Added",
+    createdAt: "2024-06-07T12:00:00Z",
+    popularity: 88
   },
   {
-    id:7,
-    image: require('../../../Assets/product1.png'), 
+    id: 7,
+    image: require('../../../Assets/product1.png'),
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
     rating: 4.6,
@@ -87,10 +99,13 @@ export const productList = [
     strain: "Sativa 100%",
     price: 80.00,
     options: ["28gg", "1/2lb", "1/4lb"],
-    category: "Bundles & Promotions"  
+    category: "Bundles & Promotions",
+    Rc: "Recently Added",
+    createdAt: "2024-06-08T12:00:00Z",
+    popularity: 78
   },
   {
-    id:8,
+    id: 8,
     image: require('../../../Assets/product2.png'),
     title: "2 Oz Deal Ahi Tuna + Master Tuna",
     type: "Flowers",
@@ -99,10 +114,13 @@ export const productList = [
     strain: "Indica 70%",
     price: 120,
     options: ["28g", "1/2lb", "1/4lb"],
-    category: "Bundles & Promotions", 
+    category: "Bundles & Promotions",
+    Rc: "Recently Added",
+    createdAt: "2024-06-09T12:00:00Z",
+    popularity: 82
   },
   {
-    id:9,
+    id: 9,
     image: require('../../../Assets/product3.png'),
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     type: "Concentrates",
@@ -111,36 +129,14 @@ export const productList = [
     strain: "Indica 70%",
     price: 102,
     options: ["28g", "1/2lb", "1/4lb"],
-    category: "On Sale"
-  },
-
-  {
-    id:10,
-    image: require('../../../Assets/product1.png'), 
-    title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
-    type: "Flowers",
-    rating: 4.6,
-    reviews: 135,
-    strain: "Sativa 100%",
-    price: 80.00,
-    options: ["28gg", "1/2lb", "1/4lb"],
-    category: "Best Sellers"
+    category: "On Sale",
+    Rc: "Recently Added",
+    createdAt: "2024-06-10T12:00:00Z",
+    popularity: 75
   },
   {
-    id:11,
-    image: require('../../../Assets/product3.png'),
-    title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
-    type: "Concentrates",
-    rating: 4.6,
-    reviews: 135,
-    strain: "Indica 70%",
-    price: 102,
-    options: ["28g", "1/2lb", "1/4lb"],
-    category: "On Sale"
-  },
-  {
-    id:12,
-    image: require('../../../Assets/product1.png'), 
+    id: 10,
+    image: require('../../../Assets/product1.png'),
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
     rating: 4.6,
@@ -149,5 +145,38 @@ export const productList = [
     price: 80.00,
     options: ["28gg", "1/2lb", "1/4lb"],
     category: "Best Sellers",
+    Rc: "Recently Added",
+    createdAt: "2024-06-11T12:00:00Z",
+    popularity: 92
   },
+  {
+    id: 11,
+    image: require('../../../Assets/product3.png'),
+    title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
+    type: "Concentrates",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Indica 70%",
+    price: 102,
+    options: ["28g", "1/2lb", "1/4lb"],
+    category: "On Sale",
+    Rc: "Recently Added",
+    createdAt: "2024-06-12T12:00:00Z",
+    popularity: 73
+  },
+  {
+    id: 12,
+    image: require('../../../Assets/product1.png'),
+    title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    type: "Flowers",
+    rating: 4.6,
+    reviews: 135,
+    strain: "Sativa 100%",
+    price: 80.00,
+    options: ["28gg", "1/2lb", "1/4lb"],
+    category: "Best Sellers",
+    Rc: "Recently Added",
+    createdAt: "2024-06-13T12:00:00Z",
+    popularity: 89
+  }
 ];
