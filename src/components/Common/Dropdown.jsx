@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Menu, MenuItem, Typography } from '@mui/material';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; // Import the icon
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
-const PlainTextDropdown = ({ label, options = [], onChange }) => {
+const Dropdown = ({ label, options = [], onChange }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [selected, setSelected] = useState('');
 
@@ -15,6 +15,10 @@ const PlainTextDropdown = ({ label, options = [], onChange }) => {
     if (onChange) onChange(option);
   };
 
+  useEffect(() => {
+    setSelected('');
+  }, [label]);
+
   return (
     <Box>
       <Box
@@ -24,7 +28,7 @@ const PlainTextDropdown = ({ label, options = [], onChange }) => {
           display: 'inline-flex',
           alignItems: 'center',
           fontWeight: 500,
-          userSelect: 'none'
+          userSelect: 'none',
         }}
         onClick={handleOpen}
       >
@@ -51,4 +55,4 @@ const PlainTextDropdown = ({ label, options = [], onChange }) => {
   );
 };
 
-export default PlainTextDropdown;
+export default Dropdown;
