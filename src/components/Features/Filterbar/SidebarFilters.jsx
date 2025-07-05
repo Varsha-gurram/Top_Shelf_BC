@@ -24,7 +24,7 @@ import {
   resetFilters
 } from '../../../Redux/filters/filterSlice';
 import { Filterbarlist } from '../../Features/Filterbar/Filterbarlist';
-import OrderBySection from '../../../pages/OrderBySection'; // Capital O!
+import OrderBySection from '../../../pages/OrderBySection';
 
 const strains = [
   "Indica 70%",
@@ -123,7 +123,6 @@ const SidebarFilters = () => {
         max={1000}
         sx={{ mb: 2, color: "#17AF26", height: "2px" }}
       />
-      {/* Order By Section */}
       <OrderBySection
         selectedSort={sort}
         setSelectedSort={handleSortChange}

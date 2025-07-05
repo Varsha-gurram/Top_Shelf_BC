@@ -1,11 +1,10 @@
 import React from 'react'
 import { Box, Card, Typography, Chip } from '@mui/material'
 import StarIcon from '@mui/icons-material/Star';
-import MyButton from './Button'; // Your custom button!
+import MyButton from './Button';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../Redux/filters/CartSlice'; // Make sure the path is correct
-
+import { addToCart } from '../../Redux/filters/CartSlice';
 const ProductCard = ({
   id,
   image,
@@ -18,12 +17,10 @@ const ProductCard = ({
   options
 }) => {
   const dispatch = useDispatch();
-
-  // Handler for Add to Cart
   const handleAddToCart = (e) => {
-    if (e) e.stopPropagation(); // Prevent navigation when clicking the button
+    if (e) e.stopPropagation();
     dispatch(addToCart({
-      id, image, title, type, rating, reviews, strain, price, options
+      id, image, title, type, rating, reviews, strain, price, options,quantity:1
     }));
   };
 
@@ -48,7 +45,6 @@ const ProductCard = ({
         },
       }}
     >
-      {/* Only this area is a link */}
       <Box
         component={Link}
         to={`/product/${id}`}
@@ -127,7 +123,6 @@ const ProductCard = ({
           ))}
         </Box>
       </Box>
-      {/* Button is outside the link */}
       <Box
         sx={{
           mt: "auto",

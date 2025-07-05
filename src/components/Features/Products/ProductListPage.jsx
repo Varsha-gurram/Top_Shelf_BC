@@ -4,10 +4,7 @@ import ProductGrid from './ProductGrid';
 import { productList } from './ProductList';
 
 const ProductListPage = () => {
-  // Get all filter and sort values from Redux
   const { category, strain, priceRange, rating, sort } = useSelector((state) => state.filters);
-
-  // 1. FILTER PRODUCTS
   const filteredProducts = productList.filter((product) => {
     const categoryMatch =
       !category || category === "all"
@@ -23,8 +20,6 @@ const ProductListPage = () => {
       rating ? product.rating >= rating : true;
     return categoryMatch && strainMatch && priceMatch && ratingMatch;
   });
-
-  // 2. SORT PRODUCTS
   let sortedProducts = [...filteredProducts];
   if (sort === "price_low_high") {
     sortedProducts.sort((a, b) => a.price - b.price);
