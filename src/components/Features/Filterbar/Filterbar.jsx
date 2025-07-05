@@ -29,19 +29,17 @@ const Filterbar = ({ showMobileIcon = false }) => {
       dispatch(setCategory(item.value));
       navigate('/products');
     }
-    setDrawerOpen(false); // Close drawer if open
+    setDrawerOpen(false);
   };
 
   const handleSubCategorySelect = (subItem) => {
     dispatch(setStrain(subItem));
     navigate('/products');
-    setDrawerOpen(false); // Close drawer if open
+    setDrawerOpen(false); 
   };
 
   const currentCategory =
     location.pathname === '/' ? '/' : selectedCategory;
-
-  // The filter bar content (used in both drawer and desktop)
   const filterBarContent = (
     <Box
       sx={{
@@ -99,11 +97,7 @@ const Filterbar = ({ showMobileIcon = false }) => {
       ))}
     </Box>
   );
-
-  // On mobile, show nothing unless showMobileIcon is true
   if (isMobile && !showMobileIcon) return null;
-
-  // On mobile, show only the filter icon (trigger drawer)
   if (isMobile && showMobileIcon) {
     return (
       <>
@@ -133,8 +127,6 @@ const Filterbar = ({ showMobileIcon = false }) => {
       </>
     );
   }
-
-  // On desktop, show the filter bar as usual
   return filterBarContent;
 };
 

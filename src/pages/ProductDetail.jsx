@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { productList } from "../components/Features/Products/ProductList";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/filters/CartSlice"; // Adjust path as needed
+import { addToCart } from "../Redux/filters/CartSlice";
 import { Box, Button, Typography, Chip } from "@mui/material";
 import StarIcon from '@mui/icons-material/Star';
 
@@ -15,7 +15,7 @@ const ProductDetail = () => {
 
   const handleAddToCart = () => {
     dispatch(addToCart(product));
-    alert("Added to cart!"); // Replace with Snackbar for a better UX
+    alert("Added to cart!");
   };
 
   return (
