@@ -23,5 +23,9 @@ export const images = {
   Product2: require("./product2.png"),
   Product3: require("./product3.png"),
   Product4: require("./product4.png"),
-  Bsc:require("./bestsellers.png")
+  Bsc:require("./bestsellers.png"),
+  Cf:require("./colorfilter.png"),
+  Relieve:require("./relieve.png"),
+  Aromas:require("./aromas.png"),
+  Tcircle:require("./tick-circle.png")
 };

@@ -20,7 +20,7 @@ const ProductCard = ({
   const handleAddToCart = (e) => {
     if (e) e.stopPropagation();
     dispatch(addToCart({
-      id, image, title, type, rating, reviews, strain, price, options
+      id, image, title, type, rating, reviews, strain, price, options,quantity:1
     }));
   };
 

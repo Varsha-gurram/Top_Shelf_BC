@@ -1,92 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { productList } from "../components/Features/Products/ProductList";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/filters/CartSlice";
-import { Box, Button, Typography, Chip } from "@mui/material";
-import StarIcon from '@mui/icons-material/Star';
-
+import { Box } from "@mui/material";
+import ProductCardWithModal from "../components/Common/ProductGallery";
+import ProductInfo from "../components/Features/Products/ProductInfo";
+import Footer from "../components/Features/Footer/Footer"
 const ProductDetail = () => {
+  const [quantity,setQuantity]=useState(1)
   const { id } = useParams();
-  const product = productList.find((p) => String(p.id) === String(id));
   const dispatch = useDispatch();
+  const product = productList.find((p) => String(p.id) === String(id));
+  const weightOptions = product?.weightOptions?.length
+    ? product.weightOptions
+    : product?.options
+      ? product.options.map(opt => ({ label: opt, price: product.price }))
+      : [{ label: "Default", price: product?.price }];
 
-  if (!product) return <Box sx={{ p: 4 }}>Product not found.</Box>;
-
+  const integraOptions = product?.integraOptions?.length
+    ? product.integraOptions
+    : [];
+  const [selectedWeight, setSelectedWeight] = useState(weightOptions[0]?.label || "");
+  const [selectedIntegra, setSelectedIntegra] = useState(integraOptions[0]?.label || "");
+  useEffect(() => {
+    setSelectedWeight(weightOptions[0]?.label || "");
+    setSelectedIntegra(integraOptions[0]?.label || "");
+  }, [product?.id]);
+  if (!product) {
+    return <Box sx={{ p: 4 }}>Product not found.</Box>;
+  }
+  const currentOption =
+    weightOptions.find(opt => opt.label === selectedWeight) || { price: product.price };
   const handleAddToCart = () => {
-    dispatch(addToCart(product));
-    alert("Added to cart!");
-  };
+  dispatch(addToCart({
+    ...product,
+    selectedWeight,
+    selectedIntegra,
+    price: currentOption.price,
+    quantity,
+  }));
+  alert("Added to cart!");
+};
+
 
   return (
-    <Box
+    <Box>
+      <Box
       sx={{
-        maxWidth: 600,
         mx: "auto",
-        my: 4,
-        p: 3,
+        mt: 4,
+        mb:40,
+        p: { xs: 3, md: 10 },
         bgcolor: "#fff",
-        borderRadius: 2,
-        boxShadow: 2,
+        borderRadius: 3,
       }}
     >
-      <Typography variant="h4" fontWeight={700} mb={2}>
-        {product.title}
-      </Typography>
-      <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, gap: 3, alignItems: "flex-start" }}>
-        <img
-          src={product.image}
-          alt={product.title}
-          style={{ width: "100%", maxWidth: 300, borderRadius: 8, marginBottom: 16 }}
-        />
+      <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 15, alignItems: "flex-start" }}>
         <Box sx={{ flex: 1 }}>
-          <Typography variant="subtitle1" color="text.secondary" mb={1}>
-            <strong>Type:</strong> {product.type}
-          </Typography>
-          <Typography variant="subtitle1" mb={1}>
-            <strong>Strain:</strong> {product.strain}
-          </Typography>
-          <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-            <StarIcon sx={{ color: "#FFD700", fontSize: 22, mr: 0.5 }} />
-            <Typography variant="subtitle1" fontWeight={600}>
-              {product.rating}
-            </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ ml: 1 }}>
-              ({product.reviews} reviews)
-            </Typography>
-          </Box>
-          <Typography variant="h6" color="error" fontWeight={700} mb={1}>
-            ${product.price}
-          </Typography>
-          <Box sx={{ mb: 2 }}>
-            <strong>Options:</strong>
-            {product.options.map((opt) => (
-              <Chip
-                key={opt}
-                label={opt}
-                size="small"
-                sx={{ mx: 0.5, my: 0.5, bgcolor: "#e7f6ea", color: "#115c3a", fontWeight: 500 }}
-              />
-            ))}
-          </Box>
-          <Typography variant="body1" mb={1}>
-            <strong>Category:</strong> {product.category}
-          </Typography>
-          {product.Rc && (
-            <Typography sx={{ color: "#d23a3a", fontWeight: "bold", mt: 1 }}>
-              {product.Rc}
-            </Typography>
-          )}
-          <Button
-            variant="contained"
-            color="success"
-            sx={{ mt: 3, px: 4, fontWeight: 600, borderRadius: 2 }}
-            onClick={handleAddToCart}
-          >
-            Add to Cart
-          </Button>
+          <ProductCardWithModal product={product} />
+        </Box>
+        <Box sx={{ flex: 2 }}>
+          <ProductInfo
+            product={product}
+            weightOptions={weightOptions}
+            selectedWeight={selectedWeight}
+            setSelectedWeight={setSelectedWeight}
+            integraOptions={integraOptions}
+            selectedIntegra={selectedIntegra}
+            setSelectedIntegra={setSelectedIntegra}
+            currentOption={currentOption}
+            handleAddToCart={handleAddToCart}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
         </Box>
       </Box>
+      
+    </Box>
+    <Footer/>
     </Box>
   );
 };
