@@ -8,7 +8,6 @@ import {
   IconButton,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-
 const ProductCardWithModal = ({ product }) => {
   const images = product?.images && product.images.length > 0 ? product.images : [product?.image];
   const [open, setOpen] = useState(false);
@@ -17,9 +16,7 @@ const ProductCardWithModal = ({ product }) => {
     setSelectedIndex(idx);
     setOpen(true);
   };
-
   const handleClose = () => setOpen(false);
-
   return (
     <>
       <Card sx={{ p: 2 }}>
