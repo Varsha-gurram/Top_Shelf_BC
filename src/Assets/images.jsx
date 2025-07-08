@@ -28,5 +28,8 @@ export const images = {
   Relieve:require("./relieve.png"),
   Aromas:require("./aromas.png"),
   Tcircle:require("./tick-circle.png"),
-  Cart:require('./Cart.png')
+  Cart:require('./Cart.png'),
+  ch1:require('./Iconch1.png'),
+  ch2:require('./Iconch2.png'),
+  ch3:require('./Iconch3.png'),
 };

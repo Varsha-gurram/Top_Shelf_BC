@@ -16,7 +16,7 @@ const CartPage = () => {
     navigate('/products');
   };
   const handleCheckout = () => {
-    navigate('/Checkout');
+    navigate('/CheckoutPage');
   };
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,

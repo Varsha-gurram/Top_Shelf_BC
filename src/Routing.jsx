@@ -8,6 +8,7 @@ import ProductDetail from "./pages/ProductDetail";
 import ProductPage from "./pages/CategoryPage";
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<LandingPage />}>
@@ -16,6 +17,7 @@ const AppRoutes = () => (
       <Route path="product/:id" element={<ProductDetail />} />
       <Route path="products" element={<ProductPage />} />
       <Route path="/cart" element={<CartPage />} />
+      <Route path="/CheckoutPage" element={<CheckoutPage />} />
       {/* <Route path="dashboard" element={<Dashboard />} /> */}
       {/* <Route path="profile" element={<Profile />} /> */}
     </Route>

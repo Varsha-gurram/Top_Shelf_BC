@@ -8,7 +8,7 @@ import ProductCardWithModal from "../components/Common/ProductGallery";
 import ProductInfo from "../components/Features/Products/ProductInfo";
 import Footer from "../components/Features/Footer/Footer";
 import ProductPageTabs from "./ProductPageTabs";
-import ProductCard from "../components/Common/ProductCard"; // Import your ProductCard
+import ProductCard from "../components/Common/ProductCard";
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
