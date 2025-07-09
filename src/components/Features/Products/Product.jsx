@@ -22,7 +22,7 @@ const ProductTabs = () => {
      <Typography
   align="center"
   sx={{
-    color: "black",
+    color: "black !important",
     fontWeight: 600,
     fontSize: { xs: "clamp(32px, 5vw, 48px)", md: "64px" },
     lineHeight: 1.1,
@@ -47,7 +47,7 @@ const ProductTabs = () => {
           '& .MuiTab-root': {
             borderRadius: '30px',
             minWidth: {md:400,sm:100},
-            color: '#05422C',
+            color: '#05422C !important',
             fontWeight: 500,
             textTransform: 'none',
             fontSize: {md:18,xs:12},
