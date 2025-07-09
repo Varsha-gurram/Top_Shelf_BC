@@ -23,7 +23,7 @@ const CheckoutSummary = () => {
   const total = subtotal - discount + shipping;
   const value = (total / 1000) * 100;
   const handleCheckout = () => {
-    alert("Proceeding to payment...");
+    navigate("/checkout");
   };
   const handleClick = () => {
     navigate("/products");

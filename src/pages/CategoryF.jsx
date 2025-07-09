@@ -33,14 +33,15 @@ const CategoryF = () => {
           lineHeight: 1.1,
           letterSpacing: { xs: "-1px", sm: "-2px", md: "-4px" },
           fontFamily: "Lexend, sans-serif",
-          textAlign: "center",
-          width: "60%",
+          textAlign: "left",
+          //width: "60%",
           mx: "auto",
+          ml:{md:15},
           display: "block",
           my: 8
         }}
       >
-        Choose Your Weed
+        CHOOSE YOUR WEED
       </Typography>
 
       <Tabs
