@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Card, Typography, Chip } from '@mui/material'
 import StarIcon from '@mui/icons-material/Star';
 import MyButton from './Button';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../Redux/filters/CartSlice';
 const ProductCard = ({
@@ -17,11 +17,13 @@ const ProductCard = ({
   options
 }) => {
   const dispatch = useDispatch();
+  const Navigate=useNavigate();
   const handleAddToCart = (e) => {
     if (e) e.stopPropagation();
-    dispatch(addToCart({
-      id, image, title, type, rating, reviews, strain, price, options,quantity:1
-    }));
+    Navigate(`/product/${id}`)
+    // dispatch(addToCart({
+    //   id, image, title, type, rating, reviews, strain, price, options,quantity:1
+    // }));
   };
 
   return (
