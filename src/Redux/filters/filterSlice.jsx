@@ -2,10 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   category: "all",
-  starin:null,
+  strain: null,
   priceRange: [0, 1000],
   rating: null,
-  Sort:"default",
+  sort: "default",
+  searchTerm: "", 
 };
 
 const filterSlice = createSlice({
@@ -14,11 +15,11 @@ const filterSlice = createSlice({
   reducers: {
     setCategory: (state, action) => {
       state.category = action.payload;
-      state.strain=null;
+      state.strain = null;
     },
-    setStrain(state,action){
-      state.strain=action.payload;
-      state.category=null;
+    setStrain: (state, action) => {
+      state.strain = action.payload;
+      state.category = null;
     },
     setPriceRange: (state, action) => {
       state.priceRange = action.payload;
@@ -26,12 +27,24 @@ const filterSlice = createSlice({
     setRating: (state, action) => {
       state.rating = action.payload;
     },
-    setSort:(state,action)=>{
-      state.sort=action.payload;
+    setSort: (state, action) => {
+      state.sort = action.payload;
+    },
+    setSearchTerm: (state, action) => { 
+      state.searchTerm = action.payload;
     },
     resetFilters: () => initialState,
   },
 });
 
-export const { setCategory, setPriceRange, setRating, resetFilters,setStrain,setSort } = filterSlice.actions;
+export const {
+  setCategory,
+  setStrain,
+  setPriceRange,
+  setRating,
+  setSort,
+  setSearchTerm, 
+  resetFilters,
+} = filterSlice.actions;
+
 export default filterSlice.reducer;

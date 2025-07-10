@@ -1,24 +1,48 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { productList } from './ProductList'; 
 import ProductGrid from './ProductGrid';
-import { productList } from './ProductList';
 
 const ProductListPage = () => {
-  const { category, strain, priceRange, rating, sort } = useSelector((state) => state.filters);
-  const filteredProducts = productList.filter((product) => {
-    const categoryMatch =
-      !category || category === "all"
-        ? true
-        : product.type.toLowerCase() === category.toLowerCase();
-    const strainMatch =
-      strain
-        ? product.strain.toLowerCase().includes(strain.toLowerCase())
-        : true;
-    const priceMatch =
-      product.price >= priceRange[0] && product.price <= priceRange[1];
-    const ratingMatch =
-      rating ? product.rating >= rating : true;
-    return categoryMatch && strainMatch && priceMatch && ratingMatch;
+  const { searchTerm, category, strain, priceRange, rating, sort } = useSelector(state => state.filters);
+  const matchesSearch = (field, term) => {
+    if (!field) return false;
+    if (Array.isArray(field)) {
+      return field.some(val => val && val.toLowerCase().includes(term));
+    }
+    return field.toLowerCase().includes(term);
+  };
+  const filteredProducts = productList.filter(product => {
+    const normSearch = searchTerm ? searchTerm.toLowerCase() : "";
+    const searchMatch = !normSearch
+      ? true
+      : (
+          matchesSearch(product.title, normSearch) ||
+          matchesSearch(product.type, normSearch) ||
+          matchesSearch(product.strain, normSearch) ||
+          matchesSearch(product.category, normSearch) ||
+          matchesSearch(product.description, normSearch) ||
+          matchesSearch(product.DescriptionD, normSearch) ||
+          matchesSearch(product.effects, normSearch) ||
+          matchesSearch(product.aromas, normSearch) ||
+          matchesSearch(product.medicalUses, normSearch)
+        );
+
+    const categoryMatch = !category || category === "all"
+      ? true
+      : product.type && product.type.toLowerCase() === category.toLowerCase();
+
+    const strainMatch = !strain
+      ? true
+      : product.strain && product.strain.toLowerCase().includes(strain.toLowerCase());
+
+    const priceMatch = priceRange && priceRange.length === 2
+      ? product.price >= priceRange[0] && product.price <= priceRange[1]
+      : true;
+
+    const ratingMatch = rating ? product.rating >= rating : true;
+
+    return searchMatch && categoryMatch && strainMatch && priceMatch && ratingMatch;
   });
   let sortedProducts = [...filteredProducts];
   if (sort === "price_low_high") {
@@ -38,7 +62,18 @@ const ProductListPage = () => {
   } else if (sort === "random") {
     sortedProducts.sort(() => Math.random() - 0.5);
   }
-  return <ProductGrid products={sortedProducts||filteredProducts} />;
+
+  return (
+    <>
+      {sortedProducts.length === 0 ? (
+        <div style={{ textAlign: 'center', margin: '2rem 0', color: '#888' }}>
+          No products found.
+        </div>
+      ) : (
+        <ProductGrid products={sortedProducts} />
+      )}
+    </>
+  );
 };
 
 export default ProductListPage;

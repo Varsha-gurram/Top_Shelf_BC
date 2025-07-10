@@ -5,6 +5,7 @@ import MyButton from "../../Common/Button";
 import { useCheckoutValues } from "./useCheckoutValues";
 import CheckOutForm from "./CheckOutform";
 import { images } from "../../../Assets/images";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutDetails = () => {
   const { subtotal, discount, shipping, total } = useCheckoutValues();
@@ -15,6 +16,7 @@ const CheckoutDetails = () => {
   const [usePoints, setUsePoints] = useState(false);
   const points = 10.85;
   const formRef = useRef();
+  const Navigate=useNavigate();
 
   const handlePlaceOrder = () => {
     if (!(addressConfirmed && usePoints)) return;
@@ -22,6 +24,7 @@ const CheckoutDetails = () => {
       const valid = formRef.current.validateAndSubmit();
       if (valid) {
         alert("Proceeding to payment!");
+        Navigate('/payment');
       }
     }
   };
