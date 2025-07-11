@@ -9,11 +9,18 @@ import {
   Button,
   Rating,
   Drawer,
-  IconButton
+  IconButton,
+  Chip,
+  Stack,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  useTheme,
+  useMediaQuery
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { useTheme, useMediaQuery } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   setCategory,
@@ -51,91 +58,155 @@ const SidebarFilters = () => {
   const handleClearAll = () => dispatch(resetFilters());
 
   const appliedFilters = [];
-  if (category && category !== 'all') appliedFilters.push(category);
-  if (strain) appliedFilters.push(strain);
-  if (priceRange && (priceRange[0] > 0 || priceRange[1] < 1000)) appliedFilters.push(`$${priceRange[0]} - $${priceRange[1]}`);
-  if (rating) appliedFilters.push(`${rating}★ & up`);
+  if (category && category !== 'all') appliedFilters.push({ type: 'category', label: category });
+  if (strain) appliedFilters.push({ type: 'strain', label: strain });
+  if (priceRange && (priceRange[0] > 0 || priceRange[1] < 1000)) appliedFilters.push({ type: 'price', label: `$${priceRange[0]} - $${priceRange[1]}` });
+  if (rating) appliedFilters.push({ type: 'rating', label: `${rating}★ & below` });
+
+  // Remove individual filter chips
+  const handleRemoveFilter = (type, value) => {
+    if (type === 'category') dispatch(setCategory('all'));
+    if (type === 'strain') dispatch(setStrain(null));
+    if (type === 'price') dispatch(setPriceRange([0, 1000]));
+    if (type === 'rating') dispatch(setRating(null));
+  };
 
   const sidebarContent = (
-    <Box sx={{ width: { xs: 280, md: 240 }, p: 2, bgcolor: '#fafafa', minHeight: '100vh' }}>
-      {isMobile && (
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 1 }}>
-          <IconButton onClick={() => setDrawerOpen(false)}>
-            <CloseIcon />
-          </IconButton>
-        </Box>
-      )}
+    <Box
+      sx={{
+        width: { xs: 300, md: 260 },
+        p: 2,
+        bgcolor: '#fff',
+        minHeight: '100vh',
+        boxShadow: { md: 3 },
+        borderRight: { md: '1px solid #eee' },
+        position: { md: 'sticky' },
+        top: { md: 0 },
+        zIndex: 1100,
+        overflowY: 'auto'
+      }}
+    >
+      {/* Applied Filters */}
       {appliedFilters.length > 0 && (
         <Box sx={{ mb: 2 }}>
-          <Typography variant="subtitle2" sx={{ fontWeight: 'bold', mb: 1 }}>Applied Filters:</Typography>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1 }}>
+          <Typography variant="subtitle2" sx={{ fontWeight: 'bold', mb: 1 }}>Applied Filters</Typography>
+          <Stack direction="row" spacing={1} flexWrap="wrap" mb={1}>
             {appliedFilters.map((filter, idx) => (
-              <Box key={idx} sx={{ bgcolor: '#e0f7fa', px: 1, py: 0.5, borderRadius: 1, fontSize: 12 }}>
-                {filter}
-              </Box>
+              <Chip
+                key={idx}
+                label={filter.label}
+                onDelete={() => handleRemoveFilter(filter.type, filter.label)}
+                color="success"
+                size="small"
+                sx={{ bgcolor: "#e0f7fa", color: "#00695c" }}
+              />
             ))}
-          </Box>
-          <Button size="small" onClick={handleClearAll} color="secondary" variant="outlined">Clear All</Button>
+          </Stack>
+          <Button
+            size="small"
+            onClick={handleClearAll}
+            color="secondary"
+            variant="contained"
+            sx={{ fontWeight: 600, letterSpacing: 1, mt: 1 }}
+            fullWidth
+          >
+            Clear All
+          </Button>
         </Box>
       )}
-      <Typography variant="subtitle2" sx={{ mt: 2 }}>Category</Typography>
-      <FormGroup>
-        {Filterbarlist.categories.filter(c => c.value !== '/').map((c) => (
-          <FormControlLabel
-            key={c.value}
-            control={
-              <Checkbox
-                checked={category === c.value}
-                onChange={() => handleCategory(c.value)}
-                sx={{
-                  '&.Mui-checked': { color: "#17AF26" },
-                }}
+      <Accordion defaultExpanded>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography sx={{ fontWeight: 600, color: "#17AF26" }}>Category</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <FormGroup>
+            {Filterbarlist.categories.filter(c => c.value !== '/').map((c) => (
+              <FormControlLabel
+                key={c.value}
+                control={
+                  <Checkbox
+                    checked={category === c.value}
+                    onChange={() => handleCategory(c.value)}
+                    sx={{
+                      '&.Mui-checked': { color: "#17AF26" },
+                    }}
+                  />
+                }
+                label={c.label}
               />
-            }
-            label={c.label}
-          />
-        ))}
-      </FormGroup>
-      <Typography variant="subtitle2" sx={{ mt: 2 }}>Strain</Typography>
-      <FormGroup>
-        {strains.map((s) => (
-          <FormControlLabel
-            key={s}
-            control={
-              <Checkbox
-                checked={strain === s}
-                onChange={() => handleStrain(s)}
-                sx={{
-                  '&.Mui-checked': { color: "#17AF26" },
-                }}
+            ))}
+          </FormGroup>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion defaultExpanded>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />} defaultExpanded>
+          <Typography sx={{ fontWeight: 600, color: "#17AF26" }}>Strain</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <FormGroup>
+            {strains.map((s) => (
+              <FormControlLabel
+                key={s}
+                control={
+                  <Checkbox
+                    checked={strain === s}
+                    onChange={() => handleStrain(s)}
+                    sx={{
+                      '&.Mui-checked': { color: "#17AF26" },
+                    }}
+                  />
+                }
+                label={s}
               />
-            }
-            label={s}
+            ))}
+          </FormGroup>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion defaultExpanded>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography sx={{ fontWeight: 600, color: "#17AF26" }}>Price</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Slider
+            value={priceRange}
+            onChange={handlePrice}
+            valueLabelDisplay="auto"
+            min={0}
+            max={1000}
+            sx={{ mb: 1, color: "#17AF26", height: "2px" }}
           />
-        ))}
-      </FormGroup>
-      <Typography variant="subtitle2" sx={{ mt: 2 }}>Price</Typography>
-      <Slider
-        value={priceRange}
-        onChange={handlePrice}
-        valueLabelDisplay="auto"
-        min={0}
-        max={1000}
-        sx={{ mb: 2, color: "#17AF26", height: "2px" }}
-      />
-      <OrderBySection
-        selectedSort={sort}
-        setSelectedSort={handleSortChange}
-      />
-      <Typography variant="subtitle2" sx={{ mt: 2, mb: 1 }}>Rating</Typography>
-      <Rating
-        name="rating-filter"
-        value={rating || 0}
-        precision={1}
-        onChange={handleRatingChange}
-        size="large"
-        sx={{ mb: 2 }}
-      />
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion defaultExpanded>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography sx={{ fontWeight: 600, color: "#17AF26" }}>Sort By</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <OrderBySection
+            selectedSort={sort}
+            setSelectedSort={handleSortChange}
+          />
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion defaultExpanded>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography sx={{ fontWeight: 600, color: "#17AF26" }}>Rating</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Rating
+            name="rating-filter"
+            value={rating || 0}
+            precision={1}
+            onChange={handleRatingChange}
+            size="large"
+            sx={{ mb: 2 }}
+          />
+        </AccordionDetails>
+      </Accordion>
     </Box>
   );
 
@@ -165,7 +236,7 @@ const SidebarFilters = () => {
         ModalProps={{ keepMounted: true }}
         sx={{
           display: { xs: 'block', md: 'none' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 280 }
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 300 }
         }}
       >
         {sidebarContent}
@@ -174,7 +245,7 @@ const SidebarFilters = () => {
         sx={{
           display: { xs: 'none', md: 'block' },
           position: 'relative',
-          width: 240,
+          width: 260,
           flexShrink: 0
         }}
       >

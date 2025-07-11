@@ -46,13 +46,14 @@ const ProcessLayout = () => {
   else spacing = 10; 
 
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box sx={{ position: "relative" ,margin:"auto"}}>
       <Box
         sx={{
           position: "absolute",
           top: -120,
-          px: { xs: 1, sm: 3, md: 8 },
+          px: { xs: 3.5, sm: 3, md: 8 },
           zIndex: 2,
+          
         }}
       >
         <Refer />
@@ -123,7 +124,8 @@ const ProcessLayout = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 textAlign: "center",
-                mb: 1,
+                //mb: 1,
+                margin:"auto"
               }}
             >
               <Box

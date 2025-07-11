@@ -13,7 +13,7 @@ const RefeAFriend = () => {
     setName('');
   };
   return (
-    <Box sx={{borderRadius: 3,boxShadow: 2,p: { xs: 2, md: 4 },maxWidth: 600,mx: 'auto',bgcolor: '#fff',}}>
+    <Box sx={{borderRadius: 3,boxShadow: 2,p: { xs: 2, md: 4 },maxWidth: 600,mx:"auto",bgcolor: '#fff',}}>
       <Typography variant="h6" fontWeight={600} mb={1}>
         Referral Program
       </Typography>

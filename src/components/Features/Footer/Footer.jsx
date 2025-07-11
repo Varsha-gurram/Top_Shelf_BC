@@ -42,7 +42,7 @@ const footerLinkStyle = {
 
 const Footer = () => {
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box sx={{ position: "relative", }}>
       <Box sx={BoxStyle}>
         <Stack
           direction={{ xs: "column", md: "row" }}
