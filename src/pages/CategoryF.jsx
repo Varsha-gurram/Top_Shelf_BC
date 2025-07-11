@@ -33,10 +33,9 @@ const CategoryF = () => {
           lineHeight: 1.1,
           letterSpacing: { xs: "-1px", sm: "-2px", md: "-4px" },
           fontFamily: "Lexend, sans-serif",
-          textAlign: "left",
+          textAlign: {md:"left",xs:"center"},
           //width: "60%",
-          mx: "auto",
-          ml:{md:15},
+          margin:"auto",
           display: "block",
           my: 8
         }}
@@ -79,7 +78,7 @@ const CategoryF = () => {
 
       <Grid container spacing={3} sx={{px:{md:12,sm:2},mb:30}}>
   {filteredProducts.map((product, idx) => (
-    <Grid item xs={12} sm={6} md={4} lg={3} key={idx}>
+    <Grid item xs={12} sm={6} md={4} lg={3} key={idx} sx={{margin:"auto"}}>
       <ProductCard {...product} />
     </Grid>
   ))}

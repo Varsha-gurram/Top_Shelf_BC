@@ -40,7 +40,7 @@ const ProductListPage = () => {
       ? product.price >= priceRange[0] && product.price <= priceRange[1]
       : true;
 
-    const ratingMatch = rating ? product.rating >= rating : true;
+    const ratingMatch = rating ? product.rating <= rating : true;
 
     return searchMatch && categoryMatch && strainMatch && priceMatch && ratingMatch;
   });

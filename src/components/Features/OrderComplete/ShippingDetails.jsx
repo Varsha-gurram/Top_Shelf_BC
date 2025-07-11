@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { clearCart } from "../../../Redux/filters/CartSlice"; 
+import { clearCart } from "../../../Redux/filters/CartSlice";
 import {
   Box,
   Typography,
@@ -11,13 +11,16 @@ import {
   Stack,
   Avatar,
   Chip,
+  Button,
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PaymentIcon from "@mui/icons-material/Payment";
+import { useNavigate } from "react-router-dom";
 
 const ShippingDetails = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const items = useSelector((state) => state.cart.items);
   const shipping = 50;
   const points = 10.28;
@@ -39,11 +42,17 @@ const ShippingDetails = () => {
     0
   );
   const total = subtotal + shipping - points;
-  React.useEffect(() => {
-    if (items.length > 0) {
-      dispatch(clearCart());
-    }
-  }, []);
+
+  // Handler to clear the cart on confirm
+  const handleConfirm = () => {
+    dispatch(clearCart());
+  };
+
+  // Handler to clear the cart and go home
+  const handleShopMore = () => {
+    dispatch(clearCart());
+    navigate('/');
+  };
 
   return (
     <Box sx={{ width: "100vw", minHeight: "100vh", bgcolor: "#f9f9f9", py: { xs: 2, md: 4 } }}>
@@ -93,6 +102,7 @@ const ShippingDetails = () => {
                       flexWrap: "wrap",
                     }}
                   >
+                    {/* Left: Picture & Title */}
                     <Box
                       sx={{
                         flex: "1 1 40%",
@@ -138,6 +148,7 @@ const ShippingDetails = () => {
                         )}
                       </Box>
                     </Box>
+                    {/* Center: Quantity & Price */}
                     <Box
                       sx={{
                         flex: "1 1 25%",
@@ -162,6 +173,7 @@ const ShippingDetails = () => {
                         Price: ${item.price.toFixed(2)}
                       </Typography>
                     </Box>
+                    {/* Right: Total */}
                     <Box
                       sx={{
                         flex: "1 1 25%",
@@ -187,6 +199,7 @@ const ShippingDetails = () => {
             })
           )}
         </List>
+        {/* Summary and shipping/payment info below */}
         <Box mt={4} width="100%">
           <Stack spacing={1} maxWidth={600} margin="0 auto">
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -228,6 +241,34 @@ const ShippingDetails = () => {
             </Typography>
           </Stack>
         </Stack>
+        {/* Confirm Button */}
+        {items.length > 0 && (
+          <Box mt={4} display="flex" justifyContent="center">
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={handleConfirm}
+            >
+              Confirm & Clear Cart
+            </Button>
+          </Box>
+        )}
+
+        {/* Shop More Button & Message */}
+        <Box mt={4} display="flex" flexDirection="column" alignItems="center">
+          <Typography variant="body1" gutterBottom>
+            Want to shop more? Click the button below to go back to the home page.
+          </Typography>
+          <Button
+            variant="outlined"
+            color="secondary"
+            onClick={handleShopMore}
+            sx={{ mt: 1 }}
+          >
+            Back to Home & Shop More
+          </Button>
+        </Box>
       </Paper>
     </Box>
   );

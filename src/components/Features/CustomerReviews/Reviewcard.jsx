@@ -32,7 +32,7 @@ const ReviewCard = ({ profile, name, rating, comment, date }) => (
         num <= Math.floor(rating) ? (
           <Star key={num} sx={{ color: "#FFD700" }} />
         ) : num - rating < 1 && num - rating > 0 ? (
-          // For half stars, you could use a custom icon or just show a full star for simplicity
+
           <Star key={num} sx={{ color: "#FFD700", opacity: 0.5 }} />
         ) : (
           <StarBorder key={num} sx={{ color: "#FFD700" }} />

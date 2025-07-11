@@ -23,7 +23,7 @@ function Edu() {
             fontWeight: 600,
             fontSize: { md: "32px", xs: "24px" },
             color: "#1A1E26",
-            textAlign: "left",
+            textAlign: {md:"left",xs:"center"},
             pt: 10,
            
             lineHeight: "150%",
@@ -43,6 +43,7 @@ function Edu() {
                 display: "flex",
                 justifyContent: "center",
                 cursor: "pointer",
+                margin:"auto",
       "&:hover": {
         boxShadow: 6,
         transform: "translateY(-6px) scale(1.03)",
@@ -64,6 +65,7 @@ function Edu() {
                   "&:hover": {
                     boxShadow: 3,
                   },
+                  
                 }}
                 onClick={() => navigate(`/article/${article.id}`)}
               >
@@ -77,6 +79,7 @@ function Edu() {
                     borderRadius: "8px",
                     mb: 2,
                     objectFit: "cover",
+                    
                   }}
                 />
                 <Typography variant="body2" color="text.secondary" mb={1}>

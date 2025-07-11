@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Box, Typography } from "@mui/material";
+import React from "react";
+import { Box, Typography, Checkbox, FormGroup, FormControlLabel } from "@mui/material";
+
 const sortOptions = [
   { label: "Default", value: "default" },
   { label: "Review Count", value: "review_count" },
@@ -17,49 +18,24 @@ const OrderBySection = ({ selectedSort, setSelectedSort }) => (
     <Typography sx={{ fontWeight: 600, mb: 1, color: "#888", fontSize: 14 }}>
       ORDER BY
     </Typography>
-    {sortOptions.map((option) => (
-      <Box
-        key={option.value}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          mb: 1.2,
-          cursor: "pointer",
-          userSelect: "none",
-        }}
-        onClick={() => setSelectedSort(option.value)}
-      >
-        <Box
-          sx={{
-            width: 20,
-            height: 20,
-            borderRadius: "50%",
-            border: "2px solid #ccc",
-            mr: 1.5,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "#fff",
-            transition: "border 0.2s",
-          }}
-        >
-          {selectedSort === option.value && (
-            <Box
+    <FormGroup>
+      {sortOptions.map((option) => (
+        <FormControlLabel
+          key={option.value}
+          control={
+            <Checkbox
+              checked={selectedSort === option.value}
+              onChange={() => setSelectedSort(option.value)}
               sx={{
-                width: 12,
-                height: 12,
-                borderRadius: "50%",
-                background: "#16b224", 
-                transition: "background 0.2s",
+                '&.Mui-checked': { color: "#16b224" },
               }}
             />
-          )}
-        </Box>
-        <Typography sx={{ fontSize: 16, color: "#222" }}>
-          {option.label}
-        </Typography>
-      </Box>
-    ))}
+          }
+          label={<Typography sx={{ fontSize: 16, color: "#222" }}>{option.label}</Typography>}
+        />
+      ))}
+    </FormGroup>
   </Box>
 );
+
 export default OrderBySection;

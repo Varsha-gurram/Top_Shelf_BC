@@ -28,7 +28,7 @@ const Types = () => {
     <Box sx={{ px: { xs: 2, sm: 4, md: 17 }, py: 2, width: "auto", }}>
       <Grid container spacing={2}>
         {types.map((type, idx) => (
-          <Grid item xs={12} sm={12} md={4} key={idx}>
+          <Grid item xs={12} sm={12} md={4} key={idx} sx={{margin:"auto"}}>
             <Card
               sx={{
                 height: "90%",

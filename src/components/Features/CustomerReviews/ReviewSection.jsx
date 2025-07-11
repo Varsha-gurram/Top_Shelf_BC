@@ -13,7 +13,7 @@ const ReviewSection = () => (
     lineHeight: 1.1,
     letterSpacing: { xs: "-1px", sm: "-2px", md: "-4px" },
     fontFamily: "Lexend, sans-serif",
-    //textAlign: "center",
+    textAlign: {md:"left",xs:"center"},
     display: "block",
     px:6,
     mt:6,
@@ -22,10 +22,10 @@ const ReviewSection = () => (
   CUSTOMER TESTIMONALS
 </Typography>
   <Grid container spacing={5} alignItems="stretch" sx={{pt:5,px:1}}>
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12} md={4} sx={{margin:"auto"}} >
       <FixedCard />
     </Grid>
-    <Grid item xs={12} md={8}>
+    <Grid item xs={12} md={8} sx={{margin:"auto"}}>
       <ReviewCarousel />
     </Grid>
   </Grid>

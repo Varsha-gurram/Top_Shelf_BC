@@ -84,7 +84,7 @@ const CategoryF = () => {
 
       <Grid container spacing={3} sx={{px:{md:12,sm:2},mb:30}}>
   {filteredProducts.map((product, idx) => (
-    <Grid item xs={12} sm={6} md={4} lg={3} key={idx}>
+    <Grid item xs={12} sm={6} md={4} lg={3} key={idx} sx={{margin:"auto"}}>
       <ProductCard {...product} />
     </Grid>
   ))}
