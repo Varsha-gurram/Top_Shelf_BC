@@ -20,98 +20,182 @@ const ProductInfoD = ({
     integraLabel = selectedIntegra.split(" ")[0];
     integraPrice = match ? parseFloat(match[1]) : 0;
   }
-  const priceToUse = selectedWeight && !isNaN(Number(selectedWeight.price))
-    ? Number(selectedWeight.price)
-    : product && !isNaN(Number(product.price))
-    ? Number(product.price)
-    : 0;
+  const priceToUse =
+    selectedWeight && !isNaN(Number(selectedWeight.price))
+      ? Number(selectedWeight.price)
+      : product && !isNaN(Number(product.price))
+      ? Number(product.price)
+      : 0;
 
   const total = (priceToUse + integraPrice) * quantity;
 
   return (
-    <Box>
-      <Box sx={{ border: "1px solid #F4F4F4", borderRadius: 5, p: 2 }}>
-        <Box sx={{ display: "flex", justifyContent: "space-between", mb: 1, py: 1 }}>
-          <Typography fontWeight={400} fontSize="14px" color="#46494F">
+    <Box sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+      <Box
+        sx={{
+          border: "1px solid #F4F4F4",
+          borderRadius: 5,
+          p: { xs: 2, sm: 3 },
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            mb: 1,
+            py: 1,
+            flexDirection: { xs: "column", sm: "row" },
+            gap: { xs: 1, sm: 0 },
+          }}
+        >
+          <Typography
+            fontWeight={400}
+            fontSize={{ xs: "12px", sm: "14px" }}
+            color="#46494F"
+          >
             {product.title}
           </Typography>
-          <Typography fontWeight={400} fontSize="14px" color="#060709">
+          <Typography
+            fontWeight={400}
+            fontSize={{ xs: "12px", sm: "14px" }}
+            color="#060709"
+            textAlign={{ xs: "left", sm: "right" }}
+          >
             ${priceToUse.toFixed(2)}
           </Typography>
         </Box>
+
         {selectedIntegra && (
-          <Box sx={{ display: "flex", justifyContent: "space-between", mb: 1, py: 1 }}>
-            <Typography fontWeight={400} fontSize="14px" color="#46494F">
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              mb: 1,
+              py: 1,
+              flexDirection: { xs: "column", sm: "row" },
+              gap: { xs: 1, sm: 0 },
+            }}
+          >
+            <Typography
+              fontWeight={400}
+              fontSize={{ xs: "12px", sm: "14px" }}
+              color="#46494F"
+            >
               Add Integra Pack ({integraLabel})
             </Typography>
-            <Typography fontWeight={400} fontSize="14px" color="#060709">
+            <Typography
+              fontWeight={400}
+              fontSize={{ xs: "12px", sm: "14px" }}
+              color="#060709"
+              textAlign={{ xs: "left", sm: "right" }}
+            >
               +${integraPrice.toFixed(2)}
             </Typography>
           </Box>
         )}
+
         <Divider sx={{ my: 4, color: "#F4F4F4", height: "0.1px", mx: 4 }} />
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: { xs: "flex-start", sm: "center" },
+            gap: 2,
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              mb: { xs: 2, sm: 0 },
+            }}
+          >
             <IconButton
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
               disabled={quantity <= 1}
               size="small"
+              sx={{ color: "black" }}
             >
               <RemoveIcon />
             </IconButton>
-            <Typography sx={{ mx: 2 }}>{quantity}</Typography>
-            <IconButton onClick={() => setQuantity(quantity + 1)} size="small">
+            <Typography sx={{ mx: 2, minWidth: 24, textAlign: "center" }}>
+              {quantity}
+            </Typography>
+            <IconButton
+              onClick={() => setQuantity(quantity + 1)}
+              size="small"
+              sx={{ color: "black" }}
+            >
               <AddIcon />
             </IconButton>
             <Typography
               color={product.inStock ? "success.main" : "error.main"}
-              sx={{ ml: 2 }}
+              sx={{ ml: 2, fontSize: { xs: "12px", sm: "14px" } }}
             >
               {product.inStock ? "In Stock" : "Out of Stock"}
             </Typography>
           </Box>
-          <Box>
+
+          <Box sx={{ width: { xs: "100%", sm: "auto" } }}>
             <MyButton
               name={`Add to Cart | $${total.toFixed(2)}`}
               onClick={handleAddToCart}
+              sx={{ width: "100%" }}
             />
           </Box>
         </Box>
+
         <Divider sx={{ my: 4, color: "#F4F4F4", height: "0.1px", mx: 4 }} />
-        <Box sx={{ display: "flex", gap: 2, mt: 5, mb: 2 }}>
-          <img src={images.Tcircle} alt="Circle" width="20px" height="20px" />
-          <Typography sx={{ fontSize: "14px" }}>
-            Free Xpress Shipping on orders over $149
-          </Typography>
-        </Box>
-        <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
-          <img src={images.Tcircle} alt="Circle" width="20px" height="20px" />
-          <Typography sx={{ fontSize: "14px" }}>
-            Order before 12:00pm for same day dispatch
-          </Typography>
-        </Box>
-        <Box sx={{ display: "flex", gap: 2 }}>
-          <img src={images.Tcircle} alt="Circle" width="20px" height="20px" />
-          <Typography sx={{ fontSize: "14px" }}>
-            Support & ordering open 7 day a week
-          </Typography>
+
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+          {[
+            "Free Xpress Shipping on orders over $149",
+            "Order before 12:00pm for same day dispatch",
+            "Support & ordering open 7 day a week",
+          ].map((text, index) => (
+            <Box key={index} sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+              <img
+                src={images.Tcircle}
+                alt="Circle"
+                width="20px"
+                height="20px"
+                style={{ flexShrink: 0 }}
+              />
+              <Typography sx={{ fontSize: { xs: "12px", sm: "14px" } }}>
+                {text}
+              </Typography>
+            </Box>
+          ))}
         </Box>
       </Box>
+
       <Divider sx={{ my: 4, color: "#F4F4F4", height: "0.1px" }} />
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ display: "flex", mb: 1, gap: 1 }}>
-          <Typography sx={{ color: "#717378", fontSize: "12px" }}>SKU : </Typography>
-          <Typography sx={{ fontSize: "12px" }}> N/A</Typography>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: { xs: "column", sm: "row" },
+          gap: 2,
+          mb: 1,
+        }}
+      >
+        <Box sx={{ display: "flex", mb: { xs: 1, sm: 0 }, gap: 1 }}>
+          <Typography sx={{ color: "#717378", fontSize: "12px" }}>SKU :</Typography>
+          <Typography sx={{ fontSize: "12px" }}>N/A</Typography>
         </Box>
-        <Box sx={{ display: "flex", gap: 1 }}>
+        <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
           <Typography sx={{ color: "#717378", fontSize: "12px" }}>
             Categories :
           </Typography>
           <Typography sx={{ color: "#17AF26", fontSize: "12px" }}>
-            AAAA WEED, {product.strain}
+            AAAA WEED{product.strain ? `, ${product.strain}` : ""}
           </Typography>
         </Box>
       </Box>
+
       <Divider sx={{ my: 4, color: "#F4F4F4", height: "1px" }} />
     </Box>
   );
