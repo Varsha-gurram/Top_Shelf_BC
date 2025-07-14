@@ -33,4 +33,8 @@ export const images = {
   ch2:require('./Iconch2.png'),
   ch3:require('./Iconch3.png'),
   EMT:require('./EMT.png'),
+  cover_im1:require('./cover_im1.png'),
+  cover_im2:require('./cover_im2.png'),
+  cover_im3:require('./cover_im3.png'),
+  cover_sm:require('./cover_sm.png'),
 };

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { productList } from './ProductList'; 
 import ProductGrid from './ProductGrid';
+import { Pagination, Box } from '@mui/material';
+
+const PRODUCTS_PER_PAGE = 9;
 
 const ProductListPage = () => {
+  const [page, setPage] = useState(1);
   const { searchTerm, category, strain, priceRange, rating, sort } = useSelector(state => state.filters);
+
   const matchesSearch = (field, term) => {
     if (!field) return false;
     if (Array.isArray(field)) {
@@ -12,6 +17,7 @@ const ProductListPage = () => {
     }
     return field.toLowerCase().includes(term);
   };
+
   const filteredProducts = productList.filter(product => {
     const normSearch = searchTerm ? searchTerm.toLowerCase() : "";
     const searchMatch = !normSearch
@@ -44,6 +50,7 @@ const ProductListPage = () => {
 
     return searchMatch && categoryMatch && strainMatch && priceMatch && ratingMatch;
   });
+
   let sortedProducts = [...filteredProducts];
   if (sort === "price_low_high") {
     sortedProducts.sort((a, b) => a.price - b.price);
@@ -62,6 +69,15 @@ const ProductListPage = () => {
   } else if (sort === "random") {
     sortedProducts.sort(() => Math.random() - 0.5);
   }
+  const totalPages = Math.ceil(sortedProducts.length / PRODUCTS_PER_PAGE);
+  React.useEffect(() => {
+    if (page > totalPages) setPage(1);
+  }, [sortedProducts.length, totalPages]);
+
+  const paginatedProducts = sortedProducts.slice(
+    (page - 1) * PRODUCTS_PER_PAGE,
+    page * PRODUCTS_PER_PAGE
+  );
 
   return (
     <>
@@ -70,7 +86,19 @@ const ProductListPage = () => {
           No products found.
         </div>
       ) : (
-        <ProductGrid products={sortedProducts} />
+        <>
+          <ProductGrid products={paginatedProducts} />
+          {totalPages > 1 && (
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+              <Pagination
+                count={totalPages}
+                page={page}
+                onChange={(e, value) => setPage(value)}
+                color="primary"
+              />
+            </Box>
+          )}
+        </>
       )}
     </>
   );

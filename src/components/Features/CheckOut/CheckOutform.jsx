@@ -8,6 +8,7 @@ import {
   Typography,
   Divider,
   FormHelperText,
+  Grid,
 } from "@mui/material";
 
 const countryList = ["Singapore", "United States", "India", "United Kingdom", "Australia"];
@@ -69,12 +70,22 @@ const CheckOutForm = forwardRef((props, ref) => {
   }));
 
   return (
-    <Box sx={{ minWidth: 800, py: 2,px:5, background: "#fff", borderRadius: 2 }}>
+    <Box
+      sx={{
+        width: { xs: "100%", sm: "90%", md: 800 },
+        mx: "auto",
+        py: { xs: 2, sm: 3 },
+        px: { xs: 1, sm: 3, md: 5 },
+        background: "#fff",
+        borderRadius: 2,
+        boxShadow: { xs: 0, sm: 2 },
+      }}
+    >
       <Typography variant="h5" sx={{ my: 1 }}>
         Shipping
       </Typography>
-      <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
-        <Box sx={{ flex: 1 }}>
+      <Grid container spacing={2} sx={{ mb: 2 }}>
+        <Grid item xs={12} sm={6}>
           <Typography variant="subtitle2" sx={{ mb: 0.5, color: "#46494F" }}>
             First Name*
           </Typography>
@@ -88,8 +99,8 @@ const CheckOutForm = forwardRef((props, ref) => {
             helperText={errors.fname}
             variant="outlined"
           />
-        </Box>
-        <Box sx={{ flex: 1 }}>
+        </Grid>
+        <Grid item xs={12} sm={6}>
           <Typography variant="subtitle2" sx={{ mb: 0.5, color: "#46494F" }}>
             Last Name*
           </Typography>
@@ -103,8 +114,8 @@ const CheckOutForm = forwardRef((props, ref) => {
             helperText={errors.lname}
             variant="outlined"
           />
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
       <Box sx={{ mb: 2 }}>
         <Typography variant="subtitle2" sx={{ mb: 0.5, color: "#46494F" }}>
           Country / Region*
@@ -143,8 +154,8 @@ const CheckOutForm = forwardRef((props, ref) => {
           variant="outlined"
         />
       </Box>
-      <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
-        <Box sx={{ flex: 1 }}>
+      <Grid container spacing={2} sx={{ mb: 2 }}>
+        <Grid item xs={12} sm={6}>
           <Typography variant="subtitle2" sx={{ mb: 0.5, color: "#46494F" }}>
             City*
           </Typography>
@@ -158,8 +169,8 @@ const CheckOutForm = forwardRef((props, ref) => {
             helperText={errors.city}
             variant="outlined"
           />
-        </Box>
-        <Box sx={{ flex: 1 }}>
+        </Grid>
+        <Grid item xs={12} sm={6}>
           <Typography variant="subtitle2" sx={{ mb: 0.5, color: "#46494F" }}>
             Province*
           </Typography>
@@ -173,8 +184,8 @@ const CheckOutForm = forwardRef((props, ref) => {
             helperText={errors.province}
             variant="outlined"
           />
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
       <Box sx={{ mb: 2 }}>
         <Typography variant="subtitle2" sx={{ mb: 0.5, color: "#46494F" }}>
           Postcode / ZIP*
@@ -190,8 +201,8 @@ const CheckOutForm = forwardRef((props, ref) => {
           variant="outlined"
         />
       </Box>
-      <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
-        <Box sx={{ flex: 1 }}>
+      <Grid container spacing={2} sx={{ mb: 2 }}>
+        <Grid item xs={12} sm={6}>
           <Typography variant="subtitle2" sx={{ mb: 0.5, color: "#46494F" }}>
             Phone*
           </Typography>
@@ -202,8 +213,8 @@ const CheckOutForm = forwardRef((props, ref) => {
             fullWidth
             variant="outlined"
           />
-        </Box>
-        <Box sx={{ flex: 1 }}>
+        </Grid>
+        <Grid item xs={12} sm={6}>
           <Typography variant="subtitle2" sx={{ mb: 0.5, color: "#46494F" }}>
             Email*
           </Typography>
@@ -217,8 +228,8 @@ const CheckOutForm = forwardRef((props, ref) => {
             helperText={errors.email}
             variant="outlined"
           />
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
       <Divider sx={{ my: 5 }} />
       <Box>
         <Typography variant="subtitle2" sx={{ mb: 1.5, color: "#46494F" }}>

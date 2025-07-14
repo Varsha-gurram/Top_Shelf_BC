@@ -5,15 +5,24 @@ import MyButton from "../components/Common/Button";
 const CoverPage = () => {
   return (
     <Box sx={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden" }}>
-      <img
-        src={images.BgImage}
-        alt="Cover Background"
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover"
-        }}
-      />
+        <picture>
+  <source media="(min-width: 768px)" srcSet={images.BgImage} />
+  <source media="(max-width: 1067px)" srcSet={images.cover_sm} />
+  <img
+    src={images.BgImageLarge}
+    alt="Responsive Background"
+    style={{ width: "100%", height: "100%",objectFit:"cover" }}
+  />
+</picture>
+      <img 
+      src={images.cover_im1}
+      style={{position:"absolute",top:375,left:1250,right:"1000px",width:"200px",height:"200px"}}/>
+      <img 
+      src={images.cover_im3}
+      style={{position:"absolute",top:425,left:810,right:"1000px",width:"200px",height:"200px"}}/>
+      <img 
+      src={images.cover_im2}
+      style={{position:"absolute",top:145,left:1010,width:"250px",height:"250px"}}/>
       <Box sx={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
         <Box sx={{ pt: { xs: 8, sm: 12 }, pl: { xs: 3, sm: 8 } }}>
           <Typography
@@ -63,7 +72,7 @@ const CoverPage = () => {
         <Box
           sx={{
             pl: { xs: 3, sm: 8 },
-            mt: {md:12,xs:13},
+            mt: {md:12,xs:5},
             display: "flex",
             alignItems: "center",
             gap: 2,

@@ -56,8 +56,6 @@ const CartPage = () => {
       <Typography variant="h5" fontWeight={600} mb={4} textAlign="center">
         Your Cart
       </Typography>
-
-      {/* Table Header */}
       <Box
         sx={{
           display: "none",
