@@ -1,5 +1,14 @@
 import React, { useRef, useState } from "react";
-import {Box,Typography,TextField,Checkbox,FormControlLabel,Switch,Divider,Grid} from "@mui/material";
+import {
+  Box,
+  Typography,
+  TextField,
+  Checkbox,
+  FormControlLabel,
+  Switch,
+  Divider,
+  Grid,
+} from "@mui/material";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import MyButton from "../../Common/Button";
 import { useCheckoutValues } from "./useCheckoutValues";
@@ -10,13 +19,12 @@ import { useNavigate } from "react-router-dom";
 const CheckoutDetails = () => {
   const { subtotal, discount, shipping, total } = useCheckoutValues();
   const [coupon, setCoupon] = useState("");
-  const [email, setEmail] = useState("");
-  const [addressConfirmed, setAddressConfirmed] = useState(false);
   const [subscribe, setSubscribe] = useState(false);
+  const [addressConfirmed, setAddressConfirmed] = useState(false);
   const [usePoints, setUsePoints] = useState(false);
   const points = 10.85;
   const formRef = useRef();
-  const Navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handlePlaceOrder = () => {
     if (!(addressConfirmed && usePoints)) return;
@@ -24,26 +32,29 @@ const CheckoutDetails = () => {
       const valid = formRef.current.validateAndSubmit();
       if (valid) {
         alert("Proceeding to payment!");
-        Navigate('/payment');
+        navigate('/payment');
       }
     }
   };
 
   return (
-    <Box sx={{ flexGrow: 1, mt: 4 }}>
-      <Grid container spacing={15}>
+    <Box sx={{ flexGrow: 1, mt: { xs: 2, md: 4 }, px: { xs: 1, sm: 2, md: 4 } }}>
+      <Grid container spacing={{ xs: 2, md: 6, lg: 10 }}>
         <Grid item xs={12} md={7}>
           <CheckOutForm ref={formRef} />
         </Grid>
-        <Grid item xs={12} md={5} sx={{py:10}}>
+        <Grid item xs={12} md={5}>
           <Box
             sx={{
               border: "1px solid #F4F4F4",
               borderRadius: 2,
-              p: 3,
+              p: { xs: 2, sm: 3 },
               width: { xs: "100%", md: 400 },
               bgcolor: "#fff",
               fontFamily: "inherit",
+              mx: { xs: 0, md: "auto" },
+              my: { xs: 2, md: 10 },
+              boxShadow: { xs: 0, sm: 1 },
             }}
           >
             <Typography variant="h6" fontWeight={600} mb={2}>
@@ -64,11 +75,11 @@ const CheckoutDetails = () => {
               </Typography>
             </Box>
             <Divider sx={{ mb: 2 }} />
-            <Box sx={{display:"flex",justifyContent:"space-between",gap:20,py:2}}>
-              <Typography sx={{color:"#9D9EA2"}}>Email Money Transfer</Typography>
-            <img src={images.EMT} alt="email money transfer" width="30px" height="30px"/>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2, py: 2 }}>
+              <Typography sx={{ color: "#9D9EA2" }}>Email Money Transfer</Typography>
+              <img src={images.EMT} alt="email money transfer" width="30" height="30" />
             </Box>
-            <Box sx={{ display: "flex", mb: 2,gap:2 }}>
+            <Box sx={{ display: "flex", mb: 2, gap: 2 }}>
               <TextField
                 fullWidth
                 size="small"
@@ -82,20 +93,16 @@ const CheckoutDetails = () => {
                 onClick={() => alert("Coupon applied!")}
               />
             </Box>
-            <Divider sx={{mb:5}}/>
+            <Divider sx={{ mb: 5 }} />
             <FormControlLabel
               control={
                 <Checkbox
-
                   checked={addressConfirmed}
                   onChange={e => setAddressConfirmed(e.target.checked)}
-                  sx={{'& .MuiSvgIcon-root': {
-      color: '#F8F8F8',
-    },
-    '&.Mui-checked .MuiSvgIcon-root': {
-      color: 'black',
-    },
-                     color: "green" }}
+                  sx={{
+                    '& .MuiSvgIcon-root': { color: '#F8F8F8' },
+                    '&.Mui-checked .MuiSvgIcon-root': { color: 'black' },
+                  }}
                 />
               }
               label={
@@ -110,13 +117,10 @@ const CheckoutDetails = () => {
                 <Checkbox
                   checked={subscribe}
                   onChange={e => setSubscribe(e.target.checked)}
-                  sx={{ '& .MuiSvgIcon-root': {
-      color: '#F4F4F4',
-    },
-    '&.Mui-checked .MuiSvgIcon-root': {
-      color: 'black',
-    },
-                    color: "green" }}
+                  sx={{
+                    '& .MuiSvgIcon-root': { color: '#F4F4F4' },
+                    '&.Mui-checked .MuiSvgIcon-root': { color: 'black' },
+                  }}
                 />
               }
               label={
@@ -152,25 +156,23 @@ const CheckoutDetails = () => {
               onClick={handlePlaceOrder}
               disabled={!(addressConfirmed && usePoints)}
             />
-            <Typography color="gray" sx={{mt:4}}>Secure payments Provided By</Typography>
-                  <Box mb={2} sx={{ display: "flex", gap: 1, cursor: "pointer" }}>
-                    <Box>
-                      <img src={images.Pay1} alt="pay1" style={{}} />
-                    </Box>
-                    <Box>
-                      <img src={images.Pay2} alt="pay2" style={{}} />
-                    </Box>
-                    <Box>
-                      <img src={images.Pay3} alt="pay3" style={{}} />
-                    </Box>
-                    <Box>
-                      <img src={images.Pay4} alt="pay4" style={{}} />
-                    </Box>
-                  </Box>
+            <Typography color="gray" sx={{ mt: 4 }}>Secure payments Provided By</Typography>
+            <Box mb={2} sx={{ display: "flex", gap: 1, cursor: "pointer" }}>
+              <Box>
+                <img src={images.Pay1} alt="pay1" />
+              </Box>
+              <Box>
+                <img src={images.Pay2} alt="pay2" />
+              </Box>
+              <Box>
+                <img src={images.Pay3} alt="pay3" />
+              </Box>
+              <Box>
+                <img src={images.Pay4} alt="pay4" />
+              </Box>
+            </Box>
           </Box>
-          
         </Grid>
-        
       </Grid>
     </Box>
   );

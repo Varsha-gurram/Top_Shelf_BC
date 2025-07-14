@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import MyButton from "../../Common/Button";
 import { images } from "../../../Assets/images";
+
 const CheckoutSummary = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const navigate = useNavigate();
@@ -22,23 +23,27 @@ const CheckoutSummary = () => {
   const shipping = subtotal > 1000 ? 0 : 50;
   const total = subtotal - discount + shipping;
   const value = (total / 1000) * 100;
+
   const handleCheckout = () => {
     navigate("/checkout");
   };
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     navigate("/products");
   };
+
   return (
     <Box
       sx={{
-        width: { md: "350px", xs: "350px" },
+        width: { xs: "100%", sm: 340, md: 350 },
         background: "#fff",
-        p: 3,
+        p: { xs: 2, sm: 3 },
         borderRadius: 2,
         boxShadow: 1,
         display: "flex",
         flexDirection: "column",
         gap: 2,
+       margin:"auto"
       }}
     >
       <Typography variant="h6" fontWeight={600}>
@@ -62,39 +67,49 @@ const CheckoutSummary = () => {
       <Divider />
       <LinearProgress
         variant="determinate"
-        value={value}
+        value={value > 100 ? 100 : value}
+        sx={{ height: 8, borderRadius: 2 }}
       />
-      <Typography sx={{ color: "gray" }}>
+      <Typography sx={{ color: "gray", fontSize: { xs: 13, sm: 15 } }}>
         Get Free <span style={{ color: "black" }}>Shipping</span> for orders
-        over <span style={{ color: "red" }}>$1000.00</span>
+        over <span style={{ color: "red" }}>₹1000.00</span>
       </Typography>
       <Link
-        to={`/products`}
+        href="/products"
         onClick={handleClick}
-        sx={{ color: "black", textDecoration: "underline" }}
+        sx={{
+          color: "black",
+          textDecoration: "underline",
+          fontSize: { xs: 14, sm: 16 },
+          width: "fit-content",
+        }}
       >
         Continue Shopping
       </Link>
-
       <MyButton
-        name={`CheckOut | $${total.toFixed(2)}`}
+        name={`CheckOut | ₹${total.toFixed(2)}`}
         onClick={handleCheckout}
+        sx={{ width: "100%", fontSize: { xs: 14, sm: 16 } }}
       />
       <Divider />
-      <Typography color="gray">Secure payments Provided By</Typography>
-      <Box mb={2} sx={{ display: "flex", gap: 1, cursor: "pointer" }}>
-        <Box>
-          <img src={images.Pay1} alt="pay1" style={{}} />
-        </Box>
-        <Box>
-          <img src={images.Pay2} alt="pay2" style={{}} />
-        </Box>
-        <Box>
-          <img src={images.Pay3} alt="pay3" style={{}} />
-        </Box>
-        <Box>
-          <img src={images.Pay4} alt="pay4" style={{}} />
-        </Box>
+      <Typography color="gray" sx={{ fontSize: { xs: 13, sm: 15 } }}>
+        Secure payments Provided By
+      </Typography>
+      <Box
+        mb={2}
+        sx={{
+          display: "flex",
+          gap: 1,
+          cursor: "pointer",
+          flexWrap: "wrap",
+          justifyContent: { xs: "center", sm: "flex-start" },
+        }}
+      >
+        {[images.Pay1, images.Pay2, images.Pay3, images.Pay4].map((img, idx) => (
+          <Box key={idx} sx={{ width: 40, height: 24, display: "flex", alignItems: "center" }}>
+            <img src={img} alt={`pay${idx + 1}`} style={{ maxWidth: "100%", maxHeight: 24 }} />
+          </Box>
+        ))}
       </Box>
     </Box>
   );

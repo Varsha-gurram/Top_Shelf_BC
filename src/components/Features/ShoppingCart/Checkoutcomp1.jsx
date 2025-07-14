@@ -9,7 +9,7 @@ const Checkoutcomp1 = () => {
         <Box>Delivery</Box>
         <Box>Free Returns</Box>
       </Box>
-    <Box display="flex" gap={3} flexWrap="wrap" sx={{ width: "100%" }}>
+    <Box display="flex" gap={3} flexWrap="wrap" sx={{ width: "100%", }}>
       {Checkoutcomp1list.map((item, idx) => (
         <Box
           key={idx}
@@ -22,9 +22,10 @@ const Checkoutcomp1 = () => {
             background: "#fff",
             boxShadow: 1.5,
             mb: 2,
+            margin:"auto"
           }}
         >
-          <Stack direction="row" alignItems="center" spacing={2} mb={2}>
+          <Stack direction="row" alignItems="center" spacing={2} mb={2} sx={{margin:"auto"}}> 
             <img src={item.logo} alt="icon" width={32} height={32} />
             {item.title && (
               <Typography variant="subtitle1" fontWeight={600}>
