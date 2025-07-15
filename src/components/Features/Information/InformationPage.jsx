@@ -95,7 +95,7 @@ const InformationPage = () => {
                     borderRadius: "8px",
                     padding: 3,
                     cursor: "pointer",
-                    margin:{xs:"auto"},
+                    margin:{xs:"auto",md:"0"},
       "&:hover": {
         boxShadow: 6,
         transform: "translateY(-6px) scale(1.03)",

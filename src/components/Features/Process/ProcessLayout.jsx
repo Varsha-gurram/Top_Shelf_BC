@@ -3,6 +3,7 @@ import { Box, Typography, Grid, useMediaQuery, useTheme } from "@mui/material";
 import MyButton from "../../Common/Button";
 import Refer from "../Refer/Refer";
 import { Process } from "./Process";
+import { useNavigate } from "react-router-dom";
 
 const steps = [
   {
@@ -30,14 +31,19 @@ const steps = [
     description: Process.description4,
   },
 ];
+ 
 
 const ProcessLayout = () => {
   const theme = useTheme();
+  const navigate=useNavigate();
+  const handleClick=()=>{
+  navigate("/products");
+};
   const isXs = useMediaQuery(theme.breakpoints.only('xs'));
   const isSm = useMediaQuery(theme.breakpoints.only('sm'));
   const isMd = useMediaQuery(theme.breakpoints.only('md'));
   const isLg = useMediaQuery(theme.breakpoints.only('lg'));
-
+ 
   let spacing = 2;
   if (isXs) spacing = 2;
   else if (isSm) spacing = 2;
@@ -163,7 +169,7 @@ const ProcessLayout = () => {
         </Grid>
 
         <Box sx={{ display: "flex", justifyContent: "center", mb: 20, mt: 10 }}>
-          <MyButton name="Choose Your Weed" height="64px" />
+          <MyButton name="Choose Your Weed" onClick={handleClick} height="64px" />
         </Box>
       </Box>
     </Box>

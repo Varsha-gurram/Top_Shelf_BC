@@ -1,0 +1,1337 @@
+[
+   {
+    "id": 1,
+    "image": "../../../Assets/product1.png",
+    "images": [
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png",
+      "../../../Assets/product3.png"
+    ],
+    "title": "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    "type": "Flowers",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Sativa 100%",
+    "price": 80.0,
+    "options": ["28g", "1/2lb", "1/4lb"],
+    "weightOptions": [
+      { "label": "28g", "price": 80.0 },
+      { "label": "1/2lb", "price": 400.0 },
+      { "label": "1/4lb", "price": 220.0 }
+    ],
+    "integraOptions": [
+      { "label": "4g (+$2.00)", "price": 2.0 },
+      { "label": "8g (+$3.00)", "price": 3.0 }
+    ],
+    "category": "Best Sellers",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-01T12:00:00Z",
+    "popularity": 90,
+    "effects": [
+      "Calming",
+      "Creative",
+      "Happy",
+      "Relaxing",
+      "Sleepy",
+      "Uplifting"
+    ],
+    "medicalUses": [
+      "Anxiety",
+      "Arthritis",
+      "Chronic Pain",
+      "Depression",
+      "Fatigue",
+      "Inflammation",
+      "Insomnia",
+      "Irregular Bowel Movements",
+      "Migraines",
+      "Mood Swings"
+    ],
+    "aromas": ["Chemical", "Citrus", "Earthy", "Pungent", "Sour"],
+    "description": "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains.",
+    "inStock": true,
+    "DescriptionD": "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains. Named for its gorgeous appearance and breeder, Jungle Diamonds is a favorite of indica and hybrid lovers alike thanks to its delicious taste and tingly, arousing high. Jungle Diamonds buds have sparkling oversized spade-shaped olive green nugs with vivid amber hairs and a thick frosty blanket of glittering tiny blue-tinted white crystal trichomes. As you pull apart each sticky little nugget, aromas of spicy mocha coffee and fruity herbs are released.... The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Terry Baskey",
+        "rating": 4,
+        "comment": "Absolutely love TopShelfBC; affordable on any budget and such fast delivery, straight to my door! I recommend them to all my friends and family for their 420 needs.",
+        "date": "January 15, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Vikki Star",
+        "rating": 5,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 5, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Bremar Kott",
+        "rating": 4,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 3, 2023"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "../../../Assets/product2.png",
+    "images": [
+      "../../../Assets/product2.png",
+      "../../../Assets/product1.png",
+      "../../../Assets/product3.png"
+    ],
+    "title": "2 Oz Deal Ahi Tuna + Master Tuna",
+    "type": "Flowers",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Indica 70%",
+    "price": 120,
+    "options": ["28g", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28g", "price": 120 },
+      { "label": "1/2lb", "price": 600 },
+      { "label": "1/4lb", "price": 330 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "Bundles & Promotions",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-03T12:00:00Z",
+    "popularity": 80,
+    "effects": [
+      "Relaxing",
+      "Euphoric",
+      "Happy",
+      "Sleepy",
+      "Uplifting",
+    ],
+   " medicalUses": [
+      "Anxiety",
+      "Chronic Pain",
+      "Depression",
+      "Insomnia",
+      "Stress",
+    ],
+    "aromas": ["Earthy", "Pungent", "Spicy", "Sweet"],
+    "description":
+      "Ahi Tuna + Master Tuna is a potent indica-dominant hybrid with relaxing effects and a strong, earthy aroma.",
+    "inStock": true,
+    "DescriptionD": "Ahi Tuna + Master Tuna is a potent indica-dominant hybrid with relaxing effects and a strong, earthy aroma. Perfect for unwinding after a long day, this strain helps with stress, insomnia, and chronic pain. Buds are dense and covered with trichomes, exuding a pungent, spicy scent.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Alex Morgan",
+        "rating": 5,
+        "comment": "Strong and relaxing, perfect for my evenings.",
+        "date": "February 10, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Sam Lee",
+        "rating": 4,
+        "comment": "Great for sleep and pain relief.",
+        "date": "February 8, 2023"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "../../../Assets/product3.png",
+    "images": [
+      "../../../Assets/product3.png",
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png"
+    ],
+    "title": "Mix And Match Shatter/Budder 28g (4 X 7G)",
+    "type": "Concentrates",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Indica 70%",
+    "price": 102,
+    "options": ["28g", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28g", "price": 102 },
+      { "label": "1/2lb", "price": 510 },
+      { "label": "1/4lb", "price": 280 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "On Sale",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-04T12:00:00Z",
+    "popularity": 70,
+    "effects": [
+      "Euphoric",
+      "Happy",
+      "Relaxing",
+      "Sleepy"
+    ],
+   " medicalUses": [
+      "Chronic Pain",
+      "Depression",
+      "Insomnia",
+      "Loss of Appetite"
+    ],
+    "aromas": ["Sweet", "Fruity", "Earthy"],
+    "description":
+      "A unique concentrate blend offering a mix of shatter and budder for versatile effects and flavors.",
+    "inStock": true,
+    "DescriptionD": "Mix And Match Shatter/Budder 28g (4 X 7G) offers a versatile concentrate experience. Enjoy the best of both worlds with potent "effects" and a delicious, fruity aroma. Ideal for those seeking variety and strong medicinal benefits.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Chris P.",
+        "rating": 5,
+        "comment": "Love the mix and the potency. Great value!",
+        "date": "March 1, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Dana S.",
+        "rating": 4,
+        "comment": "Smooth and effective, will buy again.",
+        "date": "March 2, 2023"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "../../../Assets/product1.png",
+    "images": [
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png",
+      "../../../Assets/product3.png"
+    ],
+    "title": "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    "type": "Flowers",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Sativa 100%",
+    "price": 80.0,
+    "options": ["28gg", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28gg", "price": 80.0 },
+      { "label": "1/2lb", "price": 400.0 },
+      { "label": "1/4lb", "price": 220.0 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "Best Sellers",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-05T12:00:00Z",
+    "popularity": 95,
+    "effects": [
+      "Calming",
+      "Creative",
+      "Happy",
+      "Relaxing",
+      "Sleepy",
+      "Uplifting"
+    ],
+   " medicalUses": [
+      "Anxiety",
+      "Arthritis",
+      "Chronic Pain",
+      "Depression",
+      "Fatigue",
+      "Inflammation",
+      "Insomnia",
+      "Irregular Bowel Movements",
+      "Migraines",
+      "Mood Swings"
+    ],
+    "aromas": ["Chemical", "Citrus", "Earthy", "Pungent", "Sour"],
+    "description":
+      "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains.",
+    "inStock": true,
+    "DescriptionD": "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains. Named for its gorgeous appearance and breeder, Jungle Diamonds is a favorite of indica and hybrid lovers alike thanks to its delicious taste and tingly, arousing high. Jungle Diamonds buds have sparkling oversized spade-shaped olive green nugs with vivid amber hairs and a thick frosty blanket of glittering tiny blue-tinted white crystal trichomes. As you pull apart each sticky little nugget, aromas of spicy mocha coffee and fruity herbs are released.The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Terry Baskey",
+        "rating": 4,
+        "comment":
+          "Absolutely love TopShelfBC; affordable on any budget and such fast delivery, straight to my door! I recommend them to all my friends and family for their 420 needs.",
+        "date": "January 15, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Vikki Star",
+        "rating": 5,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 5, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Bremar Kott",
+        "rating": 4,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 3, 2023"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "../../../Assets/product3.png",
+    "images": [
+      "../../../Assets/product3.png",
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png",
+    ],
+    "title": "Mix And Match Shatter/Budder 28g (4 X 7G)",
+    "type": "Concentrates",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Indica 70%",
+    "price": 102,
+    "options": ["28g", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28g", "price": 102 },
+      { "label": "1/2lb", "price": 510 },
+      { "label": "1/4lb", "price": 280 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "Best Sellers",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-06T12:00:00Z",
+    "popularity": 85,
+    "effects": [
+      "Euphoric",
+      "Happy",
+      "Relaxing",
+      "Sleepy"
+    ],
+   " medicalUses": [
+      "Chronic Pain",
+      "Depression",
+      "Insomnia",
+      "Loss of Appetite"
+    ],
+    "aromas": ["Sweet", "Fruity", "Earthy"],
+    "description":
+      "A unique concentrate blend offering a mix of shatter and budder for versatile effects and flavors.",
+    "inStock": true,
+    "DescriptionD": "Mix And Match Shatter/Budder 28g (4 X 7G) offers a versatile concentrate experience. Enjoy the best of both worlds with potent "effects" and a delicious, fruity aroma. Ideal for those seeking variety and strong medicinal benefits.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Chris P.",
+        "rating": 5,
+        "comment": "Love the mix and the potency. Great value!",
+        "date": "March 1, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Dana S.",
+        "rating": 4,
+        "comment": "Smooth and effective, will buy again.",
+        "date": "March 2, 2023"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "../../../Assets/product1.png",
+    "images": [
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png",
+      "../../../Assets/product3.png"
+    ],
+    "title": "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    "type": "Flowers",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Sativa 100%",
+    "price": 80.0,
+    "options": ["28gg", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28gg", "price": 80.0 },
+      { "label": "1/2lb", "price": 400.0 },
+      { "label": "1/4lb", "price": 220.0 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "Bundles & Promotions",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-07T12:00:00Z",
+    "popularity": 88,
+    "effects": [
+      "Calming",
+      "Creative",
+      "Happy",
+      "Relaxing",
+      "Sleepy",
+      "Uplifting"
+    ],
+   " medicalUses": [
+      "Anxiety",
+      "Arthritis",
+      "Chronic Pain",
+      "Depression",
+      "Fatigue",
+      "Inflammation",
+      "Insomnia",
+      "Irregular Bowel Movements",
+      "Migraines",
+      "Mood Swings"
+    ],
+    "aromas": ["Chemical", "Citrus", "Earthy", "Pungent", "Sour"],
+    "description":
+      "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains.",
+    "inStock": true,
+    "DescriptionD": "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains. Named for its gorgeous appearance and breeder, Jungle Diamonds is a favorite of indica and hybrid lovers alike thanks to its delicious taste and tingly, arousing high. Jungle Diamonds buds have sparkling oversized spade-shaped olive green nugs with vivid amber hairs and a thick frosty blanket of glittering tiny blue-tinted white crystal trichomes. As you pull apart each sticky little nugget, aromas of spicy mocha coffee and fruity herbs are released.The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Terry Baskey",
+        "rating": 4,
+        "comment":
+          "Absolutely love TopShelfBC; affordable on any budget and such fast delivery, straight to my door! I recommend them to all my friends and family for their 420 needs.",
+        "date": "January 15, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Vikki Star",
+        "rating": 5,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 5, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Bremar Kott",
+        "rating": 4,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 3, 2023"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "../../../Assets/product1.png",
+    "images": [
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png",
+      "../../../Assets/product3.png"
+    ],
+    "title": "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    "type": "Flowers",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Sativa 100%",
+    "price": 80.0,
+    "options": ["28gg", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28gg", "price": 80.0 },
+      { "label": "1/2lb", "price": 400.0 },
+      { "label": "1/4lb", "price": 220.0 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "Bundles & Promotions",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-08T12:00:00Z",
+    "popularity": 78,
+    "effects": [
+      "Calming",
+      "Creative",
+      "Happy",
+      "Relaxing",
+      "Sleepy",
+      "Uplifting"
+    ],
+   " medicalUses": [
+      "Anxiety",
+      "Arthritis",
+      "Chronic Pain",
+      "Depression",
+      "Fatigue",
+      "Inflammation",
+      "Insomnia",
+      "Irregular Bowel Movements",
+      "Migraines",
+      "Mood Swings"
+    ],
+    "aromas": ["Chemical", "Citrus", "Earthy", "Pungent", "Sour"],
+    "description":
+      "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains.",
+    "inStock": true,
+    "DescriptionD": "`Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains. Named for its gorgeous appearance and breeder, Jungle Diamonds is a favorite of indica and hybrid lovers alike thanks to its delicious taste and tingly, arousing high. Jungle Diamonds buds have sparkling oversized spade-shaped olive green nugs with vivid amber hairs and a thick frosty blanket of glittering tiny blue-tinted white crystal trichomes. As you pull apart each sticky little nugget, aromas of spicy mocha coffee and fruity herbs are released.The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Terry Baskey",
+        "rating": 4,
+        "comment":
+          "Absolutely love TopShelfBC; affordable on any budget and such fast delivery, straight to my door! I recommend them to all my friends and family for their 420 needs.",
+        "date": "January 15, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Vikki Star",
+        "rating": 5,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 5, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Bremar Kott",
+        "rating": 4,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 3, 2023"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "../../../Assets/product2.png",
+    "images": [
+      "../../../Assets/product2.png",
+      "../../../Assets/product1.png",
+      "../../../Assets/product3.png",
+    ],
+    "title": "2 Oz Deal Ahi Tuna + Master Tuna",
+    "type": "Flowers",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Indica 70%",
+    "price": 120,
+    "options": ["28g", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28g", "price": 120 },
+      { "label": "1/2lb", "price": 600 },
+      { "label": "1/4lb", "price": 330 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "Bundles & Promotions",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-09T12:00:00Z",
+    "popularity": 82,
+    "effects": [
+      "Relaxing",
+      "Euphoric",
+      "Happy",
+      "Sleepy",
+      "Uplifting"
+    ],
+   " medicalUses": [
+      "Anxiety",
+      "Chronic Pain",
+      "Depression",
+      "Insomnia",
+      "Stress"
+    ],
+    "aromas": ["Earthy", "Pungent", "Spicy", "Sweet"],
+    "description":
+      "Ahi Tuna + Master Tuna is a potent indica-dominant hybrid with relaxing effects and a strong, earthy aroma.",
+    "inStock": true,
+    "DescriptionD": "Ahi Tuna + Master Tuna is a potent indica-dominant hybrid with relaxing effects and a strong, earthy aroma. Perfect for unwinding after a long day, this strain helps with stress, insomnia, and chronic pain. Buds are dense and covered with trichomes, exuding a pungent, spicy scent.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Alex Morgan",
+        "rating": 5,
+        "comment": "Strong and relaxing, perfect for my evenings.",
+        "date": "February 10, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Sam Lee",
+        "rating": 4,
+        "comment": "Great for sleep and pain relief.",
+        "date": "February 8, 2023"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "../../../Assets/product3.png",
+    "images": [
+      "../../../Assets/product3.png",
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png"
+    ],
+    "title": "Mix And Match Shatter/Budder 28g (4 X 7G)",
+    "type": "Concentrates",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Indica 70%",
+    "price": 102,
+    "options": ["28g", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28g", "price": 102 },
+      { "label": "1/2lb", "price": 510 },
+      { "label": "1/4lb", "price": 280 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "On Sale",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-10T12:00:00Z",
+    "popularity": 75,
+    "effects": [
+      "Euphoric",
+      "Happy",
+      "Relaxing",
+      "Sleepy"
+    ],
+   " medicalUses": [
+      "Chronic Pain",
+      "Depression",
+      "Insomnia",
+      "Loss of Appetite"
+    ],
+    "aromas": ["Sweet", "Fruity", "Earthy"],
+    "description":
+      "A unique concentrate blend offering a mix of shatter and budder for versatile effects and flavors.",
+    "inStock": true,
+    "DescriptionD": "Mix And Match Shatter/Budder 28g (4 X 7G) offers a versatile concentrate experience. Enjoy the best of both worlds with potent effects and a delicious, fruity aroma. Ideal for those seeking variety and strong medicinal benefits.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Chris P.",
+        "rating": 5,
+        "comment": "Love the mix and the potency. Great value!",
+        "date": "March 1, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Dana S.",
+        "rating": 4,
+        "comment": "Smooth and effective, will buy again.",
+        "date": "March 2, 2023"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "../../../Assets/product1.png",
+    "images": [
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png",
+      "../../../Assets/product3.png"
+    ],
+    "title": "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    "type": "Flowers",
+    "rating": 4.6,
+    "reviews": 135,
+   " strain": "Sativa 100%",
+    "price": 80.0,
+    "options": ["28gg", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28gg", "price": 80.0 },
+      { "label": "1/2lb", "price": 400.0 },
+      { "label": "1/4lb", "price": 220.0 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "Best Sellers",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-11T12:00:00Z",
+    "popularity": 92,
+    "effects": [
+      "Calming",
+      "Creative",
+      "Happy",
+      "Relaxing",
+      "Sleepy",
+      "Uplifting"
+    ],
+   " medicalUses": [
+      "Anxiety",
+      "Arthritis",
+      "Chronic Pain",
+      "Depression",
+      "Fatigue",
+      "Inflammation",
+      "Insomnia",
+      "Irregular Bowel Movements",
+      "Migraines",
+      "Mood Swings"
+    ],
+    "aromas": ["Chemical", "Citrus", "Earthy", "Pungent", "Sour"],
+    "description":
+      "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains.",
+    "inStock": true,
+    "DescriptionD": "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains. Named for its gorgeous appearance and breeder, Jungle Diamonds is a favorite of indica and hybrid lovers alike thanks to its delicious taste and tingly, arousing high. Jungle Diamonds buds have sparkling oversized spade-shaped olive green nugs with vivid amber hairs and a thick frosty blanket of glittering tiny blue-tinted white crystal trichomes. As you pull apart each sticky little nugget, aromas of spicy mocha coffee and fruity herbs are released.The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Terry Baskey",
+        "rating": 4,
+        "comment":
+          "Absolutely love TopShelfBC; affordable on any budget and such fast delivery, straight to my door! I recommend them to all my friends and family for their 420 needs.",
+        "date": "January 15, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Vikki Star",
+        "rating": 5,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 5, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Bremar Kott",
+        "rating": 4,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 3, 2023"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "../../../Assets/product3.png",
+    "images": [
+      "../../../Assets/product3.png",
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png"
+    ],
+    "title": "Mix And Match Shatter/Budder 28g (4 X 7G)",
+    "type": "Concentrates",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Indica 70%",
+    "price": 102,
+    "options": ["28g", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28g", "price": 102 },
+      { "label": "1/2lb", "price": 510 },
+      { "label": "1/4lb", "price": 280 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "On Sale",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-12T12:00:00Z",
+    "popularity": 73,
+    "effects": [
+      "Euphoric",
+      "Happy",
+      "Relaxing",
+      "Sleepy"
+    ],
+   " medicalUses": [
+      "Chronic Pain",
+      "Depression",
+      "Insomnia",
+      "Loss of Appetite"
+    ],
+    "aromas": ["Sweet", "Fruity", "Earthy"],
+    "description":
+      "A unique concentrate blend offering a mix of shatter and budder for versatile effects and flavors.",
+    "inStock": true,
+    "DescriptionD": "Mix And Match Shatter/Budder 28g (4 X 7G) offers a versatile concentrate experience. Enjoy the best of both worlds with potent "effects" and a delicious, fruity aroma. Ideal for those seeking variety and strong medicinal benefits.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Chris P.",
+        "rating": 5,
+        "comment": "Love the mix and the potency. Great value!",
+        "date": "March 1, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Dana S.",
+        "rating": 4,
+        "comment": "Smooth and effective, will buy again.",
+        "date": "March 2, 2023"
+      }
+    ]
+  },
+  {
+   " id": 12,
+    "image": "../../../Assets/product1.png",
+    "images": [
+      "../../../Assets/product1.png",
+      "../../../Assets/product2.png",
+      "../../../Assets/product3.png"
+    ],
+    "title": "2 Oz Deal Watermelon Zkittles + Purple Gushers",
+    "type": "Flowers",
+    "rating": 4.6,
+    "reviews": 135,
+    "strain": "Sativa 100%",
+    "price": 80.0,
+    "options": ["28gg", "1/2lb", "1/4lb"],
+   " weightOptions": [
+      { "label": "28gg", "price": 80.0 },
+      { "label": "1/2lb", "price": 400.0 },
+      { "label": "1/4lb", "price": 220.0 }
+    ],
+    "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }, { "label": "8g (+$3.00)", "price": 3.0 }],
+    "category": "Best Sellers",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-13T12:00:00Z",
+    "popularity": 89,
+    "effects": [
+      "Calming",
+      "Creative",
+      "Happy",
+      "Relaxing",
+      "Sleepy",
+      "Uplifting"
+    ],
+   " medicalUses": [
+      "Anxiety",
+      "Arthritis",
+      "Chronic Pain",
+      "Depression",
+      "Fatigue",
+      "Inflammation",
+      "Insomnia",
+      "Irregular Bowel Movements",
+      "Migraines",
+      "Mood Swings"
+    ],
+    "aromas": ["Chemical", "Citrus", "Earthy", "Pungent", "Sour"],
+    "description":
+      "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains.",
+    "inStock": true,
+    "DescriptionD": "Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains. Named for its gorgeous appearance and breeder, Jungle Diamonds is a favorite of indica and hybrid lovers alike thanks to its delicious taste and tingly, arousing high. Jungle Diamonds buds have sparkling oversized spade-shaped olive green nugs with vivid amber hairs and a thick frosty blanket of glittering tiny blue-tinted white crystal trichomes. As you pull apart each sticky little nugget, aromas of spicy mocha coffee and fruity herbs are released.The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Terry Baskey",
+        "rating": 4,
+        "comment":
+          "Absolutely love TopShelfBC; affordable on any budget and such fast delivery, straight to my door! I recommend them to all my friends and family for their 420 needs.",
+        "date": "January 15, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Vikki Star",
+        "rating": 5,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 5, 2023"
+      },
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Bremar Kott",
+        "rating": 4,
+        "comment": "Best damn place to buy your canabis at great prices",
+        "date": "January 3, 2023"
+      }
+    ]
+  },
+  {
+    "id": 13,
+   // "image": "../../../Assets/edible1.png",
+    // "images": [
+    //   "../../../Assets/edible1.png",
+    //   "../../../Assets/edible2.png",
+    //   "../../../Assets/edible3.png",
+    // ],
+    "title": "Gummy Bears 300mg THC",
+    "type": "Edibles",
+    "rating": 4.8,
+    "reviews": 97,
+    "strain": "Hybrid",
+    "price": 25.0,
+    "options": ["300mg", "600mg"],
+   " weightOptions": [
+      { "label": "300mg", "price": 25.0 },
+      { "label": "600mg", "price": 45.0 }
+    ],
+    "integraOptions": [],
+    "category": "Best Sellers",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-14T12:00:00Z",
+    "popularity": 87,
+    "effects": [
+      "Euphoric",
+      "Relaxing",
+      "Happy"
+    ],
+   " medicalUses": [
+      "Stress",
+      "Anxiety",
+      "Pain Relief",
+      "Insomnia"
+    ],
+    "aromas": ["Fruity", "Sweet"],
+    "description": "Delicious THC-infused gummy bears for a discreet and tasty cannabis experience.",
+    "inStock": true,
+    "DescriptionD": "Gummy Bears 300mg THC are perfect for those seeking a flavorful and controlled edible experience. Each gummy is dosed for consistency and reliability, making it easy to manage your intake.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Jordan P.",
+        "rating": 5,
+        "comment": "Best gummies I've tried—great taste and effect!",
+        "date": "April 10, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Lisa R.",
+        "rating": 4,
+        "comment": "Good value and very relaxing.",
+        "date": "April 8, 2023"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    // "image": "../../../Assets/mushroom1.png",
+    // "images: [
+    //   "../../../Assets/mushroom1.png",
+    //   "../../../Assets/mushroom2.png",
+    // ],
+    "title": "Golden Teacher Magic Mushrooms",
+    "type": "Mushrooms",
+    "rating": 4.9,
+    "reviews": 62,
+    "strain": "Psilocybe Cubensis",
+    "price": 55.0,
+    "options": ["3.5g", "7g", "14g"],
+   " weightOptions": [
+      { "label": "3.5g", "price": 55.0 },
+      { "label": "7g", "price": 100.0 },
+      { "label": "14g", "price": 180.0 }
+    ],
+    "integraOptions": [],
+    "category": "Best Sellers",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-15T12:00:00Z",
+    "popularity": 92,
+    "effects": [
+      "Euphoric",
+      "Visual",
+      "Introspective"
+    ],
+   " medicalUses": [
+      "Depression",
+      "PTSD",
+      "Anxiety"
+    ],
+    "aromas": ["Earthy", "Woody"],
+    "description": "Golden Teacher is a classic psilocybin mushroom known for its balanced and insightful effects.",
+    "inStock": true,
+    "DescriptionD": "Golden Teacher Magic Mushrooms are favored for their reliable potency and profound journeys. Ideal for both beginners and experienced psychonauts seeking clarity and creativity.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Morgan S.",
+        "rating": 5,
+        "comment": "Amazing visuals and a very positive experience.",
+        "date": "May 1, 2023"
+      },
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Alex T.",
+        "rating": 4,
+        "comment": "Gentle come-up and very introspective.",
+        "date": "May 3, 2023"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    // "image": "../../../Assets/chocolate1.png",
+    // "images": [
+    //   "../../../Assets/chocolate1.png",
+    //   "../../../Assets/chocolate2.png",
+    // ],
+    "title": "Milk Chocolate Bar 500mg THC",
+    "type": "Edibles",
+    "rating": 4.7,
+    "reviews": 41,
+    "strain": "Hybrid",
+    "price": 30.0,
+    "options": ["500mg"],
+   " weightOptions": [
+      { "label": "500mg", "price": 30.0 },
+    ],
+    "integraOptions": [],
+    "category": "Promotions",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-16T12:00:00Z",
+    "popularity": 75,
+    "effects": [
+      "Relaxing",
+      "Happy",
+      "Euphoric"
+    ],
+   " medicalUses": [
+      "Chronic Pain",
+      "Insomnia",
+      "Stress"
+    ],
+    "aromas": ["Chocolate", "Sweet"],
+    "description": "Smooth milk chocolate bar infused with 500mg THC for a potent edible treat.",
+    "inStock": true,
+    "DescriptionD": "This milk chocolate bar delivers a rich, creamy flavor and a powerful, relaxing effect. Perfect for unwinding or sharing with friends.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review1.png",
+        "name": "Nina G.",
+        "rating": 5,
+        "comment": "Delicious and strong. Will buy again!",
+        "date": "May 12, 2023"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    // "image": "../../../Assets/shatter1.png",
+    // "images": [
+    //   "../../../Assets/shatter1.png",
+    //   "../../../Assets/concentrate2.png",
+    // ],
+    "title": "Premium Shatter 1g",
+    "type": "Concentrates",
+    "rating": 4.5,
+    "reviews": 58,
+    "strain": "Sativa 100%",
+    "price": 35.0,
+    "options": ["1g", "3g", "5g"],
+   " weightOptions": [
+      { "label": "1g", "price": 35.0 },
+      { "label": "3g", "price": 95.0 },
+      { "label": "5g", "price": 150.0 }
+    ],
+    "integraOptions": [],
+    "category": "On Sale",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-17T12:00:00Z",
+    "popularity": 68,
+    "effects": [
+      "Uplifting",
+      "Energetic",
+      "Creative"
+    ],
+   " medicalUses": [
+      "Fatigue",
+      "Depression",
+      "Mood Swings"
+    ],
+    "aromas": ["Citrus", "Pine"],
+    "description": "High-quality sativa shatter for a clean, energetic high and bold citrus flavor.",
+    "inStock": true,
+    "DescriptionD": "Premium Shatter 1g is made from top-grade sativa strains, offering a potent and clear-headed effect ideal for daytime use.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review2.png",
+        "name": "Omar V.",
+        "rating": 4,
+        "comment": "Great for focus and energy. Smooth hit.",
+        "date": "June 1, 2023"
+      },
+    ],
+  },
+  {
+    "id": 17,
+    // "image": "../../../Assets/wax1.png",
+    // "images": [
+    //   "../../../Assets/wax1.png",
+    //   "../../../Assets/concentrate3.png",
+    // ],
+    "title": "Live Resin Wax 1g",
+    "type": "Concentrates",
+    "rating": 4.6,
+    "reviews": 33,
+    "strain": "Hybrid",
+    "price": 40.0,
+    "options": ["1g", "3g"],
+   " weightOptions": [
+      { "label": "1g", "price": 40.0 },
+      { "label": "3g", "price": 110.0 }
+    ],
+    "integraOptions": [],
+    "category": "Best Sellers",
+    "Rc": "Recently Added",
+    "createdAt": "2024-06-18T12:00:00Z",
+    "popularity": 81,
+    "effects": [
+      "Euphoric",
+      "Relaxing",
+      "Creative"
+    ],
+   " medicalUses": [
+      "Pain Relief",
+      "Stress",
+      "Anxiety"
+    ],
+    "aromas": ["Fruity", "Earthy"],
+    "description": "Live resin wax made from fresh-frozen hybrid strains for maximum flavor and potency.",
+    "inStock": true,
+    "DescriptionD": "Experience the full spectrum of cannabinoids and terpenes with this premium live resin wax, perfect for dabbing enthusiasts.",
+    "Reviews": [
+      {
+        "profile": "../../../Assets/review3.png",
+        "name": "Priya M.",
+        "rating": 5,
+        "comment": "Flavorful and strong—my new favorite wax.",
+        "date": "June 10, 2023"
+      }
+    ]
+  },
+// {
+//   "id": 18,
+//   // "image": "../../../Assets/flower_hybrid1.png",
+//   // "images: [
+//   //   "../../../Assets/flower_hybrid1.png",
+//   //   "../../../Assets/flower_hybrid2.png"
+//   // ],
+//   "title": "Sunset Sherbet",
+//   "type": "Flowers",
+//   "rating": 4.8,
+//   "reviews": 82,
+//   "strain": "Hybrid",
+//   "price": 90.0,
+//   "options": ["28g", "1/2lb", "1/4lb"],
+//  " weightOptions": [
+//     { "label": "28g", "price": 90.0 },
+//     { "label": "1/2lb", "price": 450.0 },
+//     { "label": "1/4lb", "price": 250.0 },
+//   ],
+//   "integraOptions": [{ "label": "4g (+$2.00)", "price": 2.0 }],
+//   "category": "Best Sellers",
+//   "Rc": "Recently Added",
+//   "createdAt": "2024-06-20T12:00:00Z",
+//   "popularity": 85,
+//   "effects": ["Euphoric", "Relaxed", "Creative"],
+//  " medicalUses": ["Stress", "Depression", "Pain"],
+//   "aromas": ["Sweet", "Citrus", "Earthy"],
+//   "description": "A balanced hybrid flower with a sweet, dessert-like aroma and uplifting "effects".",
+//   "inStock": true,
+//   "DescriptionD": "Sunset Sherbet is a potent hybrid strain that delivers powerful full-body "effects" elevated by a jolt of cerebral energy. Its complex aroma blends sweet berries and citrus.",
+//   "Reviews": [
+//     {
+//       "profile": "../../../Assets/review1.png",
+//       "name": "Ashley D.",
+//       "rating": 5,
+//       "comment": "Love the flavor and balanced effect!",
+//       "date": "June 22, 2024",
+//     }
+//   ],
+// },
+
+{
+  "id": 19,
+  // "image": "../../../Assets/gummies1.png",
+  // "images: [
+  //   "../../../Assets/gummies1.png",
+  //   "../../../Assets/gummies2.png",
+  // ],
+  "title": "Sour Watermelon Gummies 300mg THC",
+  "type": "Edibles",
+  "rating": 4.7,
+  "reviews": 50,
+  "strain": "Gummies",
+  "price": 25.0,
+  "options": ["300mg"],
+ " weightOptions": [
+    { "label": "300mg", "price": 25.0 }
+  ],
+  "integraOptions": [],
+  "category": "Best Sellers",
+  "Rc": "Recently Added",
+  "createdAt": "2024-06-21T12:00:00Z",
+  "popularity": 80,
+  "effects": ["Relaxing", "Happy"],
+ " medicalUses": ["Anxiety", "Stress", "Insomnia"],
+  "aromas": ["Fruity", "Sweet"],
+  "description": "Tasty sour watermelon gummies infused with THC for a fun and discreet edible.",
+  "inStock": true,
+  "DescriptionD": "Perfect for microdosing or a full experience, these gummies hit the spot with their tangy flavor and smooth onset.",
+  "Reviews": [
+    {
+      "profile": "../../../Assets/review2.png",
+      "name": "Ben F.",
+      "rating": 4,
+      "comment": "Great taste, nice buzz.",
+      "date": "June 23, 2024"
+    }
+  ]
+},
+
+{
+  "id": 20,
+  // "image": "../../../Assets/chocolate2.png",
+  // "images: [
+  //   "../../../Assets/chocolate2.png",
+  //   "../../../Assets/chocolate1.png",
+  // ],
+  "title": "Dark Chocolate Bar 300mg THC",
+  "type": "Edibles",
+  "rating": 4.9,
+  "reviews": 33,
+  "strain": "Chocolates",
+  "price": 28.0,
+  "options": ["300mg"],
+ " weightOptions": [
+    { "label": "300mg", "price": 28.0 }
+  ],
+  "integraOptions": [],
+  "category": "Promotions",
+  "Rc": "Recently Added",
+  "createdAt": "2024-06-22T12:00:00Z",
+  "popularity": 77,
+  "effects": ["Euphoric", "Relaxing"],
+ " medicalUses": ["Pain", "Insomnia"],
+  "aromas": ["Chocolate", "Rich"],
+  "description": "Premium dark chocolate infused with THC for a decadent edible experience.",
+  "inStock": true,
+  "DescriptionD":" Handcrafted chocolate with a smooth finish and potent effect. Perfect for winding down.",
+  "Reviews": [
+    {
+      "profile": "../../../Assets/review3.png",
+      "name": "Maria G.",
+      "rating": 5,
+      "comment": "Delicious and effective!",
+      "date": "June 24, 2024"
+    }
+  ]
+},
+
+{
+  "id": 21,
+  // "image": "../../../Assets/shatter2.png",
+  // "images: [
+  //   "../../../Assets/shatter2.png",
+  //   "../../../Assets/shatter1.png",
+  // ],
+  "title": "Blue Dream Shatter 1g",
+  "type": "Concentrates",
+  "rating": 4.8,
+  "reviews": 40,
+  "strain": "Shatter",
+  "price": 38.0,
+  "options": ["1g"],
+ " weightOptions": [
+    { "label": "1g", "price": 38.0 }
+  ],
+  "integraOptions": [],
+  "category": "On Sale",
+  "Rc": "Recently Added",
+  "createdAt": "2024-06-23T12:00:00Z",
+  "popularity": 70,
+  "effects": ["Uplifting", "Creative"],
+ " medicalUses": ["Fatigue", "Depression"],
+  "aromas": ["Berry", "Sweet"],
+  "description": "Potent shatter made from Blue Dream, perfect for a creative and energetic high.",
+  "inStock": true,
+  "DescriptionD": "Blue Dream Shatter offers a clean, powerful sativa effect with a sweet berry aroma.",
+  "Reviews": [
+    {
+      "profile": "../../../Assets/review1.png",
+      "name": "Derek L.",
+      "rating": 5,
+      "comment": "Smooth and strong.",
+      "date": "June 25, 2024"
+    }
+  ]
+},
+
+{
+  "id": 22,
+  // "image": "../../../Assets/wax2.png",
+  // "images: [
+  //   "../../../Assets/wax2.png",
+  //   "../../../Assets/wax1.png",
+  // ],
+  "title": "OG Kush Wax 1g",
+  "type": "Concentrates",
+  "rating": 4.6,
+  "reviews": 22,
+  "strain": "Wax",
+  "price": 36.0,
+  "options": ["1g"],
+ " weightOptions": [
+    { "label": "1g", "price": 36.0 }
+  ],
+  "integraOptions": [],
+  "category": "Best Sellers",
+  "Rc": "Recently Added",
+  "createdAt": "2024-06-24T12:00:00Z",
+  "popularity": 73,
+  "effects": ["Relaxing", "Euphoric"],
+ " medicalUses": ["Pain", "Stress"],
+  "aromas": ["Earthy", "Pine"],
+  "description": "Classic OG Kush wax for a strong, relaxing effect.",
+  "inStock": true,
+  "DescriptionD": "OG Kush Wax is known for its earthy aroma and potent, long-lasting effects.",
+  "Reviews": [
+    {
+      "profile": "../../../Assets/review2.png",
+      "name": "Samira H.",
+      "rating": 4,
+      "comment": "Very relaxing, great for evenings.",
+      "date": "June 26, 2024"
+    }
+  ],
+},
+{
+  "id": 23,
+  // "image": "../../../Assets/mushroom2.png",
+  // "images: [
+  //   "../../../Assets/mushroom2.png",
+  //   "../../../Assets/mushroom1.png",
+  // ],
+  "title": "Penis Envy Magic Mushrooms",
+  "type": "Mushrooms",
+  "rating": 4.9,
+  "reviews": 29,
+  "strain": "Psilocybe Cubensis",
+  "price": 60.0,
+  "options": ["3.5g", "7g"],
+ " weightOptions": [
+    { "label": "3.5g", "price": 60.0 },
+    { "label": "7g", "price": 110.0 }
+  ],
+  "integraOptions": [],
+  "category": "Best Sellers",
+  "Rc": "Recently Added",
+  "createdAt": "2024-06-25T12:00:00Z",
+  "popularity": 90,
+  "effects": ["Visual", "Euphoric", "Introspective"],
+ " medicalUses": ["Depression", "PTSD"],
+  "aromas": ["Earthy", "Woody"],
+  "description": "Highly potent magic mushrooms for experienced users seeking deep journeys.",
+  "inStock": true,
+  "DescriptionD": "Penis Envy is one of the most potent psilocybin mushrooms, prized for its intense effects and introspective journeys.",
+  "Reviews": [
+    {
+      "profile": "../../../Assets/review3.png",
+      "name": "Jake P.",
+      "rating": 5,
+      "comment": "Strong and transformative experience.",
+      "date": "June 27, 2024"
+    }
+  ]
+},
+// {
+//   "id": 24,
+//   // "image": "../../../Assets/bundle1.png",
+//   // "images: [
+//   //   "../../../Assets/bundle1.png",
+//   //   "../../../Assets/flower_hybrid1.png",
+//   //   "../../../Assets/gummies1.png",
+//   // ],
+//   "title": "420 Starter Bundle",
+//   "type": "Flowers",
+//   "rating": 4.8,
+//   "reviews": 17,
+//   "strain": "Hybrid",
+//   "price": 120.0,
+//   "options": ["Bundle"],
+//   "weightOptions": [
+//     { "label": "Bundle", "price": 120.0 },
+//   ],
+//   "integraOptions": [],
+//   "category": "Bundles & Promotions",
+//   "Rc": "Recently Added",
+//   "createdAt": "2024-06-28T12:00:00Z",
+//   "popularity": 95,
+//   "effects": ["Relaxing", "Happy", "Creative"],
+//  " medicalUses": ["Stress", "Pain"],
+//   "aromas": ["Mixed", "Fruity", "Earthy"],
+//   "description": "A special bundle featuring flower, edibles, and accessories for the perfect 420 celebration.",
+//   "inStock": true,
+//   "DescriptionD": `This bundle includes a top-shelf hybrid flower, a pack of THC gummies, and rolling papers. Ideal for new and experienced users alike.`,
+//   "Reviews": [
+//     {
+//       "profile": "../../../Assets/review1.png",
+//       "name": "Liam S.",
+//       "rating": 5,
+//       "comment": "Great value and variety. Loved it!",
+//       "date": "June 29, 2024",
+//     }
+//   ],
+// },
+],
