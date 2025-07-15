@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
+//import PromotionsPage from "./pages/Promotions";
 const wait = ms => new Promise(res => setTimeout(res, ms));
 const LandingPage = lazy(() => wait(600).then(() => import("./LandingPage")));
 const EduDetail = lazy(() => wait(600).then(() => import('./components/Features/WeedEducation/EduDetail')));
@@ -12,7 +13,10 @@ const Checkout = lazy(() => wait(600).then(() => import("./pages/CheckoutPage"))
 const ShippingDetails = lazy(() => wait(600).then(() => import("./components/Features/OrderComplete/ShippingDetails")));
 // const Dashboard = lazy(() => wait(600).then(() => import('../pages/Dashboard')));
 // const Profile = lazy(() => wait(600).then(() => import('./pages/Profile')));
-
+const RewardsPage=lazy(()=>wait(600).then(()=>import("./pages/Rewards")));
+const SupportPage=lazy(()=>wait(600).then(()=> import("./pages/Support"))) ;
+const PromotionsPage=lazy(()=>wait(600).then(()=>import("./pages/Promotions")))
+const BlogPage=lazy(()=>wait(600).then(()=>import("./pages/BlogPage")));
 const AppRoutes = () => (
   <Suspense
     fallback={
@@ -37,6 +41,10 @@ const AppRoutes = () => (
         <Route path="/CheckoutPage" element={<CheckoutPage />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<ShippingDetails />} />
+        <Route path="/rewards" element={<RewardsPage />} />
+        <Route path="/support" element={<SupportPage/>}/>
+        <Route path="/Promotions" element={<PromotionsPage/>}/>
+        <Route path="/blogpage" element={<BlogPage/>}/>
         {/* <Route path="dashboard" element={<Dashboard />} /> */}
         {/* <Route path="profile" element={<Profile />} /> */}
       </Route>

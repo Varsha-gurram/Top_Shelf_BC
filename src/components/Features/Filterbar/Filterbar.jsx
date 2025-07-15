@@ -7,7 +7,7 @@ import { setCategory, setStrain } from '../../../Redux/filters/filterSlice';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Dropdown from '../../Common/Dropdown';
 import { useTheme, useMediaQuery } from '@mui/material';
-
+import RewardsPage from '../../../pages/Rewards';
 const Filterbar = ({ showMobileIcon = false }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -22,7 +22,20 @@ const Filterbar = ({ showMobileIcon = false }) => {
     if (item.label === 'Home') {
       dispatch(setCategory('all'));
       navigate('/');
-    } else if (item.label === 'Shop All') {
+    }
+    else if (item.label === 'Rewards') {
+      navigate('/rewards');
+    } 
+    else if(item.label==='Blog'){
+      navigate('/blogpage');
+    }
+     else if (item.label === 'Promotions') {
+      navigate('/Promotions');
+    } 
+    else if(item.label==='Support'){
+      navigate('/support');
+    }
+    else if (item.label === 'Shop All') {
       dispatch(setCategory('all'));
       navigate('/products');
     } else {
