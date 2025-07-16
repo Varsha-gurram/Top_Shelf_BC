@@ -2,7 +2,6 @@ import React from "react";
 import {
   Box,
   Typography,
-  IconButton,
 } from "@mui/material";
 import { images } from "../../../Assets/images";
 import Search from "../../Common/Search";
@@ -10,11 +9,13 @@ import CartButton from "../../Common/CartButton";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Filterbar from "../Filterbar/Filterbar";
-const Navbar = () => {
-   const cartCount = useSelector(state =>
+
+const Navbar = ({ onAccountClick }) => {
+  const cartCount = useSelector(state =>
     state.cart.items.reduce((sum, item) => sum + item.quantity, 0)
   );
   const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -28,13 +29,7 @@ const Navbar = () => {
         borderBottom: "1px solid #F4F4F4",
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          width: { xs: "auto", md: "270px" },
-        }}
-      >
+      <Box sx={{ display: "flex", alignItems: "center", width: { xs: "auto", md: "270px" } }}>
         <Box sx={{ display: { xs: "block", md: "none" } }}>
           <Filterbar showMobileIcon />
         </Box>
@@ -45,6 +40,7 @@ const Navbar = () => {
           onClick={() => navigate("/")}
         />
       </Box>
+
       <Box
         sx={{
           flex: 1,
@@ -60,6 +56,7 @@ const Navbar = () => {
           width={{ xs: "70%", sm: "400px" }}
         />
       </Box>
+
       <Box
         sx={{
           display: "flex",
@@ -68,18 +65,20 @@ const Navbar = () => {
         }}
       >
         <Typography
+          onClick={onAccountClick}
           sx={{
             fontSize: { xs: 14, md: 16 },
             mr: 1,
+            cursor: "pointer",
             display: { xs: "none", sm: "block" },
           }}
         >
           Your Account
         </Typography>
         <CartButton
-      count={cartCount}
-      onClick={() => navigate("/cart")}
-    />
+          count={cartCount}
+          onClick={() => navigate("/cart")}
+        />
       </Box>
     </Box>
   );

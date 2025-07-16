@@ -42,13 +42,9 @@ const ShippingDetails = () => {
     0
   );
   const total = subtotal + shipping - points;
-
-  // Handler to clear the cart on confirm
   const handleConfirm = () => {
     dispatch(clearCart());
   };
-
-  // Handler to clear the cart and go home
   const handleShopMore = () => {
     dispatch(clearCart());
     navigate('/');
@@ -102,7 +98,6 @@ const ShippingDetails = () => {
                       flexWrap: "wrap",
                     }}
                   >
-                    {/* Left: Picture & Title */}
                     <Box
                       sx={{
                         flex: "1 1 40%",
@@ -148,7 +143,6 @@ const ShippingDetails = () => {
                         )}
                       </Box>
                     </Box>
-                    {/* Center: Quantity & Price */}
                     <Box
                       sx={{
                         flex: "1 1 25%",
@@ -173,7 +167,6 @@ const ShippingDetails = () => {
                         Price: ${item.price.toFixed(2)}
                       </Typography>
                     </Box>
-                    {/* Right: Total */}
                     <Box
                       sx={{
                         flex: "1 1 25%",
