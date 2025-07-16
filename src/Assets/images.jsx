@@ -37,4 +37,5 @@ export const images = {
   cover_im2:require('./cover_im2.png'),
   cover_im3:require('./cover_im3.png'),
   cover_sm:require('./cover_sm.png'),
+  LSImage:require('./LoginSignupimage.jpg')
 };
