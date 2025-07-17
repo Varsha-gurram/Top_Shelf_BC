@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Notification from './components/Features/Notification/Notification';
 import Navbar from './components/Features/Navbar/Navbar';
 import Filterbar from './components/Features/Filterbar/Filterbar';
-import AccountPage from './pages/AccountPage'; // Import your account component
+import AccountPage from './pages/AccountPage';
 import { Outlet } from "react-router-dom";
 import './App.css';
 
