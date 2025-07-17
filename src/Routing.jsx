@@ -4,8 +4,8 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import AccountPage from "./pages/AccountPage"
-// Lazy loaded components with artificial delay
+import AccountPage from "./pages/AccountPage";
+import CartSync from "./pages/CartSync";
 const wait = ms => new Promise(res => setTimeout(res, ms));
 const LandingPage = lazy(() => wait(600).then(() => import("./LandingPage")));
 const EduDetail = lazy(() => wait(600).then(() => import('./components/Features/WeedEducation/EduDetail')));
@@ -20,8 +20,6 @@ const RewardsPage = lazy(() => wait(600).then(() => import("./pages/Rewards")));
 const SupportPage = lazy(() => wait(600).then(() => import("./pages/Support")));
 const PromotionsPage = lazy(() => wait(600).then(() => import("./pages/Promotions")));
 const BlogPage = lazy(() => wait(600).then(() => import("./pages/BlogPage")));
-
-// ✅ FIXED: Proper component definition
 const AppRoutes = () => {
   const [user] = useAuthState(auth);
 
@@ -38,12 +36,10 @@ const AppRoutes = () => {
         </div>
       }
     >
+      <CartSync/>
       <Routes>
-        {/* Auth Routes */}
         <Route path="/login" element={!user ? <LoginPage /> : <Navigate to="/" />} />
         <Route path="/signup" element={!user ? <SignupPage /> : <Navigate to="/" />} />
-
-        {/* Main Routes under Layout */}
         <Route path="/" element={<LandingPage />}>
           <Route index element={<HomePage />} />
           <Route path="article/:id" element={<EduDetail />} />

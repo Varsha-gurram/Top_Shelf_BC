@@ -11,18 +11,40 @@ import { images } from "../Assets/images";
 import MyButton from "../components/Common/Button";
 import { useNavigate } from "react-router-dom";
 import { Add, Remove } from "@mui/icons-material";
+import { auth, db } from "../firebase"; 
+import { doc, updateDoc, deleteDoc, getDocs, collection } from "firebase/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const CartPage = () => {
   const cartItems = useSelector((state) => state.cart.items);
+  const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleClick = () => {
-    navigate("/products");
+  const handleClick = () => navigate("/products");
+  const handleCheckout = () => navigate("/CheckoutPage");
+
+  const updateCartInFirestore = async (productId, quantity) => {
+    if (!user) return;
+    const ref = doc(db, "users", user.uid, "cart", productId.toString());
+    await updateDoc(ref, { quantity });
   };
-  const handleCheckout = () => {
-    navigate("/CheckoutPage");
+
+  const deleteCartItemFromFirestore = async (productId) => {
+    if (!user) return;
+    const ref = doc(db, "users", user.uid, "cart", productId.toString());
+    await deleteDoc(ref);
   };
+
+  const clearFirestoreCart = async () => {
+    if (!user) return;
+    const cartRef = collection(db, "users", user.uid, "cart");
+    const snapshot = await getDocs(cartRef);
+    snapshot.forEach((docSnap) =>
+      deleteDoc(doc(db, "users", user.uid, "cart", docSnap.id))
+    );
+  };
+
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
@@ -79,6 +101,7 @@ const CartPage = () => {
         <Box sx={{ width: 100, textAlign: "center" }}>Subtotal</Box>
         <Box sx={{ width: 90, textAlign: "center" }}>Action</Box>
       </Box>
+
       {cartItems.map((item) => (
         <Box
           key={item.id}
@@ -101,7 +124,6 @@ const CartPage = () => {
               style={{ width: "100%", maxWidth: 60, borderRadius: 4 }}
             />
           </Box>
-
           <Typography
             sx={{
               mx: { xs: 0, md: 2 },
@@ -114,7 +136,6 @@ const CartPage = () => {
           >
             {item.title}
           </Typography>
-
           <Typography
             sx={{
               width: { xs: "100%", md: 80 },
@@ -125,7 +146,6 @@ const CartPage = () => {
           >
             ₹{item.price.toFixed(2)}
           </Typography>
-
           <Box
             sx={{
               width: { xs: "100%", md: 120 },
@@ -136,32 +156,32 @@ const CartPage = () => {
             }}
           >
             <IconButton
-              onClick={() => dispatch(decrementQuantity(item.id))}
+              onClick={() => {
+                if (item.quantity > 1) {
+                  dispatch(decrementQuantity(item.id));
+                  updateCartInFirestore(item.id, item.quantity - 1);
+                }
+              }}
               disabled={item.quantity <= 1}
               size="small"
               sx={{ color: "black" }}
             >
               <Remove />
             </IconButton>
-            <Typography
-              sx={{
-                mx: 1,
-                minWidth: 24,
-                textAlign: "center",
-                fontWeight: 600,
-              }}
-            >
+            <Typography sx={{ mx: 1, minWidth: 24, textAlign: "center", fontWeight: 600 }}>
               {item.quantity}
             </Typography>
             <IconButton
-              onClick={() => dispatch(incrementQuantity(item.id))}
+              onClick={() => {
+                dispatch(incrementQuantity(item.id));
+                updateCartInFirestore(item.id, item.quantity + 1);
+              }}
               size="small"
               sx={{ color: "black" }}
             >
               <Add />
             </IconButton>
           </Box>
-
           <Typography
             sx={{
               width: { xs: "100%", md: 100 },
@@ -172,7 +192,6 @@ const CartPage = () => {
           >
             ₹{(item.price * item.quantity).toFixed(2)}
           </Typography>
-
           <Button
             sx={{
               mt: { xs: 1, md: 0 },
@@ -188,13 +207,15 @@ const CartPage = () => {
                 backgroundColor: "#cc0000",
               },
             }}
-            onClick={() => dispatch(removeFromCart(item.id))}
+            onClick={() => {
+              dispatch(removeFromCart(item.id));
+              deleteCartItemFromFirestore(item.id);
+            }}
           >
             Remove
           </Button>
         </Box>
       ))}
-
       <Box
         sx={{
           display: "flex",
@@ -218,7 +239,10 @@ const CartPage = () => {
               backgroundColor: "#555",
             },
           }}
-          onClick={() => dispatch(clearCart())}
+          onClick={() => {
+            dispatch(clearCart());
+            clearFirestoreCart();
+          }}
         >
           Clear Cart
         </Button>

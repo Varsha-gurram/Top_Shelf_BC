@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { auth } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-
 const SignupPage = () => {
   const [form, setForm] = useState({
     fullName: "",
@@ -13,27 +12,56 @@ const SignupPage = () => {
     password: "",
     confirmPassword: "",
   });
+  const [errors, setErrors] = useState({});
+  const validate = () => {
+    const newErrors = {};
+    if (!form.fullName.trim()) {
+      newErrors.fullName = "Full name is required.";
+    } else if (!/^[a-zA-Z\s]+$/.test(form.fullName)) {
+      newErrors.fullName = "Full name must contain only letters and spaces.";
+    }
+    if (!form.email) {
+      newErrors.email = "Email is required.";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(form.email)
+    ) {
+      newErrors.email = "Invalid email address.";
+    }
+    if (!form.password) {
+      newErrors.password = "Password is required.";
+    } else if (form.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters.";
+    } else if (!/(?=.*[0-9!@#$%^&*])/.test(form.password)) {
+      newErrors.password = "Password must include at least one number or symbol.";
+    }
+    if (form.confirmPassword !== form.password) {
+      newErrors.confirmPassword = "Passwords do not match.";
+    }
 
-  const [error, setError] = useState("");
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" }); // Clear field error
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (form.password !== form.confirmPassword) {
-      setError("Passwords do not match.");
-      return;
-    }
+    if (!validate()) return;
 
     try {
       await createUserWithEmailAndPassword(auth, form.email, form.password);
-      alert("signup Successful!");
-      setForm({ fullName: "", email: "", password: "", comfirmPassword: "" });
+      alert("Signup Successful!");
+      setForm({
+        fullName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
     } catch (error) {
-      alert("Sign Up failed:" + error.message);
+      alert("Sign Up failed: " + error.message);
     }
   };
 
@@ -41,12 +69,7 @@ const SignupPage = () => {
     <div className="signup-container">
       <div className="signup-box">
         <div>
-          <img
-            src={images.Logo}
-            alt="Weed Logo"
-            className="logo"
-            width="100px"
-          />
+          <img src={images.Logo} alt="Weed Logo" className="logo" width="100px" />
           <h2>Create an Account</h2>
 
           <form onSubmit={handleSubmit} className="signup-form">
@@ -58,6 +81,7 @@ const SignupPage = () => {
               onChange={handleChange}
               required
             />
+            {errors.fullName && <p className="error-text">{errors.fullName}</p>}
 
             <input
               type="email"
@@ -67,6 +91,7 @@ const SignupPage = () => {
               onChange={handleChange}
               required
             />
+            {errors.email && <p className="error-text">{errors.email}</p>}
 
             <input
               type="password"
@@ -76,6 +101,7 @@ const SignupPage = () => {
               onChange={handleChange}
               required
             />
+            {errors.password && <p className="error-text">{errors.password}</p>}
 
             <input
               type="password"
@@ -85,8 +111,9 @@ const SignupPage = () => {
               onChange={handleChange}
               required
             />
-
-            {error && <p className="error-text">{error}</p>}
+            {errors.confirmPassword && (
+              <p className="error-text">{errors.confirmPassword}</p>
+            )}
 
             <button type="submit">Sign Up</button>
           </form>
