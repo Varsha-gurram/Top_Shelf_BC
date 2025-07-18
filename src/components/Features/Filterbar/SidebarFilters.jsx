@@ -62,8 +62,6 @@ const SidebarFilters = () => {
   if (strain) appliedFilters.push({ type: 'strain', label: strain });
   if (priceRange && (priceRange[0] > 0 || priceRange[1] < 1000)) appliedFilters.push({ type: 'price', label: `$${priceRange[0]} - $${priceRange[1]}` });
   if (rating) appliedFilters.push({ type: 'rating', label: `${rating}★ & below` });
-
-  // Remove individual filter chips
   const handleRemoveFilter = (type, value) => {
     if (type === 'category') dispatch(setCategory('all'));
     if (type === 'strain') dispatch(setStrain(null));
@@ -86,7 +84,6 @@ const SidebarFilters = () => {
         overflowY: 'auto'
       }}
     >
-      {/* Applied Filters */}
       {appliedFilters.length > 0 && (
         <Box sx={{ mb: 2 }}>
           <Typography variant="subtitle2" sx={{ fontWeight: 'bold', mb: 1 }}>Applied Filters</Typography>

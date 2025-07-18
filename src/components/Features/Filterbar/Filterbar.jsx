@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Box, Typography, Drawer, IconButton } from '@mui/material';
-import TuneIcon from '@mui/icons-material/Tune';
-import { useDispatch, useSelector } from 'react-redux';
-import { Filterbarlist } from './Filterbarlist';
-import { setCategory, setStrain } from '../../../Redux/filters/filterSlice';
-import { useNavigate, useLocation } from 'react-router-dom';
-import Dropdown from '../../Common/Dropdown';
-import { useTheme, useMediaQuery } from '@mui/material';
-import RewardsPage from '../../../pages/Rewards';
+import React, { useState } from "react";
+import { Box, Typography, Drawer, IconButton } from "@mui/material";
+import TuneIcon from "@mui/icons-material/Tune";
+import { useDispatch, useSelector } from "react-redux";
+import { Filterbarlist } from "./Filterbarlist";
+import { setCategory, setStrain } from "../../../Redux/filters/filterSlice";
+import { useNavigate, useLocation } from "react-router-dom";
+import Dropdown from "../../Common/Dropdown";
+import { useTheme, useMediaQuery } from "@mui/material";
+
 const Filterbar = ({ showMobileIcon = false }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -15,73 +15,68 @@ const Filterbar = ({ showMobileIcon = false }) => {
   const selectedCategory = useSelector((state) => state.filters.category);
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleCategoryClick = (item) => {
-    if (item.label === 'Home') {
-      dispatch(setCategory('all'));
-      navigate('/');
-    }
-    else if (item.label === 'Rewards') {
-      navigate('/rewards');
-    } 
-    else if(item.label==='Blog'){
-      navigate('/blogpage');
-    }
-     else if (item.label === 'Promotions') {
-      navigate('/Promotions');
-    } 
-    else if(item.label==='Support'){
-      navigate('/support');
-    }
-    else if (item.label === 'Shop All') {
-      dispatch(setCategory('all'));
-      navigate('/products');
+    if (item.label === "Home") {
+      dispatch(setCategory("all"));
+      navigate("/");
+    } else if (item.label === "Rewards") {
+      navigate("/rewards");
+    } else if (item.label === "Blog") {
+      navigate("/blogpage");
+    } else if (item.label === "Promotions") {
+      navigate("/Promotions");
+    } else if (item.label === "Support") {
+      navigate("/support");
+    } else if (item.label === "Shop All") {
+      dispatch(setCategory("all"));
+      navigate("/products");
     } else {
       dispatch(setCategory(item.value));
-      navigate('/products');
+      navigate("/products");
     }
     setDrawerOpen(false);
   };
 
   const handleSubCategorySelect = (subItem) => {
     dispatch(setStrain(subItem));
-    navigate('/products');
-    setDrawerOpen(false); 
+    navigate("/products");
+    setDrawerOpen(false);
   };
 
-  const currentCategory =
-    location.pathname === '/' ? '/' : selectedCategory;
+  const currentCategory = location.pathname === "/" ? "/" : selectedCategory;
+
   const filterBarContent = (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' },
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         gap: 3,
-        justifyContent: { xs: 'flex-start', md: 'center' },
-        alignItems: { xs: 'flex-start', md: 'center' },
-        height: { md: '56px' },
+        justifyContent: { xs: "flex-start", md: "center" },
+        alignItems: { xs: "flex-start", md: "center" },
+        height: { md: "56px" },
         px: { xs: 2, md: 8 },
         py: { xs: 2, md: 0 },
-        bgcolor: '#fff',
-        borderBottom: { md: '1px solid #F4F4F4' },
-        minWidth: { xs: 220, md: 'auto' },
+        bgcolor: "#fff",
+        borderBottom: { md: "1px solid #F4F4F4" },
+        minWidth: { xs: 220, md: "auto" },
       }}
     >
       {Filterbarlist.categories.map((item) => (
         <Box
           key={item.value}
           sx={{
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
             pb: 0.5,
             borderBottom:
               currentCategory === item.value && !isMobile
-                ? '2px solid green'
-                : 'none',
-            width: { xs: '100%', md: 'auto' },
+                ? "2px solid green"
+                : "none",
+            width: { xs: "100%", md: "auto" },
           }}
         >
           {item.subItems ? (
@@ -95,11 +90,9 @@ const Filterbar = ({ showMobileIcon = false }) => {
             <Typography
               onClick={() => handleCategoryClick(item)}
               sx={{
-                color:
-                  currentCategory === item.value ? 'green' : 'black',
-                fontWeight:
-                  currentCategory === item.value ? 'bold' : 'normal',
-                width: { xs: '100%', md: 'auto' },
+                color: currentCategory === item.value ? "green" : "black",
+                fontWeight: currentCategory === item.value ? "bold" : "normal",
+                width: { xs: "100%", md: "auto" },
                 py: { xs: 1, md: 0 },
               }}
             >
@@ -110,7 +103,9 @@ const Filterbar = ({ showMobileIcon = false }) => {
       ))}
     </Box>
   );
+
   if (isMobile && !showMobileIcon) return null;
+
   if (isMobile && showMobileIcon) {
     return (
       <>
@@ -118,10 +113,10 @@ const Filterbar = ({ showMobileIcon = false }) => {
           onClick={() => setDrawerOpen(true)}
           color="inherit"
           sx={{ ml: 1 }}
-          aria-label="open filter bar"
         >
           <TuneIcon />
         </IconButton>
+
         <Drawer
           anchor="left"
           open={drawerOpen}
@@ -131,7 +126,7 @@ const Filterbar = ({ showMobileIcon = false }) => {
               borderTopLeftRadius: 12,
               borderTopRightRadius: 12,
               minHeight: 200,
-              bgcolor: '#fff',
+              bgcolor: "#fff",
             },
           }}
         >
@@ -140,6 +135,7 @@ const Filterbar = ({ showMobileIcon = false }) => {
       </>
     );
   }
+
   return filterBarContent;
 };
 
