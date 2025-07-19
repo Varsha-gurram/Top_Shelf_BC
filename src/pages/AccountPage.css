@@ -1,75 +1,290 @@
-.account-container {
-  padding: 2rem;
-  max-width: 500px;
+.account-page-root {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f7fbfa 0%, #e8f2e4 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 0;
+  overflow-y: auto;
+}
+
+.account-card {
+  /* background: #fff; */
+  max-width: 420px;
+  width: 100%;
   margin: 0 auto;
+  padding: 2rem 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(159, 196, 152, 0.16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.account-avatar,
+.account-avatar-fallback {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #fafafb;
+  object-fit: cover;
+  font-size: 2.05rem;
+  font-weight: 600;
+  color: #426231;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-avatar-fallback {
+  background: #e9ead8;
+}
+
+.account-card-title {
+  min-width: 0;
+  flex: 1;
+  text-align: left;
+}
+.account-card-title h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.40rem;
+  font-weight: 700;
+  color: #294b26;
+  letter-spacing: 0.02em;
+}
+.account-card-email {
+  font-size: 13px;
+  color: #66824b;
+  display: block;
+  word-break: break-all;
+  opacity: 0.82;
+}
+
+.account-info-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin: 14px 0 4px 0;
+}
+
+.account-empty {
+  width: 100%;
+}
+.account-actions-row {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+  justify-content: center;
+}
+.account-btn {
+  padding: 9px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .18s, color .18s;
+}
+.account-btn.edit,
+.account-btn.save {
+  background: #426231;
+  color: #fff;
+}
+
+.account-btn.logout {
+  background: #e74445;
+  color: #fff;
+}
+.account-btn.cancel {
+  background: #d4d5cd;
+  color: #313820;
+}
+.account-btn:hover, .account-link:hover {
+  filter: brightness(0.95);
+}
+
+.account-card label {
+  font-size: 13px;
+  color: #4a6932;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+
+.account-edit-form {
+  width: 100%;
+  margin-top: 12px;
+}
+.account-form-columns {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+.account-form-columns > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.account-edit-form input,
+.account-edit-form textarea {
+  width: 100%;
+  padding: 7px 9px;
+  border-radius: 6px;
+  border: 1px solid #b5bfae;
+  font-size: 15px;
+  margin-bottom: 2px;
+  background: #f7fcf7;
+  color: #135830;
+  resize: none;
+  transition: border-color 0.18s;
+}
+.account-edit-form input:focus,
+.account-edit-form textarea:focus {
+  outline: none;
+  border: 1.8px solid #4a6932;
+  background: #f2f7ef;
+}
+.account-loading {
   text-align: center;
+  padding: 44px 0;
+  color: #6d765e;
+  font-size: 1.1rem;
+}
+.account-link {
+  color: #426231;
+  font-weight: 600;
+  text-decoration: underline;
+  margin: 0 7px;
+}
+@media (max-width: 600px) {
+  .account-card {
+    padding: 1.15rem 2vw;
+    min-width: 0;
+  }
+  .account-edit-form input,
+  .account-edit-form textarea {
+    font-size: 14px;
+  }
+  .account-avatar-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .account-card-title {
+    text-align: center;
+    width: 100%;
+  }
+}
+.account-card {
+  background: #fff;
+  max-width: 420px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(90,120,100,0.09);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Spacing for avatar and name */
+.account-avatar-row {
+  margin-bottom: 22px;
 }
 
 .account-avatar {
-  width: 80px;
-  height: 80px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
-  margin: 10px auto;
+  border: 3px solid #e2ece4;
+  object-fit: cover;
+  margin-bottom: 0;
 }
 
-.account-edit-btn {
-  margin-top: 15px;
-  padding: 8px 16px;
-  background-color: #4a6932;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.account-logout-btn {
-  padding: 8px 16px;
-  background-color: #e53935;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.account-form {
-  margin-top: 20px;
+.account-card-title {
+  margin-left: 12px;
   text-align: left;
 }
 
-.account-form-group {
-  margin-bottom: 12px;
+.account-card-title h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: #294b26;
+  letter-spacing: 0.01em;
+}
+
+.account-card-email {
+  color: #8a9480;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+/* Input & Form grid tweaks */
+.form-grid {
+  gap: 14px 24px;
+  margin-bottom: 14px;
+}
+
+.account-form-group label {
+  color: #364c36;
+  font-weight: 500;
+  margin-bottom: 4px;
 }
 
 .account-input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  margin-top: 4px;
+  border-radius: 8px;
+  background: #fafbfa;
+  border: 1.5px solid #cfd9cc;
+  color: #294b26;
+  font-size: 1rem;
+}
+
+.account-input:focus {
+  border-color: #476b38;
+}
+
+.account-buttons-row {
+  gap: 12px;
+  margin-top: 28px;
 }
 
 .account-save-btn {
-  padding: 8px 16px;
-  background-color: #4a6932;
-  color: white;
+  font-size: 1rem;
+  padding: 11px 36px;
+  background-color: #446b36;
+  border-radius: 7px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 10px;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.account-save-btn:hover {
+  background-color: #38582d;
 }
 
 .account-cancel-btn {
-  padding: 8px 16px;
-  background-color: #ccc;
-  color: black;
+  font-size: 1rem;
+  padding: 11px 36px;
+  background-color: #e7ebea;
+  color: #3d423d;
+  border-radius: 7px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.16s;
 }
 
-.account-link {
-  color: #4a6932;
-  text-decoration: none;
-  margin: 0 8px;
+.account-cancel-btn:hover {
+  background: #d1d5d3;
+  color: #242a23;
 }
