@@ -10,6 +10,8 @@ import {
 import LocalOfferRoundedIcon from "@mui/icons-material/LocalOfferRounded";
 import MyButton from "../components/Common/Button"; 
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
 const promotions = [
   {
     title: "20% OFF First Order",
@@ -36,6 +38,16 @@ const promotions = [
     link: "/referrals",
   },
 ];
+
+const cardMotion = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.18, duration: 0.6 },
+  }),
+  hover: { scale: 1.04, boxShadow: "0 8px 24px rgba(23,175,38,0.18)" }
+};
 
 const PromotionsPage = () => {
   const navigate = useNavigate();
@@ -73,36 +85,47 @@ const PromotionsPage = () => {
       <Grid container spacing={4}>
         {promotions.map((promo, index) => (
           <Grid item xs={12} md={6} key={index} display="flex">
-            <Card
-              elevation={3}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                borderRadius: 3,
-                p: 3,
-                flex: 1,
-              }}
+            <motion.div
+              custom={index}
+              variants={cardMotion}
+              initial="hidden"
+              whileInView="visible"
+              whileHover="hover"
+              viewport={{ once: true, amount: 0.2 }}
+              style={{ width: '100%', display: 'flex', flex: 1 }}
             >
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Stack direction="row" spacing={1} alignItems="center" mb={2}>
-                  <LocalOfferRoundedIcon sx={{ color: "#17AF26", fontSize: 28 }} />
-                  <Typography variant="h6" fontWeight="bold" sx={{ color: "#070707ff" }}>
-                    {promo.title}
+              <Card
+                elevation={3}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  borderRadius: 3,
+                  p: 3,
+                  flex: 1,
+                  transition: 'box-shadow 0.2s, transform 0.2s',
+                }}
+              >
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Stack direction="row" spacing={1} alignItems="center" mb={2}>
+                    <LocalOfferRoundedIcon sx={{ color: "#17AF26", fontSize: 28 }} />
+                    <Typography variant="h6" fontWeight="bold" sx={{ color: "#070707ff" }}>
+                      {promo.title}
+                    </Typography>
+                  </Stack>
+                  <Typography variant="body2" color="text.secondary" sx={{ minHeight: 60 }}>
+                    {promo.description}
                   </Typography>
-                </Stack>
-                <Typography variant="body2" color="text.secondary" sx={{ minHeight: 60 }}>
-                  {promo.description}
-                </Typography>
-              </CardContent>
-              <Box mt={3}>
-                <MyButton
-                  name={promo.buttonText}
-                  onClick={() => handleClick(promo.link)}
-                  color="white"
-                />
-              </Box>
-            </Card>
+                </CardContent>
+                <Box mt={3}>
+                  <MyButton
+                    name={promo.buttonText}
+                    onClick={() => handleClick(promo.link)}
+                    color="white"
+                  />
+                </Box>
+              </Card>
+            </motion.div>
           </Grid>
         ))}
       </Grid>

@@ -58,8 +58,6 @@ const ProductListPage = () => {
     sortedProducts.sort((a, b) => b.price - a.price);
   } else if (sort === "rating" || sort === "average_rating") {
     sortedProducts.sort((a, b) => b.rating - a.rating);
-  } else if (sort === "review_count") {
-    sortedProducts.sort((a, b) => b.reviews - a.reviews);
   } else if (sort === "popularity") {
     sortedProducts.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
   } else if (sort === "newness") {

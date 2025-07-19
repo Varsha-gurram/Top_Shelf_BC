@@ -3,7 +3,6 @@ import { Box, Typography, Checkbox, FormGroup, FormControlLabel } from "@mui/mat
 
 const sortOptions = [
   { label: "Default", value: "default" },
-  { label: "Review Count", value: "review_count" },
   { label: "Popularity", value: "popularity" },
   { label: "Average Rating", value: "average_rating" },
   { label: "Newness", value: "newness" },

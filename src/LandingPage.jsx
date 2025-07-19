@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Notification from './components/Features/Notification/Notification';
 import Navbar from './components/Features/Navbar/Navbar';
 import Filterbar from './components/Features/Filterbar/Filterbar';
@@ -8,6 +8,18 @@ import './App.css';
 
 const LandingPage = () => {
   const [showAccount, setShowAccount] = useState(false);
+
+  // Disable scroll on body when account sidebar is open
+  useEffect(() => {
+    if (showAccount) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    // Clean up when unmounting
+    return () => document.body.classList.remove("no-scroll");
+  }, [showAccount]);
 
   return (
     <div className="landing-center-wrapper">
