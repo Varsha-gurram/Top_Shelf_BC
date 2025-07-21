@@ -25,8 +25,6 @@ const Navbar = ({ onAccountClick }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [user] = useAuthState(auth);
-
-  // Helper to get initials from display name
   const getInitials = (name) => {
     if (!name) return "";
     const words = name.trim().split(" ");
@@ -49,7 +47,6 @@ const Navbar = ({ onAccountClick }) => {
         borderBottom: "1px solid #F4F4F4",
       }}
     >
-      {/* Logo + Mobile Filter */}
       <Box
         sx={{
           display: "flex",
@@ -67,8 +64,6 @@ const Navbar = ({ onAccountClick }) => {
           onClick={() => navigate("/")}
         />
       </Box>
-
-      {/* Search */}
       <Box
         sx={{
           flex: 1,
@@ -84,8 +79,6 @@ const Navbar = ({ onAccountClick }) => {
           width={{ xs: "70%", sm: "400px" }}
         />
       </Box>
-
-      {/* Right Section: Account + Cart */}
       <Box sx={{ display: "flex", alignItems: "center", gap: { xs: 1, md: 2 } }}>
         {!isMobile ? (
           <Typography

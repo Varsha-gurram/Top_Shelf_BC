@@ -222,8 +222,6 @@ const ProductInfo = ({
           </Typography>
         </Box>
         <Divider sx={{ my: 4, color: "#F4F4F4", height: "0.1px" }} />
-
-        {/* Animated selectors */}
         <motion.div
           custom={0.5}
           variants={selectorVariants}
@@ -312,8 +310,6 @@ const ProductInfo = ({
                 </Box>
               </Box>
             </Box>
-
-            {/* Points animation */}
             <motion.div
               variants={pointsVariants}
               initial="hidden"

@@ -2,7 +2,12 @@ import React from "react";
 import { Box, Typography} from "@mui/material";
 import { images } from "../Assets/images";
 import MyButton from "../components/Common/Button";
+import { useNavigate } from "react-router-dom";
 const CoverPage = () => {
+  const Navigate=useNavigate();
+  const handleClick=()=>{
+    Navigate('/products');
+  }
   return (
     <Box sx={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden" }}>
         <picture>
@@ -107,7 +112,7 @@ const CoverPage = () => {
           </Typography>
         </Box>
         <Box sx={{ pl: { xs: 3, sm: 8 }, mt: 5 }}>
-          <MyButton name="Shop All" size="18px" height="64px" />
+          <MyButton name="Shop All" size="18px" height="64px" onClick={handleClick} />
         </Box>
       </Box>
     </Box>
