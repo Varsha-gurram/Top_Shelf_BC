@@ -12,8 +12,6 @@ import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
 import RedeemRoundedIcon from '@mui/icons-material/RedeemRounded';
 import RocketLaunchRoundedIcon from '@mui/icons-material/RocketLaunchRounded';
 import { motion } from 'framer-motion';
-
-// Animation variants
 const paperVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i = 1) => ({
@@ -100,7 +98,6 @@ const sections = [
 const RewardsPage = () => {
   return (
     <Box sx={{ px: { xs: 2, md: 8 }, py: 6, maxWidth: 900, mx: 'auto' }}>
-      {/* Hero Section */}
       <Box
         sx={{
           background: "linear-gradient(103deg, #f2fcf6 0%, #d5f6e3 100%)",
@@ -117,8 +114,6 @@ const RewardsPage = () => {
           Earn rewards with every purchase, referral, and review. Redeem points for exclusive discounts—loyalty rewarded your way!
         </Typography>
       </Box>
-
-      {/* Sections - animated cards */}
       {sections.map((section, i) => (
         <motion.div
           key={section.title}

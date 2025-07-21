@@ -1,8 +1,13 @@
 import React from "react";
 import { Box, Grid, Card, CardContent, Typography, Link } from "@mui/material";
 import TypesL from "./TypesL";
+import { useNavigate } from "react-router-dom";
 
 const Types = () => {
+  const Navigate=useNavigate();
+  const handleClick=()=>{
+    Navigate('/products');
+  }
   const types = [
     {
       logo: TypesL.Logo1,
@@ -75,6 +80,7 @@ const Types = () => {
                 </Typography>
                 <Link
                   href="#"
+                  onClick={handleClick}
                   underline="hover"
                   sx={{
                     color: "#17AF26",
