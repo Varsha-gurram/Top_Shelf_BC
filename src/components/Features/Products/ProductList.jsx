@@ -1,11 +1,11 @@
 export const productList = [
   {
     id: 1,
-    image: require("../../../Assets/product1.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
     images: [
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
-      require("../../../Assets/product3.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
     ],
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
@@ -53,7 +53,7 @@ export const productList = [
     The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Terry Baskey",
         rating: 4,
         comment:
@@ -61,14 +61,14 @@ export const productList = [
         date: "January 15, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Vikki Star",
         rating: 5,
         comment: "Best damn place to buy your canabis at great prices",
         date: "January 5, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Bremar Kott",
         rating: 4,
         comment: "Best damn place to buy your canabis at great prices",
@@ -78,11 +78,11 @@ export const productList = [
   },
   {
     id: 2,
-    image: require("../../../Assets/product2.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
     images: [
-      require("../../../Assets/product2.png"),
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product3.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
     ],
     title: "2 Oz Deal Ahi Tuna + Master Tuna",
     type: "Flowers",
@@ -122,14 +122,14 @@ export const productList = [
     DescriptionD: `Ahi Tuna + Master Tuna is a potent indica-dominant hybrid with relaxing effects and a strong, earthy aroma. Perfect for unwinding after a long day, this strain helps with stress, insomnia, and chronic pain. Buds are dense and covered with trichomes, exuding a pungent, spicy scent.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Alex Morgan",
         rating: 5,
         comment: "Strong and relaxing, perfect for my evenings.",
         date: "February 10, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Sam Lee",
         rating: 4,
         comment: "Great for sleep and pain relief.",
@@ -139,11 +139,11 @@ export const productList = [
   },
   {
     id: 3,
-    image: require("../../../Assets/product3.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
     images: [
-      require("../../../Assets/product3.png"),
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
     ],
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     type: "Concentrates",
@@ -181,14 +181,14 @@ export const productList = [
     DescriptionD: `Mix And Match Shatter/Budder 28g (4 X 7G) offers a versatile concentrate experience. Enjoy the best of both worlds with potent effects and a delicious, fruity aroma. Ideal for those seeking variety and strong medicinal benefits.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Chris P.",
         rating: 5,
         comment: "Love the mix and the potency. Great value!",
         date: "March 1, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Dana S.",
         rating: 4,
         comment: "Smooth and effective, will buy again.",
@@ -198,11 +198,11 @@ export const productList = [
   },
   {
     id: 4,
-    image: require("../../../Assets/product1.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
     images: [
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
-      require("../../../Assets/product3.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png"
     ],
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
@@ -250,7 +250,7 @@ export const productList = [
     The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Terry Baskey",
         rating: 4,
         comment:
@@ -258,14 +258,14 @@ export const productList = [
         date: "January 15, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Vikki Star",
         rating: 5,
         comment: "Best damn place to buy your canabis at great prices",
         date: "January 5, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Bremar Kott",
         rating: 4,
         comment: "Best damn place to buy your canabis at great prices",
@@ -275,11 +275,11 @@ export const productList = [
   },
   {
     id: 5,
-    image: require("../../../Assets/product3.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
     images: [
-      require("../../../Assets/product3.png"),
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
     ],
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     type: "Concentrates",
@@ -317,14 +317,14 @@ export const productList = [
     DescriptionD: `Mix And Match Shatter/Budder 28g (4 X 7G) offers a versatile concentrate experience. Enjoy the best of both worlds with potent effects and a delicious, fruity aroma. Ideal for those seeking variety and strong medicinal benefits.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Chris P.",
         rating: 5,
         comment: "Love the mix and the potency. Great value!",
         date: "March 1, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Dana S.",
         rating: 4,
         comment: "Smooth and effective, will buy again.",
@@ -334,11 +334,11 @@ export const productList = [
   },
   {
     id: 6,
-    image: require("../../../Assets/product1.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
     images: [
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
-      require("../../../Assets/product3.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png"
     ],
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
@@ -386,7 +386,7 @@ export const productList = [
     The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Terry Baskey",
         rating: 4,
         comment:
@@ -394,14 +394,14 @@ export const productList = [
         date: "January 15, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Vikki Star",
         rating: 5,
         comment: "Best damn place to buy your canabis at great prices",
         date: "January 5, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Bremar Kott",
         rating: 4,
         comment: "Best damn place to buy your canabis at great prices",
@@ -411,11 +411,11 @@ export const productList = [
   },
   {
     id: 7,
-    image: require("../../../Assets/product1.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
     images: [
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
-      require("../../../Assets/product3.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png"
     ],
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
@@ -463,7 +463,7 @@ export const productList = [
     The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Terry Baskey",
         rating: 4,
         comment:
@@ -471,14 +471,14 @@ export const productList = [
         date: "January 15, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Vikki Star",
         rating: 5,
         comment: "Best damn place to buy your canabis at great prices",
         date: "January 5, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Bremar Kott",
         rating: 4,
         comment: "Best damn place to buy your canabis at great prices",
@@ -488,11 +488,11 @@ export const productList = [
   },
   {
     id: 8,
-    image: require("../../../Assets/product2.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
     images: [
-      require("../../../Assets/product2.png"),
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product3.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png"
     ],
     title: "2 Oz Deal Ahi Tuna + Master Tuna",
     type: "Flowers",
@@ -532,14 +532,14 @@ export const productList = [
     DescriptionD: `Ahi Tuna + Master Tuna is a potent indica-dominant hybrid with relaxing effects and a strong, earthy aroma. Perfect for unwinding after a long day, this strain helps with stress, insomnia, and chronic pain. Buds are dense and covered with trichomes, exuding a pungent, spicy scent.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Alex Morgan",
         rating: 5,
         comment: "Strong and relaxing, perfect for my evenings.",
         date: "February 10, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Sam Lee",
         rating: 4,
         comment: "Great for sleep and pain relief.",
@@ -549,11 +549,11 @@ export const productList = [
   },
   {
     id: 9,
-    image: require("../../../Assets/product3.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
     images: [
-      require("../../../Assets/product3.png"),
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
     ],
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     type: "Concentrates",
@@ -591,14 +591,14 @@ export const productList = [
     DescriptionD: `Mix And Match Shatter/Budder 28g (4 X 7G) offers a versatile concentrate experience. Enjoy the best of both worlds with potent effects and a delicious, fruity aroma. Ideal for those seeking variety and strong medicinal benefits.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Chris P.",
         rating: 5,
         comment: "Love the mix and the potency. Great value!",
         date: "March 1, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Dana S.",
         rating: 4,
         comment: "Smooth and effective, will buy again.",
@@ -608,11 +608,11 @@ export const productList = [
   },
   {
     id: 10,
-    image: require("../../../Assets/product1.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
     images: [
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
-      require("../../../Assets/product3.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png"
     ],
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
@@ -660,7 +660,7 @@ export const productList = [
     The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Terry Baskey",
         rating: 4,
         comment:
@@ -668,14 +668,14 @@ export const productList = [
         date: "January 15, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Vikki Star",
         rating: 5,
         comment: "Best damn place to buy your canabis at great prices",
         date: "January 5, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Bremar Kott",
         rating: 4,
         comment: "Best damn place to buy your canabis at great prices",
@@ -685,11 +685,11 @@ export const productList = [
   },
   {
     id: 11,
-    image: require("../../../Assets/product3.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
     images: [
-      require("../../../Assets/product3.png"),
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
     ],
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     type: "Concentrates",
@@ -727,14 +727,14 @@ export const productList = [
     DescriptionD: `Mix And Match Shatter/Budder 28g (4 X 7G) offers a versatile concentrate experience. Enjoy the best of both worlds with potent effects and a delicious, fruity aroma. Ideal for those seeking variety and strong medicinal benefits.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Chris P.",
         rating: 5,
         comment: "Love the mix and the potency. Great value!",
         date: "March 1, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Dana S.",
         rating: 4,
         comment: "Smooth and effective, will buy again.",
@@ -744,11 +744,11 @@ export const productList = [
   },
   {
     id: 12,
-    image: require("../../../Assets/product1.png"),
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
     images: [
-      require("../../../Assets/product1.png"),
-      require("../../../Assets/product2.png"),
-      require("../../../Assets/product3.png"),
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png"
     ],
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     type: "Flowers",
@@ -796,7 +796,7 @@ export const productList = [
     The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Terry Baskey",
         rating: 4,
         comment:
@@ -804,14 +804,14 @@ export const productList = [
         date: "January 15, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Vikki Star",
         rating: 5,
         comment: "Best damn place to buy your canabis at great prices",
         date: "January 5, 2023",
       },
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Bremar Kott",
         rating: 4,
         comment: "Best damn place to buy your canabis at great prices",
@@ -821,12 +821,12 @@ export const productList = [
   },
   {
     id: 13,
-   // image: require("../../../Assets/edible1.png"),
-    // images: [
-    //   require("../../../Assets/edible1.png"),
-    //   require("../../../Assets/edible2.png"),
-    //   require("../../../Assets/edible3.png"),
-    // ],
+   image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product4.png",
+    images: [
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product4.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+    ],
     title: "Gummy Bears 300mg THC",
     type: "Edibles",
     rating: 4.8,
@@ -860,14 +860,14 @@ export const productList = [
     DescriptionD: `Gummy Bears 300mg THC are perfect for those seeking a flavorful and controlled edible experience. Each gummy is dosed for consistency and reliability, making it easy to manage your intake.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Jordan P.",
         rating: 5,
         comment: "Best gummies I've tried—great taste and effect!",
         date: "April 10, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Lisa R.",
         rating: 4,
         comment: "Good value and very relaxing.",
@@ -877,11 +877,11 @@ export const productList = [
   },
   {
     id: 14,
-    // image: require("../../../Assets/mushroom1.png"),
-    // images: [
-    //   require("../../../Assets/mushroom1.png"),
-    //   require("../../../Assets/mushroom2.png"),
-    // ],
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+    images: [
+     "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+    ],
     title: "Golden Teacher Magic Mushrooms",
     type: "Mushrooms",
     rating: 4.9,
@@ -915,14 +915,14 @@ export const productList = [
     DescriptionD: `Golden Teacher Magic Mushrooms are favored for their reliable potency and profound journeys. Ideal for both beginners and experienced psychonauts seeking clarity and creativity.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Morgan S.",
         rating: 5,
         comment: "Amazing visuals and a very positive experience.",
         date: "May 1, 2023",
       },
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Alex T.",
         rating: 4,
         comment: "Gentle come-up and very introspective.",
@@ -932,11 +932,11 @@ export const productList = [
   },
   {
     id: 15,
-    // image: require("../../../Assets/chocolate1.png"),
-    // images: [
-    //   require("../../../Assets/chocolate1.png"),
-    //   require("../../../Assets/chocolate2.png"),
-    // ],
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+    images: [
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+    ],
     title: "Milk Chocolate Bar 500mg THC",
     type: "Edibles",
     rating: 4.7,
@@ -968,7 +968,7 @@ export const productList = [
     DescriptionD: `This milk chocolate bar delivers a rich, creamy flavor and a powerful, relaxing effect. Perfect for unwinding or sharing with friends.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review1.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
         name: "Nina G.",
         rating: 5,
         comment: "Delicious and strong. Will buy again!",
@@ -978,11 +978,11 @@ export const productList = [
   },
   {
     id: 16,
-    // image: require("../../../Assets/shatter1.png"),
-    // images: [
-    //   require("../../../Assets/shatter1.png"),
-    //   require("../../../Assets/concentrate2.png"),
-    // ],
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+    images: [
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product4.png",
+    ],
     title: "Premium Shatter 1g",
     type: "Concentrates",
     rating: 4.5,
@@ -1016,7 +1016,7 @@ export const productList = [
     DescriptionD: `Premium Shatter 1g is made from top-grade sativa strains, offering a potent and clear-headed effect ideal for daytime use.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review2.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
         name: "Omar V.",
         rating: 4,
         comment: "Great for focus and energy. Smooth hit.",
@@ -1026,11 +1026,11 @@ export const productList = [
   },
   {
     id: 17,
-    // image: require("../../../Assets/wax1.png"),
-    // images: [
-    //   require("../../../Assets/wax1.png"),
-    //   require("../../../Assets/concentrate3.png"),
-    // ],
+    image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+    images: [
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+      "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product4.png",
+    ],
     title: "Live Resin Wax 1g",
     type: "Concentrates",
     rating: 4.6,
@@ -1063,7 +1063,7 @@ export const productList = [
     DescriptionD: `Experience the full spectrum of cannabinoids and terpenes with this premium live resin wax, perfect for dabbing enthusiasts.`,
     Reviews: [
       {
-        profile: require("../../../Assets/review3.png"),
+        profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
         name: "Priya M.",
         rating: 5,
         comment: "Flavorful and strong—my new favorite wax.",
@@ -1103,7 +1103,7 @@ export const productList = [
 //   DescriptionD: `Sunset Sherbet is a potent hybrid strain that delivers powerful full-body effects elevated by a jolt of cerebral energy. Its complex aroma blends sweet berries and citrus.`,
 //   Reviews: [
 //     {
-//       profile: require("../../../Assets/review1.png"),
+//       profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
 //       name: "Ashley D.",
 //       rating: 5,
 //       comment: "Love the flavor and balanced effect!",
@@ -1114,11 +1114,11 @@ export const productList = [
 
 {
   id: 19,
-  // image: require("../../../Assets/gummies1.png"),
-  // images: [
-  //   require("../../../Assets/gummies1.png"),
-  //   require("../../../Assets/gummies2.png"),
-  // ],
+  image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product4.png",
+  images: [
+    "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+    "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+  ],
   title: "Sour Watermelon Gummies 300mg THC",
   type: "Edibles",
   rating: 4.7,
@@ -1142,7 +1142,7 @@ export const productList = [
   DescriptionD: `Perfect for microdosing or a full experience, these gummies hit the spot with their tangy flavor and smooth onset.`,
   Reviews: [
     {
-      profile: require("../../../Assets/review2.png"),
+      profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
       name: "Ben F.",
       rating: 4,
       comment: "Great taste, nice buzz.",
@@ -1153,11 +1153,11 @@ export const productList = [
 
 {
   id: 20,
-  // image: require("../../../Assets/chocolate2.png"),
-  // images: [
-  //   require("../../../Assets/chocolate2.png"),
-  //   require("../../../Assets/chocolate1.png"),
-  // ],
+  image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+  images: [
+   "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+    "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+  ],
   title: "Dark Chocolate Bar 300mg THC",
   type: "Edibles",
   rating: 4.9,
@@ -1181,7 +1181,7 @@ export const productList = [
   DescriptionD: `Handcrafted chocolate with a smooth finish and potent effect. Perfect for winding down.`,
   Reviews: [
     {
-      profile: require("../../../Assets/review3.png"),
+      profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
       name: "Maria G.",
       rating: 5,
       comment: "Delicious and effective!",
@@ -1192,11 +1192,11 @@ export const productList = [
 
 {
   id: 21,
-  // image: require("../../../Assets/shatter2.png"),
-  // images: [
-  //   require("../../../Assets/shatter2.png"),
-  //   require("../../../Assets/shatter1.png"),
-  // ],
+  image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+  images: [
+   "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+   "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+  ],
   title: "Blue Dream Shatter 1g",
   type: "Concentrates",
   rating: 4.8,
@@ -1220,7 +1220,7 @@ export const productList = [
   DescriptionD: `Blue Dream Shatter offers a clean, powerful sativa effect with a sweet berry aroma.`,
   Reviews: [
     {
-      profile: require("../../../Assets/review1.png"),
+      profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185924/review1.png",
       name: "Derek L.",
       rating: 5,
       comment: "Smooth and strong.",
@@ -1231,11 +1231,11 @@ export const productList = [
 
 {
   id: 22,
-  // image: require("../../../Assets/wax2.png"),
-  // images: [
-  //   require("../../../Assets/wax2.png"),
-  //   require("../../../Assets/wax1.png"),
-  // ],
+  image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+  images: [
+    "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+    "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185920/product1.png",
+  ],
   title: "OG Kush Wax 1g",
   type: "Concentrates",
   rating: 4.6,
@@ -1259,7 +1259,7 @@ export const productList = [
   DescriptionD: `OG Kush Wax is known for its earthy aroma and potent, long-lasting effects.`,
   Reviews: [
     {
-      profile: require("../../../Assets/review2.png"),
+      profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review2.png",
       name: "Samira H.",
       rating: 4,
       comment: "Very relaxing, great for evenings.",
@@ -1269,11 +1269,11 @@ export const productList = [
 },
 {
   id: 23,
-  // image: require("../../../Assets/mushroom2.png"),
-  // images: [
-  //   require("../../../Assets/mushroom2.png"),
-  //   require("../../../Assets/mushroom1.png"),
-  // ],
+  image: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product4.png",
+  images: [
+    "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185922/product3.png",
+   "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185921/product2.png",
+  ],
   title: "Penis Envy Magic Mushrooms",
   type: "Mushrooms",
   rating: 4.9,
@@ -1298,7 +1298,7 @@ export const productList = [
   DescriptionD: `Penis Envy is one of the most potent psilocybin mushrooms, prized for its intense effects and introspective journeys.`,
   Reviews: [
     {
-      profile: require("../../../Assets/review3.png"),
+      profile: "https://res.cloudinary.com/dyiprp2fw/image/upload/v1753185925/review3.png",
       name: "Jake P.",
       rating: 5,
       comment: "Strong and transformative experience.",
@@ -1306,45 +1306,4 @@ export const productList = [
     }
   ],
 },
-// {
-//   id: 24,
-//   // image: require("../../../Assets/bundle1.png"),
-//   // images: [
-//   //   require("../../../Assets/bundle1.png"),
-//   //   require("../../../Assets/flower_hybrid1.png"),
-//   //   require("../../../Assets/gummies1.png"),
-//   // ],
-//   title: "420 Starter Bundle",
-//   type: "Flowers",
-//   rating: 4.8,
-//   reviews: 17,
-//   strain: "Hybrid",
-//   price: 120.0,
-//   options: ["Bundle"],
-//   weightOptions: [
-//     { label: "Bundle", price: 120.0 },
-//   ],
-//   integraOptions: [],
-//   category: "Bundles & Promotions",
-//   Rc: "Recently Added",
-//   createdAt: "2024-06-28T12:00:00Z",
-//   popularity: 95,
-//   effects: ["Relaxing", "Happy", "Creative"],
-//   medicalUses: ["Stress", "Pain"],
-//   aromas: ["Mixed", "Fruity", "Earthy"],
-//   description: "A special bundle featuring flower, edibles, and accessories for the perfect 420 celebration.",
-//   inStock: true,
-//   DescriptionD: `This bundle includes a top-shelf hybrid flower, a pack of THC gummies, and rolling papers. Ideal for new and experienced users alike.`,
-//   Reviews: [
-//     {
-//       profile: require("../../../Assets/review1.png"),
-//       name: "Liam S.",
-//       rating: 5,
-//       comment: "Great value and variety. Loved it!",
-//       date: "June 29, 2024",
-//     }
-//   ],
-// },
-
-
 ];
